@@ -1,45 +1,36 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Workspace</title>
-	</head>
+	<!-- Header -->
+	{% include header.html %}
 	
-	<style>
-		.div_title {
-			text-align: 	center;
-			border-style:	outset;
-		}
-		
-		.div_menu {
+	<!-- Page -->
+	
+	<style>		
+		.div_intro {
 			margin-left:	auto;
 			margin-right:	auto;
-			border-style: 	double;
-			padding:		5px;
-		}
-		
-		.menu_row {
-			width:			100px;
-			text-align:		center;
-			font-weight:	bold;
+			text-align:		justify;
+			text-justify: 	inter-word;
+			padding-top:	2em;
+			padding-left:	20em;
+			padding-right: 	20em;
+			font-size:		120%;
 		}
 	</style>
 	
-	<div class = "div_title">
-		<h1>Mag's workspace</h1>
-		<p>A repository for various projects</p>
-	</div>
-	
-	<div style = "padding: 5px">
-	<table class = "div_menu">
-		<tr>
-			<td class = "menu_row"> Home </td>
-			<td class = "menu_row"> Projects </td>
-			<td class = "menu_row"> Contact </td>
-		</tr>
-	</table>
-	</div>
-	
 	<body>
-		<h2>Tittle</h2>
+		<div class = "div_intro">
+			<p>
+			This site is dedicated to showcasing a series of somewhat related projects.
+			Many of them are related to model aircraft or some application therein.
+			</p>
+			<p>
+			However, some of the projects may be completely unrelated yet still use concepts 
+			from the aircraft projects. 
+			<p/>
+			<p>
+			Overall, there will be a common theme to the work that is presented here.
+			</p>
+		</div>
 	</body>
 </html>
