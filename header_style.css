@@ -1,0 +1,22 @@
+.menu_row {
+	width:			100px;
+	text-align:		center;
+	font-weight:	bold;
+}
+
+.menu_text {
+	text-decoration: 	none;
+}
+
+.div_title {
+	text-align: 		center;
+	border-style:		outset;
+	background-color:	rgb( 240, 240, 240);
+}
+
+.div_menu {
+	margin-left:	auto;
+	margin-right:	auto;
+	border-style: 	double;
+	padding:		0.5em;
+}
