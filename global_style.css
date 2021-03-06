@@ -17,7 +17,7 @@ body {
 
 /*-- Configuration of nested frames */
 .header_frame {
-	height: 			130px; 
+	height: 			auto; 
 	width: 				100%;
 	overflow:			hidden;
 	border:				none;
@@ -28,8 +28,8 @@ body {
 	margin:				auto;
 	display:			flex;
 	flex-flow:			column;
-	height:				100%;
-	width:				70%;
+	height:				auto;
+	width:				80%;
 }
 
 .content_frame {	
@@ -44,6 +44,7 @@ body {
 
 .paragraph_format {
 	width: 				80%;
+	height:				100%;
 	margin-left: 		auto;
 	margin-right: 		auto;
 	text-align:			justify;
