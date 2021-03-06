@@ -28,7 +28,7 @@ body {
 	margin:				auto;
 	display:			flex;
 	flex-flow:			column;
-	height:				auto;
+	min-height:			auto;
 	width:				80%;
 }
 
