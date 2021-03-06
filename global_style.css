@@ -1,0 +1,52 @@
+/*-- Global tags */
+
+	/* Hyperlinks */
+a {
+	text-decoration: 	none;
+	color:				black;
+}
+	/* Mouse over */
+a:hover {
+	color: 				orange;
+}
+
+body {
+	background-color:	orange;
+	height:				100%
+}
+
+/*-- Configuration of nested frames */
+.header_frame {
+	height: 			130px; 
+	width: 				100%;
+	overflow:			hidden;
+	border:				none;
+	border-radius:		20px 20px 0px 0px;
+}
+
+.outer_frame {
+	margin:				auto;
+	display:			flex;
+	flex-flow:			column;
+	height:				100%;
+	width:				70%;
+}
+
+.content_frame {	
+	background-color: 	white;
+	margin:				auto;
+	display:			flex;
+	flex-flow:			column;
+	height:				100%;
+	width:				100%;
+	border-radius:		0px 0px 20px 20px;
+}
+
+.paragraph_format {
+	width: 				80%;
+	margin-left: 		auto;
+	margin-right: 		auto;
+	text-align:			justify;
+	text-justify: 		inter-word;
+	font-size:			105%;
+}
