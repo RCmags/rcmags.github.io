@@ -12,7 +12,6 @@ a:hover {
 
 body {
 	background-color:	orange;
-	height:				auto;
 }
 
 /*-- Configuration of nested frames */
@@ -45,9 +44,10 @@ body {
 .paragraph_format {
 	width: 				80%;
 	height:				100%;
-	margin-left: 		auto;
-	margin-right: 		auto;
+	margin: 			auto;
 	text-align:			justify;
 	text-justify: 		inter-word;
 	font-size:			105%;
+	word-wrap: 			break-word;
+	overflow:			auto;
 }
