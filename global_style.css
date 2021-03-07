@@ -12,7 +12,7 @@ a:hover {
 
 body {
 	background-color:	orange;
-	height:				100%
+	height:				auto;
 }
 
 /*-- Configuration of nested frames */
@@ -37,7 +37,7 @@ body {
 	margin:				auto;
 	display:			flex;
 	flex-flow:			column;
-	height:				100%;
+	height:				auto;
 	width:				100%;
 	border-radius:		0px 0px 20px 20px;
 }
