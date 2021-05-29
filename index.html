@@ -1,31 +1,31 @@
 <html>
-	<!-- Global styles -->
+	<!-- Styles -->
 	<head>
 		<link rel="stylesheet" type="text/css" href="global_style.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	</head>
-	
+		
 	<body>
-		<div class = "outer_frame">
-			<!-- Header frame -->
-			<div style = "text-align: center;">
-				<iframe src="header.html" class = "header_frame" ></iframe>
+		<!-- Margin box -->
+		<div class = "outer_div">
+		
+			<!-- Header-->
+			<div class = "header">
+				<h1>Mags' workspace</h1>
+				<table>
+					<tr>
+						<td id = "menu1"> About    </td>
+						<td id = "menu2"> Projects </td>
+						<td id = "menu3"> Contact  </td>
+					</tr>
+				</table>
 			</div>
-			
+		
 			<!-- Content frame -->
-			<div class = "content_frame">
-			
-				<!-- Paragraph -->
-				<div class = "paragraph_format" style = "width: 60%">
-					<p style = "text-align: center;"> Hi! This is the site of some random guy the internet. </p>			
-					
-					<p> On this site you will find a repository for multiple and somewhat related projects.
-					Many of them are related to model aircraft or some application therein. However, 
-					some of the projects may be completely unrelated yet still use similar concepts. 
-					Overall, there is a common theme to the work found here. </p>
-				</div>
-			
-			</div>
+			<iframe id = "frame" src = "about.html" class = "content"></iframe>
+		
+			<!-- Script to enable menu -->
+			<script src = "menu.js"></script>				
 		</div>
-	</body>
+	</body>	
 </html>

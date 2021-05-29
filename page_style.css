@@ -1,0 +1,21 @@
+	/* Hyperlinks */
+a {
+	text-decoration: 	none;
+	color:				black;
+}
+	/* Mouse over */
+a:hover {
+	color: 				orange;
+}
+
+.paragraph {
+	width: 				80%;
+	height:				100%;
+	margin-left:		auto;
+	margin-right:		auto;
+	text-align:			justify;
+	text-justify: 		inter-word;
+	font-size:			105%;
+	word-wrap: 			break-word;
+	overflow:			auto;
+}
