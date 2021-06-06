@@ -1,15 +1,20 @@
 // Iframe element
-var frame = document.getElementById("frame");
+var iframe = document.getElementById("iframe");
 
 // Change source based on button click:
 document.getElementById("menu1").onclick = function() {
-	frame.src="about.html";
+	iframe.src="about.html";
 }
 
 document.getElementById("menu2").onclick = function() {
-	frame.src="projects.html";
+	iframe.src="projects.html";
 }
 
 document.getElementById("menu3").onclick = function() {
-	frame.src="contact.html";
+	iframe.src="contact.html";
 }
+
+// Receive height of "container" div and resize iframe			
+window.onmessage = (input) => {
+	iframe.style.height = `${input.data.frame_height}px`;
+};
