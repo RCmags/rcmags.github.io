@@ -16,5 +16,5 @@ document.getElementById("menu3").onclick = function() {
 
 // Receive height of "container" div and resize iframe			
 window.onmessage = (input) => {
-	iframe.style.height = `${input.data.frame_height}px`;
+	iframe.style.height = `${input.data.frame_height + 20}px`;
 };

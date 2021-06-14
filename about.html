@@ -6,40 +6,143 @@
 	
 	<style>
 		.block {
-			text-align:		center;
-			width:			100%;
+			text-align:			center;
+			display:			flex;
+			justify-content:	center;
+			padding-top:		20px;
 		}
 		.block img {
-			width:			28%;
-			border-radius:	15px;
+			width:				50vw;
+			min-width:			300px;
+			border-radius:		15px;
+		}
+		.block div {
+			border-bottom:		3px inset;
+			width:				80%;
+		}
+		.block p {
+			text-align: 		justify; 
+			display: 			flex; 
+			justify-content: 	center;
+		}
+		
+		.detail {
+			color:				blue;
+			font-weight:		bold;
+			font-size:			16px;
 		}
 	</style>
 	
 	<body style = "margin: 0;">
-		<div id = "container" class = "paragraph" style = "width: 100%; padding-bottom: 30px;">
-			<!-- Intro text -->
-			<p style = "text-align: center;"> 
-				This site is a repository for multiple projects. <u>Click on <i>Projects</i></u> for details. 
-			</p>
-			
+		<div id = "container" class = "paragraph">
 			<!-- Images -->
-			<div class = "block"> 
-				<img src = "https://github.com/RCmags/ServoFlappingControl/raw/main/example_pics/servo_body_res.jpg"</img>
-				<img src = "https://raw.githubusercontent.com/RCmags/TrackRobot/main/images/tank2_res.jpg"</img>	
-				<img src = "https://raw.githubusercontent.com/RCmags/HeliFlightController/main/example_pictures/front_view_res.JPG"</img>
-				<br>
-				<img src = "https://raw.githubusercontent.com/RCmags/ServoFlappingControl/main/example_pics/flap_motion.gif"</img>
-				<img src = "https://raw.githubusercontent.com/RCmags/TrackRobot/main/images/zip_zag.gif"</img>
-				<img src = "https://raw.githubusercontent.com/RCmags/HeliFlightController/main/example_pictures/stab_motion.gif"</img>
-				<br>
-				<img src = "https://raw.githubusercontent.com/RCmags/FourBarSimulation/main/example_pics/short_bar_anim.gif"</img>
-				<img src = "img/balance_motion.gif"></img>
-				<img src = "https://github.com/RCmags/TrackVehicleSimulation/raw/main/example_pics/low_coeff_anim.gif"></img>
-				<br>
-				<img src = "img/autogyro_res.JPG"></img>
-				<img src = "https://raw.githubusercontent.com/RCmags/TailLessStability/main/example_pictures/top_view_res.jpg"></img>
-				<img src = "img/orni_motor_res.JPG"></img>
+			<div class = "block">
+				<div>			
+					<img src = "https://github.com/RCmags/ServoFlappingControl/raw/main/example_pics/servo_body_res.jpg"</img> 								
+					<h2>Servo Ornithopter</h2>
+					<p>	Aircraft powered and controlled by two servo motors.
+						The servos acted as artificial muscles that oscillated the wings.
+					</p>
+					<a href = "https://github.com/RCmags/ServoFlappingControl" target="_parent" class = "hyperlink detail"> 
+						>> Click for details << 
+					</a>
+				</div>
 			</div>
+			
+			<div class = "block">
+				<div>			
+					<img src = "https://raw.githubusercontent.com/RCmags/HeliFlightController/main/example_pictures/front_view_res.JPG"</img>						
+					<h2>Helicopter & flight controller</h2>
+					<p>	Weight-shift controlled helicopter capable of auto-rotations.
+						The aircraft was stabilized via a 3-axis gyroscope.
+					</p>
+					<a href = "https://github.com/RCmags/HeliFlightController" target="_parent" class = "hyperlink detail"> 
+						>> Click for details << 
+					</a>
+				</div>
+			</div>
+			
+			<div class = "block">
+				<div>			
+					<img src = "https://raw.githubusercontent.com/RCmags/TrackRobot/main/images/tank2_res.jpg"</img>						
+					<h2>Autonomous tracked vehicle</h2>
+					<p>	Vehicle capable of driving to waypoints located on a 3D surface.
+						It would follow a closed circuit through the coordinates.
+					</p>
+					<a href = "https://github.com/RCmags/TrackRobot" target="_parent" class = "hyperlink detail"> 
+						>> Click for details << 
+					</a>
+				</div>
+			</div> 
+
+			<div class = "block">
+				<div>			
+					<img src = "https://raw.githubusercontent.com/RCmags/TailLessStability/main/example_pictures/top_view_res.jpg"></img>						
+					<h2>Stabilized tail-less airplane</h2>
+					<p>	Airplane without a horizontal stabilizer that was actively stabilized in pitch.
+						A DIY angle-of-attack sensor deflected the elevons to achieve stability.
+					</p>
+					<a href = "https://github.com/RCmags/TailLessStability" target="_parent" class = "hyperlink detail"> 
+						>> Click for details << 
+					</a>
+				</div>
+			</div> 
+			
+			<div class = "block">
+				<div>			
+					<img src = "https://raw.githubusercontent.com/RCmags/FourBarSimulation/main/example_pics/short_bar_anim.gif"</img>						
+					<h2>Simulation of 4-bar linkage</h2>
+					<p>	2D simulation of a linkage mechanism. The length of the bars could be changed 
+						along with the mass of the crank or the rocker arm.
+					</p>
+					<a href = "https://github.com/RCmags/FourBarSimulation" target="_parent" class = "hyperlink detail"> 
+						>> Click for details << 
+					</a>
+				</div>
+			</div> 
+			
+			<div class = "block">
+				<div>			
+					<img src = "https://github.com/RCmags/TrackVehicleSimulation/raw/main/example_pics/low_coeff_anim.gif"></img>						
+					<h2>Simulation of tracked vehicle</h2>
+					<p>	2D simulation of a tracked vehicle with symmetric weight distribution.
+						The velocity of the tracks could be changed to see how the vehicle would respond.
+					</p>
+					<a href = "https://github.com/RCmags/TrackVehicleSimulation" target="_parent" class = "hyperlink detail"> 
+						>> Click for details << 
+					</a>
+				</div>
+			</div> 
+			
+			<div class = "block">
+				<div>			
+					<img src = "https://rcmags.github.io/img/balance_motion.gif"></img>						
+					<h2>Self balancing robot</h2>
+					<p>	Small vehicle with that acted as an inverted pendulum.
+						It was kept upright by constantly accelerating the wheel base.
+					</p>
+				</div>
+			</div>
+			
+			<div class = "block">
+				<div>			
+					<img src = "https://rcmags.github.io/img/autogyro_res.JPG"></img>						
+					<h2>Autogyro</h2>
+					<p>	Model autogyro without a horizontal stabilizer. An elastic hinge next to the rotor
+						provided the nessesary pitch stability.
+					</p>
+				</div>
+			</div> 
+
+			<div class = "block">
+				<div>			
+					<img src = "https://rcmags.github.io/img/orni_motor_res.JPG"></img>						
+					<h2>Motor ornithopter</h2>
+					<p>	Aircraft powered by flapping wings. A motor drove a gearbox attached to crank-shaft that 
+						would oscillate the wings. 
+					</p>
+				</div>
+			</div> 						
 		</div>
 	</body>
 	
