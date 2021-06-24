@@ -1,7 +1,7 @@
 	/* Hyperlinks */
 a {
 	text-decoration: 	none;
-	color:				white;
+	color: 				black;
 }
 	/* Mouse over */
 a:hover {
@@ -18,5 +18,9 @@ a:hover {
 	font-size:			105%;
 	word-wrap: 			break-word;
 	overflow:			auto;
-	color:				white;
+	font-family: 		"Courier New";
+}
+
+.paragraph h2 {
+	font-family: 		"Lucida Console";
 }
