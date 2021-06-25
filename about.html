@@ -15,10 +15,10 @@
 			max-width:			600px;
 			width:				100%;
 			border-radius:		15px;
-			box-shadow: 		0px 5px 15px grey
+			box-shadow: 		0px 5px 10px grey
 		}
 		.block div {
-			border-bottom:		5px inset;
+			border-bottom:		5px solid rgb(240,240,240);
 			width:				90%;
 			max-width:			1000px;
 		}
@@ -27,11 +27,18 @@
 			display: 			flex; 
 			justify-content: 	center;
 		}
+		h2 {
+			color:				white;
+			text-shadow:		-1px  1px 0 black,
+								-1px -1px 0 black,
+								 1px  1px 0 black,
+								 1px -1px 0 black;
+		}
 		
 		.detail {
 			color:				blue;
 			font-weight:		bold;
-			font-size:			16px;
+			font-size:			18px;
 		}
 	</style>
 	
@@ -93,7 +100,7 @@
 			<div class = "block">
 				<div>			
 					<img src = "https://raw.githubusercontent.com/RCmags/FourBarSimulation/main/example_pics/short_bar_anim.gif"</img>						
-					<h2>Simulation of 4-bar linkage</h2>
+					<h2>Simulation of a 4-bar linkage</h2>
 					<p>	2D simulation of a linkage mechanism. The length of the bars could be changed, 
 						along with the mass of the crank or the rocker arm.
 					</p>
@@ -106,7 +113,7 @@
 			<div class = "block">
 				<div>			
 					<img src = "https://github.com/RCmags/TrackVehicleSimulation/raw/main/example_pics/low_coeff_anim.gif"></img>						
-					<h2>Simulation of tracked vehicle</h2>
+					<h2>Simulation of a tracked vehicle</h2>
 					<p>	2D simulation of a tracked vehicle with symmetric weight distribution.
 						The velocity of the tracks could changed to see how the vehicle reacted.
 					</p>

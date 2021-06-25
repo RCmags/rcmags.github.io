@@ -23,8 +23,8 @@ body {
 }
 
 .header #menu2 {
-	border-left:		3px solid Chartreuse;
-	border-right:		3px solid Chartreuse;
+	border-left:		2px solid Chartreuse;
+	border-right:		2px solid Chartreuse;
 }
 
 .header th:hover {
@@ -38,7 +38,3 @@ body {
 	height:				100%;
 	border:				none;
 }
-
-
-/* 300ms delay, 8ms transition, 4 unstacked frames, 30% size, 35 compression */
-300ms, 3 @ 8ms, 30%, 35%
