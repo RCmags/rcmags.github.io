@@ -38,3 +38,21 @@ body {
 	height:				100%;
 	border:				none;
 }
+
+.return_button {
+	position: 			fixed;
+	right:				0;
+	bottom:				50%;
+}
+
+.return_button a {
+	color: 			    rgb(0, 255, 0, 0.4);
+	font-size:			60px;
+	font-weight:		bold;
+	text-decoration:	none;
+}
+
+.return_button a:hover {
+	color:				rgb(0, 0, 255, 0.4);
+}
+
