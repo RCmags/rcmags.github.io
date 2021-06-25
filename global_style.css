@@ -42,17 +42,17 @@ body {
 .return_button {
 	position: 			fixed;
 	right:				0;
-	bottom:				50%;
+	bottom:				10px;
 }
 
 .return_button a {
-	color: 			    rgb(0, 255, 0, 0.4);
-	font-size:			60px;
+	color: 			    rgb(0, 255, 0, 0.5);
+	font-size:			40px;
 	font-weight:		bold;
 	text-decoration:	none;
 }
 
 .return_button a:hover {
-	color:				rgb(0, 0, 255, 0.4);
+	color:				rgb(0, 0, 255, 0.5);
 }
 
