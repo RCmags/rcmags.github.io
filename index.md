@@ -8,6 +8,6 @@
 layout: home
 ---
 
-![image](https://raw.githubusercontent.com/RCmags/rcmags.github.io/main/img/site_banner.jpg)
+![image](../img/website_banner.jpg)
 
 Recent posts:
