@@ -1,0 +1,2 @@
+I"ª<p>This library contains a sensor fusion algorithm to combine the outputs of a 6-axis inertial measurement unit (IMU). Itâ€™s based on a modified version of the Mahony filter that replaces the PI controller with something akin to a 2nd order low pass filter. The proportional term was removed and the integral term has been forced to decay in order to damp the system. The correction steps of each filter are shown below:</p>
+:ET

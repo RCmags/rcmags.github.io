@@ -1,0 +1,2 @@
+I"0<p>This repo contains a python script and an arduino sketch to render the output of an ADNS3080 mouse sensor as a grayscale image. This is ideal for focusing the lens on the sensor as its obvious when an image is blurry. Doing so greatly improves the SQUAL value and the subsequent motion detection.</p>
+:ET
