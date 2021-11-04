@@ -1,0 +1,18 @@
+I"Ó<p>This is an Arduino library for ADNS3080 mouse sensor. It provides a simple interface to retrieve motion and frame data from the sensor. It is generally sold as a module with a lens attached. This code was written for such a module. The following schematic shows how to connect the module to an arduino uno. Itâ€™s the same for other boards except the SPI spins change.</p>
+
+<p><img src="https://raw.githubusercontent.com/RCmags/ADNS3080/main/extras/ADNS3080_arduino_wiring.jpg" alt="image" /></p>
+
+<p>To focus the camera see the following repo: <a href="https://github.com/RCmags/ADNS3080_frame_capture">ADNS3080_frame_capture</a>. It contains an arduino sketch and a python script that work in conjunction with this library.</p>
+
+<h3 id="references">References:</h3>
+<p>Credit goes to Lauszus and Neumi for on their code to get the sensor to work with arduino. This library is essentially a repackaging of their code into a neater form.<br />
+https://github.com/Lauszus/ADNS3080<br />
+https://github.com/Neumi/OpticalFlowA3080ArduinoProcessing</p>
+
+<p>For more information on this sensor see the <a href="https://people.ece.cornell.edu/land/courses/ece4760/FinalProjects/s2009/ncr6_wjw27/ncr6_wjw27/docs/adns_3080.pdf">datasheet</a></p>
+
+<p>The schematic was found on this <a href="http://forum.arduino.ir/8/21/391.html">forum post</a> (the page also contains another library).</p>
+
+<h3 id="github-repo">Github Repo:</h3>
+<p><a href="https://github.com/RCmags/ADNS3080">ADNS3080</a></p>
+:ET

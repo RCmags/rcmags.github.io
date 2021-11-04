@@ -25,3 +25,6 @@ Since a 6-axis IMU has no absolute reference for heading there is a function to 
 For more information on the Mahony filter see these links:
 - [IMU Data Fusing: Complementary, Kalman, and Mahony Filter](http://www.olliw.eu/2013/imu-data-fusing/#chapter23)
 - [Mahony Filter](https://nitinjsanket.github.io/tutorials/attitudeest/mahony)
+
+### Github Repo:
+[imuFilter](https://github.com/RCmags/imuFilter)

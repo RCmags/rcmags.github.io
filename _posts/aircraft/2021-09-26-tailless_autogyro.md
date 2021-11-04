@@ -46,9 +46,9 @@ As the spring is elastic, it will deflect when the force changes. With more angl
 
 # Design iterations and development
 
-The model autogyro required multiple iterations before it reached a satisfying design. It also required analyzing the flight mechanics to make an educated guess about what should be modified.
-Iteration 1
+The model autogyro required multiple iterations before it reached a satisfying design. It also required analyzing the flight mechanics to make an educated guess about what should be modified.  
 
+__Iteration 1:__  
 The first iteration used a conventional landing gear configuration. While it was simple and only required three wheels, the configuration was unstable during landings. The Friction of the front tires induced a braking force that unloaded the rear wheel. As the main wheels were in front of the center of mass, the torque caused by their cornering force caused the vehicle to rotate towards a sharper turn. This was destabilizing and caused the aircraft to roll over during landings.
 
 ![image](https://hangar.modelairplanenews.com/members/files/2020/10/1.jpg)
@@ -57,34 +57,34 @@ The design of the offset hinge also went through 2 iterations. Initially it was 
 
 ![image](https://raw.githubusercontent.com/RCmags/rcmags.github.io/main/img/autogyro/version1/front.JPG)
 ![image](https://raw.githubusercontent.com/RCmags/rcmags.github.io/main/img/autogyro/version1/side.JPG)
-Version 1: lateral views of Autogyro.
+<p align="center"> Lateral views of Autogyro </p>
 
 ![image](https://raw.githubusercontent.com/RCmags/rcmags.github.io/main/img/autogyro/version1/rotor1.JPG)
 ![image](https://raw.githubusercontent.com/RCmags/rcmags.github.io/main/img/autogyro/version1/rotor2.JPG)
-Rotor head: hinge with spring and later leaf spring.
+<p align="center"> Rotor head: hinge with spring and later leaf spring  </p>
 
 [![video](https://img.youtube.com/vi/ps-KYJPquqs/hqdefault.jpg)](https://youtu.be/ps-KYJPquqs)  
-Version 1: Flight video
+<p align="center"> Flight video </p>
 
 After the hinge modification, the aircraft flew quite well aside from its unfavorable ground handling. It seemed like the aircraft had neutral pitch stability. It was not unstable, it did not return to a low angle of attack very quickly. This was especially noticeable at low airspeeds where there wasn't a strong tendency for the nose to drop. Instead the attitude merely stayed where it was.
-Iteration 2
 
+__Iteration 2:__  
 The second iteration fixed the landing gear by using a tricycle configuration. The front wheel was given a caster and the the main wheels located behind the center of mass. In addition to this, a wheel was added to the tail boom to protect it during landings. Braking would load the front wheel but due to the caster, the wheel did not make strong cornering forces. At the same time, the cornering force of the rear wheels would act behind the center of mass. This combination proved stable as the moment would rotate the vehicle to a wider turn, drastically reducing the likelihood of a rollover.
 
 In addition to this, the motor mount was modified to one adjust the position of the propeller. Rather than a fixed block onto which the motor bolted onto, the mount was a plate with a slot that allowed the motor to move vertically. This made it easy to align the thrust line with the center of mass. It is extremely important these two must align to avoid the possibility of powered-push-over.
 
 [![video](https://img.youtube.com/vi/RCiWSCi7bfk/hqdefault.jpg)](https://youtu.be/RCiWSCi7bfk)
-Explanation of powered-push-over
+<p align="center"> Explanation of powered-push-over </p>
 
 Should this happen, the aircraft will suddenly pitch forward in an unrecoverable dive when the rotor unloads. Another modification was a softer hinge. After these changes the aircraft was farly stable and easy to fly by an experienced pilot. The pitch stability was somewhat better but it was still neutral compared to an airplane. 
 
 ![image](https://raw.githubusercontent.com/RCmags/rcmags.github.io/main/img/autogyro/version2/front.JPG)
 ![image](https://raw.githubusercontent.com/RCmags/rcmags.github.io/main/img/autogyro/version2/side.JPG)
-Version 2: lateral views of Autogyro
+<p align="center"> Lateral views of Autogyro </p>
 
 ![image](https://raw.githubusercontent.com/RCmags/rcmags.github.io/main/img/autogyro/version2/rotor.JPG)
-Rotor head
+<p align="center"> Rotor head </p>
 
 [![video](https://img.youtube.com/vi/b1p8pCHiuWo/hqdefault.jpg)](https://youtu.be/b1p8pCHiuWo)  
-Version 2: Flight video
+<p align="center"> Flight video </p>
 

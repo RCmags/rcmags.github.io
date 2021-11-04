@@ -8,6 +8,10 @@
 layout: home
 ---
 
-![image](../img/website_banner.jpg)
+<img src="../img/website_banner.jpg" style="width: 100%;">
 
-Recent posts:
+This website is dedicated to organizing and documenting my personal projects.
+They're mostly related to model aircraft and small robots, but there's a few programming projects as well. 
+A lot of my work is posted on [RCGroups](https://www.rcgroups.com/forums/member.php?u=189488) so check it out.
+
+## Recent projects:

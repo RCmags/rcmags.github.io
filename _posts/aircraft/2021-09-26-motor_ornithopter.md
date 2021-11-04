@@ -26,4 +26,8 @@ This code was made to work for the following circuit:
 <img src = "https://raw.githubusercontent.com/RCmags/GlideLock/main/glide_lock_schem.png" width = "80%">
 
 See this video to see the glide lock working:  
-[<img src="https://img.youtube.com/vi/v0z1ojpoehQ/maxresdefault.jpg" width="50%">](https://youtu.be/v0z1ojpoehQ)
+[![video](https://img.youtube.com/vi/v0z1ojpoehQ/hqdefault.jpg)](https://youtu.be/v0z1ojpoehQ)  
+
+### Github Repo:
+[GlideLock](https://github.com/RCmags/GlideLock)
+

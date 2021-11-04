@@ -11,7 +11,3 @@ although with time I've delved into robotics and this has become it's own motiva
 
 Overall, I'm very interested in developing and experimenting with unusual small-scale vehicles. 
 They require a combination of mechanics, electronics, and programming that I find very satisfying. 
-
-This website is dedicated to organizing and documenting my personal projects.
-They're mostly related to model aircraft and small robots, but there's a few programming projects as well. 
-A lot of my work is also posted on [RCGroups](https://www.rcgroups.com/forums/member.php?u=189488) so check it out.

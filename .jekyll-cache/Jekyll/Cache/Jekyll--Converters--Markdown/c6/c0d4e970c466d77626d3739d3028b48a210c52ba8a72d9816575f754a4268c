@@ -1,0 +1,24 @@
+I"l<p>This is an arduino sketch for a <a href="https://www.electronicshub.org/arduino-line-follower-robot/">line following robot</a> based on infrared LED’s and an H-bridge. 
+The code uses a PID controller to control the wheels of the vehicle so it steers into a dark line. 
+To improve the likelihood of the vehicle from sliding off the line, 
+the code decreases the speed of the robot when it enters a sharp turn. 
+In an effort to improve the low speed performance, 
+the speed of the motors is controlled via <a href="https://en.wikipedia.org/wiki/Pulse-frequency_modulation">pulse frequency modulation</a>.
+This allows the motors to be moved under the influence of cogging torque and stiction as the pulses act like a jackhammer.
+The end result is motion similar to stepper motor as the motor moves in discrete jumps of variable length.
+At higher throttle settings the motors switch over to <a href="https://en.wikipedia.org/wiki/Pulse-width_modulation">PWM</a> to smoothen the motion.</p>
+
+<p>The code requires a circuit like the one shown in this schematic:<br />
+<img src="https://raw.githubusercontent.com/RCmags/LineFollowingRobot/main/line_follower_robot_schem.png" alt="image" /></p>
+
+<p>Below are images of the vehicle this code was written for:<br />
+<img src="https://raw.githubusercontent.com/RCmags/LineFollowingRobot/main/img/bottom_view_res.jpg" alt="image" />
+<img src="https://raw.githubusercontent.com/RCmags/LineFollowingRobot/main/img/diag_view_res.jpg" alt="image" />
+<img src="https://raw.githubusercontent.com/RCmags/LineFollowingRobot/main/img/top_view_res.jpg" alt="image" /></p>
+
+<p>Here’s a video of the robot working: 
+<a href="https://youtu.be/NBQjQLE4u1M"><img src="https://img.youtube.com/vi/NBQjQLE4u1M/hqdefault.jpg" alt="video" /></a></p>
+
+<h3 id="github-repo">Github Repo:</h3>
+<p><a href="https://github.com/RCmags/LineFollowingRobot">LineFollowingRobot</a></p>
+:ET

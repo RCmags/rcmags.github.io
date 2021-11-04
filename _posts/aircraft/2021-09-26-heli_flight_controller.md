@@ -1,39 +1,95 @@
 ---
 layout: post
-title: "Flight controller for a weight-shift controlled helicopter"
+title: "Flight controller for a weight-shift RC helicopter"
 categories: Aircraft
 ---
 
-Helicopters are naturally unstable aircraft. If they do not have a system that augments their stability, they will inevitably spiral into the ground. Luckily, there are a few ways to enhance their stability. A classic approach is to use a heavy bar placed at an angle relative to the rotor blades. Such a system is known as a flybar, stabilizer-bar or stabilizer gyro. For helicopters with more than two blades, the bar transforms into a star-shaped object, or even a disk. 
+# Introduction to concept
 
-z
+Helicopters are naturally unstable aircraft. Without a system to augment their stability they will inevitably spiral towards the ground. Thankfully, theres a few ways to enhance their stability. A classic approach is to use a heavy bar placed at an angle relative to the rotor blades. Such a 
+system is known as a flybar, stabilizer-bar, or mechanical gyro.  
 
-While this approach works it comes at the cost of increased rotor complexity. To avoid this problem, it's possible to use electronics to provide the required corrective inputs. This approach greatly simplifies the rotor head but it transfers the complexity to an electronic circuit. A suitable device to provide this function is a programable development board. In this case, the complexity of the electronics are abstracted way and emphasis is placed on an algorithm that can stabilize the aircraft.  
+![image](https://www.rchelicopterfun.com/images/HillerHead500pics.gif)
+[See: Bell-Hiller mixing]()
 
-# ---- divisor ----
+This system works by exploiting the angular momentum of the bar. When disturbed, the bar will tend to stay rotating about its current plane. This "resistance" to changes in orientation can fed to the rotor blades to damp the rotation. There are many examples of this stabilization system, be it in large manned helicopters or in small radio-controlled models. Here is a video of what the bar's motion looks like on a small rc-helicopter:  
 
+[![video](https://img.youtube.com/vi/1fi3qSU-d1o/hqdefault.jpg)](https://youtu.be/1fi3qSU-d1o)  
 
-This Arduino sketch is a simple flight controller for a 4ch RC heli based on an [MPU6050 6-axis gyroscope/accelerometer](https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/). 
+For helicopters with more than two blades, the bar transforms into a star-shaped object or a ring. 
 
-Stabilization about pitch and roll is accomplished via a PID loop using the Gyro as the proportional term. Stabilization about the yaw axis uses a PI loop along with a counter-torque term that increases as throttle is added. The accelerometer is is not used. Due to this, the program only improves the short-term stability of the helicopter, up to the point that human can stabilize the vehicle in the long-term.  
+![image](https://www.aviastar.org/foto/lok_xh-51.gif)
+[See: Lockheed XH-51](https://www.aviastar.org/helicopters_eng/lok_xh-51.php)
 
-The program is designed to receive 4 PWM inputs from an RC receiver operating in MODE 2 and outputs 3 PWM signals. Two signals go to the cyclic servos and the third goes to a tail-servo or a speed controller. Since it is assumed only two servo motors are used for controlling the rotor, only a [90-degree swashplate](https://www.rchelicopterfun.com/ccpm.html) is supported. MODE 1 can be used with this program by swapping the RX connections at the arduino. 
+![image](https://www.aviastar.org/foto/lok_cl-475.gif)
+[See: Lockheed CL-475](https://sites.google.com/site/stingrayslistofrotorcraft/lockheed-cl-475)
 
-The program was written for an Arduino Nano but it should be compatible with other boards. See the schematic for the tail-motor variant of the required circuit:
+While this system works, it comes at the cost of increased mechanical complexity. One can side-step this issue by using electronics to provide analogous control inputs. This greatly simplifies the rotor head but it transfers the complexity to an electronic circuit. With the onset of cheap microcontrollers, this complexity can be abstracted away and emphasis can be placed on the control algorithm.
 
-<img src = "https://raw.githubusercontent.com/RCmags/HeliFlightController/main/heli_flight_control_schem.png" width = "80%" height = "80%"> 
+# Project overview
 
-See these links for flight videos of a helicopter that uses this software:
+This project concerns itself with the development of a simple and lightweight flight controller for an RC helicopter. To keep things simple, it will use an [Arduino Nano](https://store.arduino.cc/products/arduino-nano) as a development board. It only weighs around 5 grams and is just a few centimeters in length so its an ideal platform. It will also use the [MPU-6050 gyroscope/accelerometer](https://create.arduino.cc/projecthub/CiferTech/what-is-mpu6050-b3b178) to measure the state of the aircraft. This sensor is ubiquous and inexpensive. 
+
+# Stabilization Algorithm
+
+The pitch and roll axes of the helicopter can be stabilized by means of two [PID Controllers](https://en.wikipedia.org/wiki/PID_controller). The angular velocity, as measured by a gyroscope, acts as the proportional term of the control loops. By taking time integral of this value, one obtains the angular deflection of the aircraft. Hence, the proportional term will act like a viscous damper, while the integral term will act like a spring. 
+The derivative term would represent the angular acceleration of the aircraft, although in practice may be used to smoothen in the proportional term. 
   
-- https://www.youtube.com/watch?v=qZ7qUPAXkvc
-- https://www.youtube.com/watch?v=zrrgVdPAhFI
+![image](https://cdn.instrumentationtools.com/wp-content/uploads/2018/01/PID-Controller-Responses-to-Two-momentary-step-inputs.png)
+  
+The yaw axis is different as it is affected by the torque generated by the rotor, and this in turn depends on the configuration of the helicopter. For an aircraft with a tail rotor, the yaw axis can use a PID controller along with a counter-torque term that increases with throttle. This is known as [revo mixing](https://helihack.co.uk/revomixing).  
 
-Finally, below are images of the helicopter this code was initially writen for:
+These corrections can improve the short-term stability of a helicopter, but their effect on long-term stability is less clear. Nonetheless, it is not critical that the aircraft finds an upright attitude on its own. It can still be unstable so long it occurs slowly. This way the pilot can provide nessesary corrections and the helicopter can remain aloft.
 
-<img src = "https://raw.githubusercontent.com/RCmags/HeliFlightController/main//example_pictures/front_view_res.JPG" width = "30%" height = "30%"> 
-<img src = "https://raw.githubusercontent.com/RCmags/HeliFlightController/main//example_pictures/side_rev_view_res.JPG" width = "30%" height = "30%"> 
-<img src = "https://raw.githubusercontent.com/RCmags/HeliFlightController/main//example_pictures/arduino_view_res.JPG" width = "30%" height = "30%"> 
+# Design iterations
 
-<img src = "https://raw.githubusercontent.com/RCmags/HeliFlightController/main//example_pictures/stab_motion.gif" width = "30%" height = "30%">
-<img src = "https://raw.githubusercontent.com/RCmags/HeliFlightController/main//example_pictures/pitch_stab.gif" width = "30%" height = "30%"> 
-<img src = "https://raw.githubusercontent.com/RCmags/HeliFlightController/main//example_pictures/yaw_stab.gif" width = "30%" height = "30%">
+__Iteration 1:__  
+The first iteration of the controller focused on implementing the basic functions needed for the device to work. These were divided into three categories:
+- The PWM signals sent by the receiver could be decoded accurately and without delay.
+- Information from the gyroscope could be retrieved and calibrated consistently.
+- Each axis had a corresponding PID controller that combined the receiver and gyroscope signals.
+
+While these functions were programmed succesfully, in practice it became evident that vibrations were a serious problem. The gyroscope was sensitive to the slightest disturbances, so any vibrations were measured by the sensor. As the PID controller amplified these signals, the noise would cause the controls of the helicopter to jitter. This made it impossible to make the gains large enough to achieve stable flight, as vibrations overshadowed the slower rotation of the vehicle. 
+
+To overcome this problem, a [simple first order low pass filter](http://www.tsdconseil.fr/tutos/tuto-iir1-en.pdf) was used to suppress the vibration noise. While this helped, it did not provide sufficient suppression. A straight forward, albeit naive, solution was to [cascade multiple 1rst order filters](https://2n3904blog.com/cascading-single-pole-filters/). This increased the noise suppression but came at the cost of a larger response delay.  
+
+![image](https://wiki.analog.com/_media/university/courses/alm1k/circuits1/cascade_rc_sim.png?w=600&tok=694820)
+[See: Cascaded filters](https://wiki.analog.com/university/labs/cascaded_rc_adalm2000)
+
+Unfortunately, this lag caused the PID controller to become unstable as they would not react in synch with the aircraft. This was especially noticeable with the proportional term. Therefore, tuning the filters became a compromise between noise supression and PID stability. After a lot tweaking it was possible to obtain a compromise between filter gain and PID gains. While it worked, the results were generally unsatisfactory as it left the helicopter marginally stable.  
+
+[![video](https://img.youtube.com/vi/qZ7qUPAXkvc/hqdefault.jpg)](https://youtu.be/qZ7qUPAXkvc)  
+<p align="center"> Version 1. Cascaded 1rst order filters</p>
+
+
+__Iteration 2:__  
+The second iteration focused on improving the low pass filter. It was critical to increase the filter order without increasing the delay. A digital [infinite impulse response filter](https://en.wikipedia.org/wiki/Infinite_impulse_response) was a simple way to achieve this. These filters are nothing more than the [sum of past signal values multiplied by coefficients](https://ccrma.stanford.edu/~jos/filters/Difference_Equation.html). Since the coefficients are hard to calculate, the [Iowa Hills IIR filter designer](https://web.archive.org/web/20201112004255/http://www.iowahills.com/5FIRFiltersPage.html) was used to find the values. The coefficients were then copied into the arduino code. Since the code used arrays to store the coefficients and signal values, it was trivial to try out different configurations. 
+
+The filter performed best when configured as a [Chebychev filter](https://web.archive.org/web/20200706034508/http://www.iowahills.com/IIRChebyshevFilters.html). This provided the best compromise between noise suppression and reponse delay. The step response was very underdamped but it didn't seem to matter. Since the helicopter rotated slowly and smoothly, the ringing was too small to be noticeable.  
+
+![image](https://build.openmodelica.org/Documentation/Modelica_LinearSystems2%202.3.2/Resources/Images/LowPassOrder4FiltersStepResponse.png)
+
+Whatever the IIR configuration, the results were much better than with cascaded 1rst order filters. The noise suppression was stronger and the signal delay was lower. This allowed the PID gains to increase and made aircraft much more stable and easier to fly. 
+
+[![video](https://img.youtube.com/vi/zrrgVdPAhFI/hqdefault.jpg)](https://youtu.be/zrrgVdPAhFI)  
+<p align="center"> Version 2. Infinite Impulse Reponse filter</p>
+
+__Iteration 3:__  
+The third iteration removed the IIR filter and enabled the [in-built low-pass filter of the MPU-6050](https://deepbluembedded.com/mpu6050-with-microchip-pic-accelerometer-gyroscope-interfacing-with-pic/). This required configuring specific [registers](https://stackoverflow.com/questions/45655256/activting-low-pass-filter-on-mpu6050#45655539). It was trivial since this was already needed for the gyro to communicate with the arduino. At it's lowest setting the filter performed better than any of the hand-coded filters. Like before, this allowed the PID gains to increase and improved stability. 
+
+To complement the filter, the helicopter was adjusted to reduce mechanical vibrations. Rubber grommets were added to the control linkages to remove slop, and a skid was added to the tail boom to prevent vibration. This last tweak is subtle as it worked by increasing the moment of inertia of the entire tail boom. This changed the [resonant frequency](http://facstaff.cbu.edu/~pshiue/Courses/ME318/Notes/Lecture17.pdf) of the boom and shifted it past the frequencies caused by the tail motor. As a result, the amplitude of the vibrations were greatly reduced.  
+
+Here's what the helicopter and flight controller looked like:
+
+![image](https://raw.githubusercontent.com/RCmags/HeliFlightController/main//example_pictures/front_view_res.JPG)
+<p align="center">Overview of the helicopter</p>
+![image](https://raw.githubusercontent.com/RCmags/HeliFlightController/main//example_pictures/arduino_view_res.JPG)  
+<p align="center">Closeup of the flight controller</p>
+
+# Arduino Code
+The code was designed to receive 4 PWM inputs from an RC receiver operating in MODE 2 and output 3 PWM signals. Two signals go to the cyclic servos and the third goes to a tail-servo or a speed controller. Since it is assumed only two servo motors are used for controlling the rotor, only a [90-degree swashplate](https://www.rchelicopterfun.com/ccpm.html) is supported. See the schematic for the tail-motor variant of the required circuit:
+
+![image](https://raw.githubusercontent.com/RCmags/HeliFlightController/main/heli_flight_control_schem.png)
+
+__Github Repo__:
+[HeliFlightController](https://github.com/RCmags/HeliFlightController)

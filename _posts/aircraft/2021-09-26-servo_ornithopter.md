@@ -19,13 +19,17 @@ See the attached schematic for an example of the required circuit:
 <img src = "https://raw.githubusercontent.com/RCmags/ServoFlappingControl/main/ReceiverServoFlap_VoltCutoff.png" width = "80%">
 
 This video shows what the controller and how it works:  
-[<img src="https://img.youtube.com/vi/T6NfZD_iuEs/maxresdefault.jpg" width="50%">](https://youtu.be/T6NfZD_iuEs)
+[![video](https://img.youtube.com/vi/T6NfZD_iuEs/hqdefault.jpg)](https://youtu.be/T6NfZD_iuEs)  
 
 Lastly, here is an example of the kind of aircraft this code was writen for:
 
-<img src = "https://raw.githubusercontent.com/RCmags/ServoFlappingControl/main/example_pics/servo_body_res.jpg" width = "30%">
-<img src = "https://raw.githubusercontent.com/RCmags/ServoFlappingControl/main/example_pics/bottom_view_res.JPG" width = "30%">
-<img src = "https://raw.githubusercontent.com/RCmags/ServoFlappingControl/main/example_pics/side_view_res.JPG" width = "30%">
+![image](https://raw.githubusercontent.com/RCmags/ServoFlappingControl/main/example_pics/servo_body_res.jpg)
+![image](https://raw.githubusercontent.com/RCmags/ServoFlappingControl/main/example_pics/bottom_view_res.JPG)
+![image](https://raw.githubusercontent.com/RCmags/ServoFlappingControl/main/example_pics/side_view_res.JPG)
 
-<img src = "https://raw.githubusercontent.com/RCmags/ServoFlappingControl/main/example_pics/flap_motion.gif" width = "30%">
-<img src = "https://raw.githubusercontent.com/RCmags/ServoFlappingControl/main/example_pics/roll_motion.gif" width = "30%">
+![image](https://raw.githubusercontent.com/RCmags/ServoFlappingControl/main/example_pics/flap_motion.gif)
+![image](https://raw.githubusercontent.com/RCmags/ServoFlappingControl/main/example_pics/roll_motion.gif)
+
+### Github Repo:
+[ServoFlappingControl](https://github.com/RCmags/ServoFlappingControl)
+

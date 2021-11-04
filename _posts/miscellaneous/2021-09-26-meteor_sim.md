@@ -10,7 +10,9 @@ It's fairly simple to use and has a small menu that is executed at the start of 
 In case the the meteor reaches the boundary of the console, 
 it will elastically collide the boundary and continue to bounce around the confined space.  
 
-<img src="https://github.com/RCmags/MeteorSim/blob/main/img/menu_pic.png"
-     width="30%"></img>
-<img src="https://github.com/RCmags/MeteorSim/blob/main/img/meteor_motion.gif"
-     width="38%"></img>
+![image](https://raw.githubusercontent.com/RCmags/MeteorSim/main/img/meteor_motion.gif)  
+
+![image](https://raw.githubusercontent.com/RCmags/MeteorSim/main/img/menu_pic.png)
+
+### Github Repo:
+[MeteorSim](https://github.com/RCmags/MeteorSim)

@@ -9,4 +9,8 @@ This is a basic graphing calculator implemented in Javascript and is meant to be
 To use the calculator, simply go to the project page of this repo: https://rcmags.github.io/Browser-Graphing-Calculator/  
 
 Here is an example of the output:  
-<img src = "https://raw.githubusercontent.com/RCmags/Browser-Graphing-Calculator/main/plot_example.png" width = "70%"></img
+![image](https://raw.githubusercontent.com/RCmags/Browser-Graphing-Calculator/main/plot_example.png)
+
+### Github Repo:
+[Browser-Graphing-Calculator](https://rcmags.github.io/Browser-Graphing-Calculator)
+

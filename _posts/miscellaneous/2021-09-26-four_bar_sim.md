@@ -10,8 +10,13 @@ As the system reduces to a single degree freedom, only one variable is solved fo
 
 The output is a canvas animation of the linkage mechanism rotating under the absense damping forces (System energy is conserved). This animation can then be saved as a video that is created in the same location as the .py file. 
 
-Here are some examples of the script's output:
+Here are some examples of the script's output: 
+![image](https://raw.githubusercontent.com/RCmags/FourBarSimulation/main/example_pics/short_bar_anim.gif)
+![image](https://raw.githubusercontent.com/RCmags/FourBarSimulation/main/example_pics/short_graph.png)  
 
-<img src = "example_pics/short_bar_anim.gif" width = "35%" height = "35%"> <img src = "example_pics/short_graph.png" width = "35%" height = "35%">
+![image](https://raw.githubusercontent.com/RCmags/FourBarSimulation/main/example_pics/long_bar_anim.gif)
+![image](https://raw.githubusercontent.com/RCmags/FourBarSimulation/main/example_pics/long_graph.png)
 
-<img src = "example_pics/long_bar_anim.gif" width = "35%" height = "35%"> <img src = "example_pics/long_graph.png" width = "35%" height = "35%">
+### Github Repo:
+[FourBarSimulation](https://github.com/RCmags/FourBarSimulation)
+

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Line following robot"
+title: "Self balancing robot stabilized with a gyroscope"
 categories: Robots
 ---
 
@@ -27,11 +27,14 @@ This allows the center of gravity of the vehicle to change in real time and the 
 In essence, one has two PID loops acting simulatenously. 
 One that stabilizes the heading of the vehicle, and one that attempts to keep the vehicle form sliding back and forth.
 
-Here is a schematic of the required circuit:   
-<img src="https://raw.githubusercontent.com/RCmags/selfBalancingRobot/main/self_balacing_robot_schem.png" width = "75%"></img>
+Here is a schematic of the required circuit:  
+![image](https://raw.githubusercontent.com/RCmags/selfBalancingRobot/main/self_balacing_robot_schem.png)
 
 Finally, this is the intended platform:  
-<img src="https://raw.githubusercontent.com/RCmags/SelfBalancingRobot/main/images/side_view_res.jpg" width = "30%"></img>
-<img src="https://raw.githubusercontent.com/RCmags/SelfBalancingRobot/main/images/top_view_res.jpg" width = "30%"></img>  
-<img src="https://raw.githubusercontent.com/RCmags/SelfBalancingRobot/main/images/motion_disturb.gif" width = "30%"></img>
-<img src="https://raw.githubusercontent.com/RCmags/SelfBalancingRobot/main/images/motion_error.gif" width = "30%"></img>
+![image](https://raw.githubusercontent.com/RCmags/SelfBalancingRobot/main/images/side_view_res.jpg)
+![image](https://raw.githubusercontent.com/RCmags/SelfBalancingRobot/main/images/top_view_res.jpg)
+![image](https://raw.githubusercontent.com/RCmags/SelfBalancingRobot/main/images/motion_disturb.gif)
+![image](https://raw.githubusercontent.com/RCmags/SelfBalancingRobot/main/images/motion_error.gif)
+
+### Github Repo:
+[SelfBalancingRobot](https://github.com/RCmags/SelfBalancingRobot)

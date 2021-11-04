@@ -1,0 +1,9 @@
+I"‹<p>These are programs to compare the speed of basic sorting algorithms an a linked list data type. For an array of 15000 elements, this is how the algorithms fare:<br />
+<img src="https://raw.githubusercontent.com/RCmags/SortingAlgorithmCompare/main/data/sort_compare.png" alt="image" /></p>
+
+<p>The linked list is easily visualized with this diagram:<br />
+<img src="https://3.bp.blogspot.com/-sXOQBd_OCR8/WBBn3QNhOiI/AAAAAAAAALQ/ysaUNOhKMoY59zw2cRxcHioHzdvn8HdNgCLcB/s1600/simpleLinkedList.png" alt="image" /></p>
+
+<h3 id="github-repo">Github Repo:</h3>
+<p><a href="https://github.com/RCmags/SortingAlgorithmCompare">SortingAlgorithmCompare</a></p>
+:ET
