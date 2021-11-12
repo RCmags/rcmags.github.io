@@ -11,7 +11,7 @@
 }
 
 .site-title {
-  @include relative-font-size(2.5); // Original = 1.625
+  @include relative-font-size(2.2); // Original = 1.625
   font-weight: 300;
   line-height: $base-line-height * $base-font-size * 2.25;
   letter-spacing: -1px;
@@ -39,6 +39,9 @@
   .page-link {
     color: $text-color;
     line-height: $base-line-height;
+
+	// Increase menu item size
+	@include relative-font-size(1.5);
 
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
@@ -178,6 +181,8 @@
 .page-content {
   padding: $spacing-unit 0;
   flex: 1;
+  // Align text in posts
+  //text-align: justify;
 }
 
 .page-heading {
@@ -190,23 +195,29 @@
 
 .post-list {
   margin-left: 0;
-  list-style: none;
+  list-style: none;	// Default was none
 
   > li {
-    margin-bottom: $spacing-unit;
+    margin-bottom: $spacing-unit/1.25;	// Decreased spacing 
   }
 }
 
-.post-meta {
+// Inherit class  
+.post-meta, .post-meta-date {
   font-size: $small-font-size;
   color: $grey-color;
 }
 
+// Add minimum width
+.post-meta-date {
+  min-width: 90px;
+  padding-left:	2%;
+} 
+
 .post-link {
   display: block;
-  @include relative-font-size(1.5);
+  @include relative-font-size(1.25);	// Decreased from: 1.5
 }
-
 
 
 /**

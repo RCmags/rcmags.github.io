@@ -9,27 +9,32 @@ layout: default
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
+  <!-- Site banner -->	
+  <img src="../img/website_banner.jpg" style="width: 100%; margin-bottom: 5px; border-radius: 10px;">
+
+  <!-- Introductory text -->
   {{ content }}
 
   {%- if site.posts.size > 0 -%}
   	<!-- remove post header
     <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
     -->
-        
+
+    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                    
     <ul class="post-list">
-      {%- for post in site.posts limit: 3 -%} <!-- Only show recent posts -->
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
+      {%- for post in site.posts limit: 3 -%} <!-- Only show recent posts -->	   
+		<li style = "display: flex; justify-content: space-between;">
+			<!-- Name of post --> 
+			<article class="post-link">   
+          		<a href="{{ post.url | relative_url }}"> {{ post.title | escape }} </a>
+        	</article>
+        	<!-- Right align date -->
+        	<span class="post-meta-date">{{ post.date | date: date_format }}</span>       
+        </li>
         {%- if site.show_excerpts -%}
           {{ post.excerpt }}
         {%- endif -%}
-      </li>
       {%- endfor -%}
     </ul>
 
