@@ -83,8 +83,10 @@ The angle of attack sensor was very simple. The weathervane was a stick with a f
 
 This is what the completed airplane looked like:  
 
-![image](https://raw.githubusercontent.com/RCmags/TailLessStability/main//example_pictures/top_view_res.jpg)
-![image](https://raw.githubusercontent.com/RCmags/TailLessStability/main//example_pictures/front_view_res.jpg)
+![image](https://raw.githubusercontent.com/RCmags/TailLessStability/main//example_pictures/top_view_res.jpg)  
+
+![image](https://raw.githubusercontent.com/RCmags/TailLessStability/main//example_pictures/front_view_res.jpg)  
+
 ![image](https://raw.githubusercontent.com/RCmags/TailLessStability/main//example_pictures/side_view_res.jpg)
 
 Unfortunately, test flights revealed the [thrust line](https://www.flitetest.com/articles/Motor_angles_for_pusher_planes) was far below the center of mass. This offset caused the aircraft to raise its nose to the point it was very difficult to recover. Secondly, the response of the elevons about the pitch axis was very sluggish and made piloting the aircraft somewhat uncomfortable. Despite this, the airplane was capable of gliding without active stabilization. This behavior indicated there was an ample margin of passive stability. 
@@ -93,12 +95,14 @@ __Iteration 2:__
 
 For the second iteration, the thrust line of the aircraft was rotated by tilting the firewall of the motor. Through trial and error, the motor was aligned such that the thrust did not generate a noticeable torque about the pitch and yaw axes. This was verified by running the motor at full throttle and letting the airplane enter free fall to see how it rotated.
 
-![image](/img/figures/thrustline_side.jpg)
+![image](/img/figures/thrustline_side.jpg)  
+
 ![image](/img/figures/thrustline_top.jpg)  
 
 The elevons were also made twice as large to increase the control authority and reduce lag in the control response. By extending the surfaces aft, not only did the area increase but so too did the lever arm with respect to the center of mass.
 
-![image](/img/figures/larger_flap_top.jpg)
+![image](/img/figures/larger_flap_top.jpg)  
+
 ![image](/img/figures/larger_flap_bottom.jpg)  
 
 These modifications greatly enhanced the stability of the aircraft. Changes in throttle had a neutral effect on the attitude, and the pitch response was much faster. The next step was to adjust the PID controller and observe its effects on stability. 

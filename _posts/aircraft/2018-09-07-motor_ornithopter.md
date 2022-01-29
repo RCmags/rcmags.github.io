@@ -4,6 +4,16 @@ title: "Ornithopter powered by a motor with a crank-shaft"
 categories: Aircraft
 ---
 
+# RCgroups build log
+For more information, see there RCgroups posts:
+1. [Gearbox construction](https://www.rcgroups.com/forums/showpost.php?p=41363327&postcount=76)
+2. [Adding second stage to gearbox](https://www.rcgroups.com/forums/showpost.php?p=41380437&postcount=80)
+3. [Adding wings](https://www.rcgroups.com/forums/showpost.php?p=41415689&postcount=81)
+4. [Completing the frame and adding the electronics](https://www.rcgroups.com/forums/showpost.php?p=41423997&postcount=82)
+5. [Initial test flights](https://www.rcgroups.com/forums/showpost.php?p=41432795&postcount=85)
+6. [Succesful controlled flight](https://www.rcgroups.com/forums/showpost.php?p=41439849&postcount=87)
+
+# Arduino Code
 This is a sketch for the [glide lock](http://ovirc.free.fr/GLDAB_English.php) of a crank-driven ornithopter.
 It uses the [PinChangeInterrupt](https://github.com/NicoHood/PinChangeInterrupt) library to read a PWM signal from a transmitter.  
 
