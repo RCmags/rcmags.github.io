@@ -23,7 +23,7 @@ This project concerns itself with developing a radio-controlled ornithopter powe
 # Aircraft Iterations
 
 __Iteration 1:__  
-The first version was a test platform to observe how effectively servos could oscillate a long spar. It also served to test springs connected to the servos in series or parallel. These springs can [reduce the power drawn by an oscillating mass](https://www.rcgroups.com/forums/showpost.php?p=41117281&postcount=20) driven by a motor if tuned correctly. For this designa a coil spring was connected in series with the servo and a leaf spring was used for a parallel connection. 
+The first version was a test platform to observe how effectively servos could oscillate a long spar. It also served to test springs connected to the servos in series or parallel. These springs can [reduce the power drawn by an oscillating mass](https://www.rcgroups.com/forums/showpost.php?p=41117281&postcount=20) driven by a motor if tuned correctly. For this design, a a coil spring was connected in series with the servo and a leaf spring was used for a parallel connection. 
 
 ![image](/img/servo_orni/version1-1.jpg)  
 
