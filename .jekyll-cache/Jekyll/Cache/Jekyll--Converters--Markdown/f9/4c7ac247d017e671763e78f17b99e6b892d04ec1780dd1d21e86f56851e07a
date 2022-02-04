@@ -1,3 +1,0 @@
-I"‚<h1 id="concept">Concept</h1>
-<p>This project concerns itself with the development of an RC ornithopter (Flapping MAV) powered and controlled by two servos. Each servo is connected to a wing and flapped independently. This allows the motion of the wings to be controlled through software rather than through a specially designed mechanism. There are many advantages to this system.</p>
-:ET

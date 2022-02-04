@@ -4,7 +4,7 @@ title: "Ornithopter powered and controlled by servos"
 categories: Aircraft
 ---
 
-# Introduction
+# Introduction to concept
 [Ornithopters](https://en.wikipedia.org/wiki/Ornithopter) are aircraft that use oscillating wings to stay aloft. Depending on the characteristics of the aircraft, an ornithopter can maintain flight at a constant velocity like a bird, or it can fly in static air like an insect. These scenarios are analogous to an airplane driven by a propeller and a helicopter at hover.
 
 [![video](https://img.youtube.com/vi/f50K68zB4eU/hqdefault.jpg)](https://youtu.be/f50K68zB4eU)  
@@ -15,7 +15,7 @@ categories: Aircraft
 
 There are a few advantages to ornithopters. In horizontal flight, the wings of an ornithopter can sweep over a much larger area compared to a propeller. According to [actuator disk theory](https://web.mit.edu/16.unified/www/FALL/thermodynamics/notes/node86.html), this increase in the area can increase the propulsive efficiency of the aircraft. Likewise, oscillating wings do not suffer from [dissymetry of lift](https://www.copters.com/aero/lift_dissymetry.html) and [gyroscopic precession](http://www.cleonis.nl/physics/phys256/gyroscope_physics.php) like a rotary-wing. The absence of these forces can enhance the natural stability of an ornithopter compared to a helicopter.
 
-# Design Concept
+# Initial aircraft design
 This project concerns itself with developing a radio-controlled ornithopter powered and controlled by two servos. Each servo is connected to a wing and flapped independently. This allows the motion of the wings to be controlled through software rather than through a specially designed mechanism. There are many advantages to this approach, mainly that it is very easy to adjust the amplitude of the flapping motion, and the wings may be oscillated asymmetrically to achieve directional control. 
 
 ![image](https://www.researchgate.net/profile/Yanghai-Nan/publication/280948641/figure/fig1/AS:614244433289216@1523458693052/Control-via-flapping-amplitude-offset-modulation.png)  
@@ -50,22 +50,17 @@ The third iteration built upon the second version. Control was accomplished sepa
 # Arduino Code
 The program is designed to receive 3 PWM inputs from an RC receiver operating in [MODE 2](https://www.rc-airplane-world.com/rc-transmitter-modes.html) and outputs 2 PWM signals for off-the-shelf hobby servos. The aileron (1) and elevator (2) channels are used to bias the dihedral angle of each wing, with the aileron rotating the wings in unison while the elevator changes the dihedral angle. The throttle channel (3) changes the amplitude of a fixed-frequency oscillation. 
 
-There are three wave-forms the user can select: sine wave, triangle wave, and saw wave. The controller also is equipped with a low-voltage cutoff routine. This will disable the throttle channel to prevent over-discharging a battery. The routine uses an analog pin to read the input voltage via a voltage divider. 
-
-The program was written for an Arduino Nano, but it should be compatible with other boards. 
-It requires the [PinChageInterrupt](https://www.arduino.cc/reference/en/libraries/pinchangeinterrupt/) library.
-For more information on the controller, please see this [RCgroups post](https://www.rcgroups.com/forums/showpost.php?p=41325203&postcount=69).
-
-Github Repo: [ServoFlappingControl](https://github.com/RCmags/ServoFlappingControl)
+There are three wave-forms the user can select: sine wave, triangle wave, and saw wave. The controller also is equipped with a low-voltage cutoff routine. This will disable the throttle channel to prevent over-discharging a battery. The routine uses an analog pin to read the input voltage via a voltage divider. The program was written for an Arduino Nano, but it should be compatible with other boards. 
+It requires the [PinChageInterrupt](https://www.arduino.cc/reference/en/libraries/pinchangeinterrupt/) library. For more information on the controller, please see this [RCgroups post](https://www.rcgroups.com/forums/showpost.php?p=41325203&postcount=69).
 
 See the attached schematic for an example of the required circuit:
+![image](https://raw.githubusercontent.com/RCmags/ServoFlappingControl/main/ReceiverServoFlap_VoltCutoff.png)
 
-<img src = "https://raw.githubusercontent.com/RCmags/ServoFlappingControl/main/ReceiverServoFlap_VoltCutoff.png" width = "80%">
+__Github Repo:__ [ServoFlappingControl](https://github.com/RCmags/ServoFlappingControl)
 
 # Videos
 Below are videos of different iterations of the aircraft:
-
-This video demonstrates how the controller works:  
+  
 [![video](https://img.youtube.com/vi/T6NfZD_iuEs/hqdefault.jpg)](https://youtu.be/T6NfZD_iuEs)  
 <p align="center">Video 1. Demonstration of servo controller</p>
 

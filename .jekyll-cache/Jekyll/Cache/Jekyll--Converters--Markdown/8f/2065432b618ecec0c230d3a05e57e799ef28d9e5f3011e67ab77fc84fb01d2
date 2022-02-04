@@ -1,0 +1,4 @@
+I"4<h1 id="arduino-code">Arduino Code</h1>
+<p>This is a sketch for the <a href="http://ovirc.free.fr/GLDAB_English.php">glide lock</a> of a crank-driven ornithopter.
+It uses the <a href="https://github.com/NicoHood/PinChangeInterrupt">PinChangeInterrupt</a> library to read a PWM signal from a transmitter.</p>
+:ET

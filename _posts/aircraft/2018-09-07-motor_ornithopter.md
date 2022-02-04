@@ -4,14 +4,12 @@ title: "Ornithopter powered by a motor with a crank-shaft"
 categories: Aircraft
 ---
 
-# RCgroups build log
-For more information, see there RCgroups posts:
-1. [Gearbox construction](https://www.rcgroups.com/forums/showpost.php?p=41363327&postcount=76)
-2. [Adding second stage to gearbox](https://www.rcgroups.com/forums/showpost.php?p=41380437&postcount=80)
-3. [Adding wings](https://www.rcgroups.com/forums/showpost.php?p=41415689&postcount=81)
-4. [Completing the frame and adding the electronics](https://www.rcgroups.com/forums/showpost.php?p=41423997&postcount=82)
-5. [Initial test flights](https://www.rcgroups.com/forums/showpost.php?p=41432795&postcount=85)
-6. [Succesful controlled flight](https://www.rcgroups.com/forums/showpost.php?p=41439849&postcount=87)
+# Introduction to concept
+This project concerns itself with the development of an ornithopter powered by a motor driving a crank-shaft.
+
+# Design iterations
+[![video](https://img.youtube.com/vi/wVLkWb_JHCo/hqdefault.jpg)](https://youtu.be/wVLkWb_JHCo) 
+<p align="center">Video 1. Ornithopter with inverted V-tail</p>
 
 # Arduino Code
 This is a sketch for the [glide lock](http://ovirc.free.fr/GLDAB_English.php) of a crank-driven ornithopter.
@@ -33,11 +31,18 @@ and one that's intended for a digital hall sensor and uses an external interrupt
 Both work well although the interrupt version can recognize the magnet at higher RPM's.
 
 This code was made to work for the following circuit:  
-<img src = "https://raw.githubusercontent.com/RCmags/GlideLock/main/glide_lock_schem.png" width = "80%">
+![image](https://raw.githubusercontent.com/RCmags/GlideLock/main/glide_lock_schem.png)
 
-See this video to see the glide lock working:  
-[![video](https://img.youtube.com/vi/v0z1ojpoehQ/hqdefault.jpg)](https://youtu.be/v0z1ojpoehQ)  
+[![video](https://img.youtube.com/vi/v0z1ojpoehQ/hqdefault.jpg)](https://youtu.be/v0z1ojpoehQ) 
+<p align="center">Video 2. Operation of glide-lock</p> 
 
-### Github Repo:
-[GlideLock](https://github.com/RCmags/GlideLock)
+__Github Repo:__ [GlideLock](https://github.com/RCmags/GlideLock)
 
+# RCgroups build log
+For more informatio on this aircraft, see these posts on RCgroups:
+1. [Gearbox construction](https://www.rcgroups.com/forums/showpost.php?p=41363327&postcount=76)
+2. [Adding second stage to gearbox](https://www.rcgroups.com/forums/showpost.php?p=41380437&postcount=80)
+3. [Adding wings](https://www.rcgroups.com/forums/showpost.php?p=41415689&postcount=81)
+4. [Completing the frame and adding the electronics](https://www.rcgroups.com/forums/showpost.php?p=41423997&postcount=82)
+5. [Initial test flights](https://www.rcgroups.com/forums/showpost.php?p=41432795&postcount=85)
+6. [Succesful controlled flight](https://www.rcgroups.com/forums/showpost.php?p=41439849&postcount=87)
