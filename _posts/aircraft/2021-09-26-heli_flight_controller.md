@@ -45,12 +45,11 @@ These corrections can improve the short-term stability of a helicopter, but thei
 __Iteration 1:__  
 The first version of the helicopter did not have augmented stability. Rather, the focus was on building an aircraft capable of flight and then improving its stability electronically. To this end, the aircraft used very heavy tip weights at the ends of the blades to dampen its rotation. While this worked, it caused the pitch and roll control to have a large delay. This slow response was not very detrimental in high-speed flight, but it did make the aircraft challenging to fly in a hover. Moreover, the tip weights did not enhance the long-term stability of the helicopter. All they did was slow down the motion so that a person could correct the instability. 
 
-![image](/img/heli_controller/heli-v1-nostab.JPG)
-<p align="center">Initial airframe with heavy tip weights</p>
-
 [![video](https://img.youtube.com/vi/z77q4AkcPiY/hqdefault.jpg)](https://youtu.be/z77q4AkcPiY)  
 <p align="center"> Video 1. Passive stability</p>
 
+![image](/img/heli_controller/heli-v1-nostab.JPG)
+<p align="center">Initial airframe with heavy tip weights</p>
 
 __Iteration 2:__  
 The second iteration of the controller focused on implementing the basic functions needed for the device to work. These were divided into three categories:
@@ -67,11 +66,11 @@ To overcome this problem, a [simple first order low pass filter](http://www.tsdc
 
 Unfortunately, this lag caused the PID controller to become unstable as they would not react in synch with the aircraft. This was especially noticeable with the proportional term. Therefore, tuning the filters became a compromise between noise supression and PID stability. After a lot tweaking it was possible to obtain a compromise between filter gain and PID gains. While it worked, the results were generally unsatisfactory as it left the helicopter marginally stable.  
 
-![image](/img/heli_controller/heli-v2-wires.JPG)
-<p align="center">Helicopter with Arduino nano and MPU-6050 gyro</p>
-
 [![video](https://img.youtube.com/vi/qZ7qUPAXkvc/hqdefault.jpg)](https://youtu.be/qZ7qUPAXkvc)  
 <p align="center"> Video 2. Cascaded 1rst order filters</p>
+
+![image](/img/heli_controller/heli-v2-wires.JPG)
+<p align="center">Helicopter with Arduino nano and MPU-6050 gyro</p>
 
 __Iteration 3:__  
 The third iteration focused on improving the low pass filter. It was critical to increase the filter order without increasing the delay. A digital [infinite impulse response filter](https://en.wikipedia.org/wiki/Infinite_impulse_response) was a simple way to achieve this. These filters are nothing more than the [sum of past signal values multiplied by coefficients](https://ccrma.stanford.edu/~jos/filters/Difference_Equation.html). Since the coefficients are hard to calculate, the [Iowa Hills IIR filter designer](https://web.archive.org/web/20201112004255/http://www.iowahills.com/5FIRFiltersPage.html) was used to find the values. The coefficients were then copied into the arduino code. Since the code used arrays to store the coefficients and signal values, it was trivial to try out different configurations. 
