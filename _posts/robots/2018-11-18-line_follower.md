@@ -22,8 +22,8 @@ Below are images of the vehicle this code was written for:
 ![image](https://raw.githubusercontent.com/RCmags/LineFollowingRobot/main/img/diag_view_res.jpg)
 ![image](https://raw.githubusercontent.com/RCmags/LineFollowingRobot/main/img/top_view_res.jpg) 
 
-Here's a video of the robot working: 
 [![video](https://img.youtube.com/vi/NBQjQLE4u1M/hqdefault.jpg)](https://youtu.be/NBQjQLE4u1M) 
+<p align="center">Video 1. Operation of the line following robot</p>
 
 ### Github Repo:
 [LineFollowingRobot](https://github.com/RCmags/LineFollowingRobot)

@@ -11,6 +11,9 @@ This project concerns itself with the development of an ornithopter powered by a
 [![video](https://img.youtube.com/vi/wVLkWb_JHCo/hqdefault.jpg)](https://youtu.be/wVLkWb_JHCo) 
 <p align="center">Video 1. Ornithopter with inverted V-tail</p>
 
+[![video](https://img.youtube.com/vi/peSMr35mHOE/hqdefault.jpg)](https://youtu.be/peSMr35mHOE) 
+<p align="center">Video 2. Cambered wings and bias springs</p>
+
 # Arduino Code
 This is a sketch for the [glide lock](http://ovirc.free.fr/GLDAB_English.php) of a crank-driven ornithopter.
 It uses the [PinChangeInterrupt](https://github.com/NicoHood/PinChangeInterrupt) library to read a PWM signal from a transmitter.  
@@ -34,7 +37,7 @@ This code was made to work for the following circuit:
 ![image](https://raw.githubusercontent.com/RCmags/GlideLock/main/glide_lock_schem.png)
 
 [![video](https://img.youtube.com/vi/v0z1ojpoehQ/hqdefault.jpg)](https://youtu.be/v0z1ojpoehQ) 
-<p align="center">Video 2. Operation of glide-lock</p> 
+<p align="center">Video 3. Operation of glide-lock</p> 
 
 __Github Repo:__ [GlideLock](https://github.com/RCmags/GlideLock)
 
