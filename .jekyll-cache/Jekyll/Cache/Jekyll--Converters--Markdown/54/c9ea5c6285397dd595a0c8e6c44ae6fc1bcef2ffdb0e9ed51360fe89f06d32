@@ -1,3 +1,0 @@
-I"	<h1 id="introduction-to-concept">Introduction to concept</h1>
-<p>This project concerns itself with developing a helicopter rotor that can automatically enter <a href="https://en.wikipedia.org/wiki/Autorotation">auto-rotation</a>. Most helicopters transition between powered by and unpowered flight through active control inputs from the pilot. The blades are set at a positive pitch angle in powered flight to produce lift. The blades are set to a much lower or negative pitch angle in autorotation to generate lift.</p>
-:ET
