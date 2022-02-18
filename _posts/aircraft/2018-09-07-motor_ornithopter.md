@@ -8,11 +8,28 @@ categories: Aircraft
 This project concerns itself with the development of an ornithopter powered by a motor driving a crank-shaft.
 
 # Design iterations
+__Iteration 1:__
+
+![image](/img/motor_orni/crank-1.JPG)
+
+![image](/img/motor_orni/front-vtail.JPG)
+
+![image](/img/motor_orni/front-inverted.JPG)
+
 [![video](https://img.youtube.com/vi/wVLkWb_JHCo/hqdefault.jpg)](https://youtu.be/wVLkWb_JHCo) 
 <p align="center">Video 1. Ornithopter with inverted V-tail</p>
 
+__Iteration 2:__
 [![video](https://img.youtube.com/vi/peSMr35mHOE/hqdefault.jpg)](https://youtu.be/peSMr35mHOE) 
 <p align="center">Video 2. Cambered wings and bias springs</p>
+
+![image](/img/motor_orni/crank-2.JPG)
+
+![image](/img/motor_orni/front-inverted-cambered.JPG)
+
+![image](/img/motor_orni/side-2.JPG)
+
+
 
 # Arduino Code
 This is a sketch for the [glide lock](http://ovirc.free.fr/GLDAB_English.php) of a crank-driven ornithopter.
