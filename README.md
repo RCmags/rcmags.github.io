@@ -1,1 +1,1 @@
-Website to display personal projects.
+Website to display personal projects
