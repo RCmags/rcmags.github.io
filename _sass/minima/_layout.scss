@@ -70,8 +70,8 @@
     .menu-icon {
       display: block;
       float: right;
-      width: 36px;
-      height: 26px;
+      width: 16px;
+      height: 16px;
       line-height: 0;
       padding-top: 10px;
       text-align: center;
@@ -122,6 +122,8 @@
 .social-media-list {
   list-style: none;
   margin-left: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-col-wrapper {
@@ -191,15 +193,6 @@
 
 .post-list-heading {
   @include relative-font-size(1.75);
-}
-
-.post-list {
-  margin-left: 0;
-  list-style: none;	// Default was none
-
-  > li {
-    margin-bottom: calc($spacing-unit/1.25);	// Decreased spacing 
-  }
 }
 
 // Inherit class  

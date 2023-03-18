@@ -1,0 +1,37 @@
+<!-- Pagination links -->
+<div class="pagination">
+	<!-- Previous button -->
+	{% if paginator.previous_page %}
+		<a class="button" href="{{ paginator.previous_page_path }}">
+			&#9664;
+		</a>
+	{% endif %}	
+	
+  	<!-- pages -->
+	<span class="page_number">
+		<p>{{ paginator.page }}/{{ paginator.total_pages }}</p>
+	</span>
+	
+	<!-- Next button -->	
+	{% if paginator.next_page %}
+		<a class="button" href="{{ paginator.next_page_path }}">
+			&#9654; 
+		</a> 
+	{% endif %}	
+</div>
+
+<!-- This loops through the paginated posts -->
+{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+ 
+<ul class="paginator-list"> 
+	<div id="container_out">
+	{% for post in paginator.posts %}
+		<li>
+			<div id="container_in">
+    			<a href="{{ post.url | relative_url }}"> {{ post.title | escape }} </a>	
+    			<span> {{ post.date | date: date_format }} </span> 
+			</div>
+		</li>
+	{% endfor %}
+	</div>
+</ul>

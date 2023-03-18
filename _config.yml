@@ -4,6 +4,16 @@ email: memoryofatrufestival@gmail.com
 description: > # this means to ignore newlines until "twitter_username:"
   Personal blog about model aircraft and small robots
 
+# index pagination
+plugins:
+- jekyll-paginate
+
+paginate: 10
+paginate_path: "/page:num/"
+
+# collections
+collections_dir: collections
+
 # social links
 github_username: RCmags
 youtube_username: XXXmags

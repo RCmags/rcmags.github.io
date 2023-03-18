@@ -1,0 +1,23 @@
+#lunrsearchresults {
+	padding-top: 0.2rem;
+	margin-left: 10px;
+}
+
+.lunrsearchresult {padding-bottom: 1rem;}
+.lunrsearchresult .title {color: #d9230f;}
+.lunrsearchresult .url {color: silver;}
+.lunrsearchresult a {display: block; color: #777;}
+.lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+.lunrsearchresult a:hover .title {text-decoration: underline;}
+
+.form-control {
+	display: flex;
+ 	justify-content: center;
+ 	width: 100%;
+ 	 		
+ 	input {
+ 		width: 90%;
+ 	}
+}
+
+

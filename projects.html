@@ -1,37 +1,38 @@
 ---
-layout: page
+layout: default
 title: Projects
 permalink: /projects/
 ---
 
-<div id="archives">
-<!-- display category -->
+<!-- display category --> <!-- exclude category: blog -->
 {% for category in site.categories %}
-  <div class="archive-group">
-    {% capture category_name %}{{ category | first }}{% endcapture %}
-    <div id="#{{ category_name | slugize }}"></div>
-    <p></p>
-
-    <h3 class="category-head">{{ category_name }}</h3>
-    <a name="{{ category_name | slugize }}"></a>
-    
-    <!-- posts in category -->
-    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-    
-	<ul class="post-list">
-    {% for post in site.categories[category_name] %}
-    <li style = "display: flex; justify-content: space-between;">
- 		<!-- Post name -->   
-    	<article class="post-link">
-      	<a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a>
-    	</article>
-    	
-    	<!-- Right align date -->
-    	<span class="post-meta-date">{{ post.date | date: date_format }}</span> 
-    </li>
-    {% endfor %}
-    <ul>
-
-  </div>
-{% endfor %}
+<div class="archive-group">
+	{% unless category contains 'projects' or category contains 'blog' %} 
+		
+		{% capture category_name %}{{ category | first }}{% endcapture %}	
+		
+		<details>
+			<!-- category -->
+			<summary>
+				<h2 class="category-head" style="display: inline;">{{ category_name }}</h2>
+			</summary>
+			
+			<!-- posts in category -->
+			{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+			
+			<ul class="paginator-list">
+				<div id="container_out">
+				{% for post in site.categories[category_name] %}
+					<li>
+						<div id="container_in">
+    						<a href="{{ post.url | relative_url }}"> {{ post.title | escape }} </a>	
+    						<span> {{ post.date | date: date_format }} </span> 
+						</div>
+					</li>
+				{% endfor %}
+				</div>
+			<ul>
+		</details>
+	{% endunless %}
 </div>
+{% endfor %}

@@ -4,7 +4,13 @@ title: About
 permalink: /about/
 ---
 
-Hi, I'm a mechanical engineer that's learned how to program. I've gained this skill over time as I enjoy working on electro-mechanical devices. A lot of this was motivated by my interest unusual radio-controlled aircraft, although with time I've delved into robotics and this has become it's own motivation. Overall, I'm very interested in developing small unusual vehicles. They require a combination of mechanics, electronics, and programming that I find very satisfying. Here's a sample of some of the stuff I've worked on:
+
+<!-- Site banner --> 	
+<img src="../img/website_banner.jpg" style="width: 100%; margin-bottom: 5px; border-radius: 10px;"> 
+
+Hi! I'm a mechanical engineer and this site is dedicated to documenting my personal projects. They're mostly about model aircraft, but there's some programing projects as well. Complementing this are my post on [RCGroups](https://www.rcgroups.com/forums/member.php?u=189488), so check them out!  
+
+Here's some of my stuff:  
 
 ![image](https://raw.githubusercontent.com/RCmags/TrackRobot/main/images/disturbance.gif)  
 <p align="center">Autonomous tank</p>  
