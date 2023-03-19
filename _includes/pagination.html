@@ -1,10 +1,12 @@
-<!-- Pagination links -->
+<!-- Pagination buttons -->
 <div class="pagination">
 	<!-- Previous button -->
 	{% if paginator.previous_page %}
-		<a class="button" href="{{ paginator.previous_page_path }}">
+		<a class="button_link" href="{{ paginator.previous_page_path }}">
 			&#9664;
 		</a>
+	{% else %}
+		<span class="button"> &#9664; </span>	
 	{% endif %}	
 	
   	<!-- pages -->
@@ -14,13 +16,15 @@
 	
 	<!-- Next button -->	
 	{% if paginator.next_page %}
-		<a class="button" href="{{ paginator.next_page_path }}">
+		<a class="button_link" href="{{ paginator.next_page_path }}">
 			&#9654; 
-		</a> 
+		</a>
+	{% else %}
+		<span class="button"> &#9654; </span>
 	{% endif %}	
 </div>
 
-<!-- This loops through the paginated posts -->
+<!-- Post list -->
 {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
  
 <ul class="paginator-list"> 
@@ -28,7 +32,14 @@
 	{% for post in paginator.posts %}
 		<li>
 			<div id="container_in">
-    			<a href="{{ post.url | relative_url }}"> {{ post.title | escape }} </a>	
+				<div id="list_in">
+					<a href="{{ post.url | relative_url }}"> {{ post.title | escape }} </a>	
+					<div>
+					{% for category in post.categories %}
+						<small> [{{ category }}] </small>
+					{% endfor %}
+					</div>
+    			</div>
     			<span> {{ post.date | date: date_format }} </span> 
 			</div>
 		</li>

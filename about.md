@@ -4,7 +4,6 @@ title: About
 permalink: /about/
 ---
 
-
 <!-- Site banner --> 	
 <img src="../img/website_banner.jpg" style="width: 100%; margin-bottom: 5px; border-radius: 10px;"> 
 

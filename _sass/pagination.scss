@@ -12,6 +12,11 @@
 	flex-direction: row;
 	justify-content: space-between; 
   }
+  
+  #list_in {
+  	display: flex;
+  	flex-direction: column;
+  }
     
   li {
   	margin-bottom: 10px;
@@ -59,8 +64,14 @@
   	font-size: 24px;
   	border-radius: 5px;
   }
+
+  .button_link {
+  	@extend .box;
+  	font-size: 24px;
+  	border-radius: 5px;
+  }
   
-  .button:hover {
+  .button_link:hover {
   	background: #b3d1ff;
   	text-decoration: none;
   }

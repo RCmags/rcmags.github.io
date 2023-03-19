@@ -1,38 +1,25 @@
 ---
 layout: default
 title: Projects
-permalink: /projects/
 ---
 
-<!-- display category --> <!-- exclude category: blog -->
-{% for category in site.categories %}
 <div class="archive-group">
-	{% unless category contains 'projects' or category contains 'blog' %} 
-		
-		{% capture category_name %}{{ category | first }}{% endcapture %}	
-		
-		<details>
-			<!-- category -->
-			<summary>
-				<h2 class="category-head" style="display: inline;">{{ category_name }}</h2>
-			</summary>
-			
-			<!-- posts in category -->
-			{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-			
-			<ul class="paginator-list">
-				<div id="container_out">
-				{% for post in site.categories[category_name] %}
-					<li>
-						<div id="container_in">
-    						<a href="{{ post.url | relative_url }}"> {{ post.title | escape }} </a>	
-    						<span> {{ post.date | date: date_format }} </span> 
-						</div>
-					</li>
-				{% endfor %}
+	<ul class="project-list">
+		<div id="container_out">
+		{% for post in site.projects %}
+			<li>
+				<div id="container_in">
+					<div id="container_title">
+    					<a href="{{ post.url | relative_url }}"> 
+    						<h2>{{ post.title | escape }}</h2> 
+    					</a>
+    				</div>
+    				{% if post.description %}
+    					<span>{{ post.description }}</span>
+    				{% endif %}	
 				</div>
-			<ul>
-		</details>
-	{% endunless %}
+			</li>
+		{% endfor %}
+		</div>
+	<ul>
 </div>
-{% endfor %}

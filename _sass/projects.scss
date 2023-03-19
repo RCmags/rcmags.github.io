@@ -1,0 +1,26 @@
+.project-list {
+	@extend .paginator-list;
+	
+	#container_in {
+		flex-direction: column;
+	}
+	
+	#container_out {
+  		width: 100%;
+  	}
+
+  	#container_title {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between; 
+  	}
+	
+	span {
+		width: auto;
+		text-align: left;
+  	} 
+  	
+  	h2 {
+  		margin-bottom: 0px;
+  	}
+}
