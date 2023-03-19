@@ -3,23 +3,27 @@ layout: page
 title: Projects
 ---
 
-<div class="archive-group">
-	<ul class="project-list">
-		<div id="container_out">
-		{% for post in site.projects %}
-			<li>
-				<div id="container_in">
-					<div id="container_title">
-    					<a href="{{ post.url | relative_url }}"> 
-    						<h3>{{ post.title | escape }}</h3> 
-    					</a>
-    				</div>
+<ul class="project-list">
+{% for post in site.projects %}
+	<li id="list_out">
+		<div id="container_list">
+    		<a id="category" href="{{ post.url | relative_url }}"> {{ post.title }} </a>
+
+    		<details>
+    			<summary>
     				{% if post.description %}
     					<span>{{ post.description }}</span>
-    				{% endif %}	
-				</div>
-			</li>
-		{% endfor %}
+    				{% endif %}
+    				
+    				<span class="button_on">[show]</span>
+    				<span class="button_off">[hide]</span>	
+    			</summary>
+				
+				<div id="content">
+    				{% include category-posts.html category=post.category %}
+    			</div>
+    		</details>			    				
 		</div>
-	<ul>
-</div>
+	</li>
+{% endfor %}
+</ul>

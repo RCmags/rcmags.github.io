@@ -1,0 +1,12 @@
+---
+layout: default
+---
+
+<!-- category -->
+<header class="post-header">
+	<h1 style ="text-align: center;" class="post-title">{{ page.category | escape }}</h1>
+</header>
+
+<!-- post list -->
+{% include category-posts.html category=page.category %}
+
