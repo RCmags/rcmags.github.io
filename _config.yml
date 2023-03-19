@@ -8,7 +8,7 @@ description: > # this means to ignore newlines until "twitter_username:"
 plugins:
 - jekyll-paginate
 
-paginate: 8
+paginate: 6
 paginate_path: "/page:num/"
 
 # collections

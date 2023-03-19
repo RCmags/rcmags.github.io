@@ -82,3 +82,17 @@
   	border-right: none;
   }
 }
+
+// Other options
+.pagination_options {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	
+	h3 {
+		text-align: center; 
+		color: gray;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+}
