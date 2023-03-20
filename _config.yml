@@ -17,6 +17,8 @@ collections_dir: collections
 collections:
   projects:
     output: true
+  blog:
+    output: true
     
 # social links
 github_username: RCmags

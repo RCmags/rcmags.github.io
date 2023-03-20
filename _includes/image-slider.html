@@ -3,9 +3,12 @@
   	{% for image in include.list %}
     	<div>
     		<p>{{ forloop.index }} / {{ forloop.length }}</p>
-      		<img loading="lazy" src="{{ site.baseurl }}{{ image.url }}">
+      		{% if include.local %}
+      			<img loading="lazy" src="{{ site.baseurl }}{{ image.url }}">
+      		{% else %}
+      			<img loading="lazy" src="{{ image.url }}">
+      		{% endif %}
     	</div>
     {% endfor %}
   	</div>		
 </div>
-

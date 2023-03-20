@@ -3,20 +3,5 @@ layout: page
 title: Blog
 ---
 
-<div class="archive-group">
-	{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-
-	<ul class="paginator-list">
-		<div id="container_out">
-		{% for post in site.categories.blog %}
-			<li>
-				<div id="container_in">
-    				<a href="{{ post.url | relative_url }}"> {{ post.title | escape }} </a>	
-    				<span> {{ post.date | date: date_format }} </span> 
-				</div>
-			</li>
-		{% endfor %}
-		</div>
-	<ul>
-</div>
+{% include sub-category.html parent='blog' %}
 

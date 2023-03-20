@@ -3,27 +3,4 @@ layout: page
 title: Projects
 ---
 
-<ul class="project-list">
-{% for post in site.projects %}
-	<li id="list_out">
-		<div id="container_list">
-    		<a id="category" href="{{ post.url | relative_url }}"> {{ post.title }} </a>
-
-    		<details>
-    			<summary>
-    				{% if post.description %}
-    					<span>{{ post.description }}</span>
-    				{% endif %}
-    				
-    				<span class="button_on">[show]</span>
-    				<span class="button_off">[hide]</span>	
-    			</summary>
-				
-				<div id="content">
-    				{% include category-posts.html category=post.category %}
-    			</div>
-    		</details>			    				
-		</div>
-	</li>
-{% endfor %}
-</ul>
+{% include sub-category.html parent='projects' %}

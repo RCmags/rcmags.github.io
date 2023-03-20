@@ -1,18 +1,6 @@
 ---
 layout: post
 title: "Ornithopter powered by a motor with a crank-shaft"
-
-# image sliders:
-slider1:
-- url: /img/motor_orni/crank-1.JPG
-- url: /img/motor_orni/front-vtail.JPG
-- url: /img/motor_orni/front-inverted.JPG
-
-slider2:
-- url: /img/motor_orni/crank-2.JPG
-- url: /img/motor_orni/front-inverted-cambered.JPG
-- url: /img/motor_orni/side-2.JPG
-
 ---
 
 # Introduction to concept
@@ -21,7 +9,11 @@ This project concerns itself with the development of an ornithopter powered by a
 # Design iterations
 __Iteration 1:__
 
-{% include image-slider.html list=page.slider1 local='yes' %}
+![image](/img/motor_orni/crank-1.JPG)
+
+![image](/img/motor_orni/front-vtail.JPG)
+
+![image](/img/motor_orni/front-inverted.JPG)
 
 {% include youtube.html id='wVLkWb_JHCo' %}    
 <p align="center">Video 1. Ornithopter with inverted V-tail</p>
@@ -30,7 +22,11 @@ __Iteration 2:__
 {% include youtube.html id='peSMr35mHOE' %}   
 <p align="center">Video 2. Cambered wings and bias springs</p>
 
-{% include image-slider.html list=page.slider1 local='yes' %}
+![image](/img/motor_orni/crank-2.JPG)
+
+![image](/img/motor_orni/front-inverted-cambered.JPG)
+
+![image](/img/motor_orni/side-2.JPG)
 
 # Arduino Code
 This is a sketch for the [glide lock](http://ovirc.free.fr/GLDAB_English.php) of a crank-driven ornithopter.

@@ -1,22 +1,6 @@
 ---
 layout: post
 title: "Ornithopter powered and controlled by servos"
-
-# image sliders:
-slider1:
-- url: /img/servo_orni/version1-1.jpg
-- url: /img/servo_orni/version1-2.JPG
-
-slider2:
-- url: /img/servo_orni/version2-1.JPG
-- url: /img/servo_orni/version2-2.jpg
-- url: /img/servo_orni/version2-3.jpg
-
-slider3:
-- url: https://raw.githubusercontent.com/RCmags/ServoFlappingControl/main/example_pics/servo_body_res.jpg
-- url: https://raw.githubusercontent.com/RCmags/ServoFlappingControl/main/example_pics/bottom_view_res.JPG
-- url: https://raw.githubusercontent.com/RCmags/ServoFlappingControl/main/example_pics/flap_motion.gif 
-
 ---
 
 # Introduction to concept
@@ -40,17 +24,27 @@ This project concerns itself with developing a radio-controlled ornithopter powe
 __Iteration 1:__  
 The first version was a test platform to observe how effectively servos could oscillate a long spar. It also served to test springs connected to the servos in series or parallel. These springs can [reduce the power drawn by an oscillating mass](https://www.rcgroups.com/forums/showpost.php?p=41117281&postcount=20) driven by a motor if tuned correctly. For this design, a a coil spring was connected in series with the servo and a leaf spring was used for a parallel connection. 
 
-{% include image-slider.html list=page.slider1 local='yes' %}
+![image](/img/servo_orni/version1-1.jpg)  
+
+![image](/img/servo_orni/version1-2.JPG)  
 
 __Iteration 2:__  
 The second iteration was a complete aircraft. The design employed a pair of [skewed hinges](https://www.rcgroups.com/forums/showpost.php?p=41151391&postcount=33) to hopefully achieve roll and pitch control. Unfortunately, test flights revealed this system did not work and barely redirected the aircraft. In addition to this, the servos were undersized and were under too much load. This resulted in the servos getting very hot to apply the desired torque. The wings were also inefficient and could not generate the required thrust for the aircraft to sustain flight. 
 
-{% include image-slider.html list=page.slider2 local='yes' %}
+![image](/img/servo_orni/version2-1.JPG)  
+ 
+![image](/img/servo_orni/version2-2.jpg)  
+
+![image](/img/servo_orni/version2-3.jpg)  
 
 __Iteration 3:__  
 The third iteration built upon the second version. Control was accomplished separately through a controllable tail, and larger servos with four times the torque were used to reduce the likelihood of excess torque. To complement this, the servos were connected indirectly to the wings via a lever arm to double the torque applied to the wings. While this overcame the issues of driving the wings, the wing design was lacking. To overcome this limitation, different wing designs revealed large wings with a high degree of flexibility allowed the aircraft to maintain powered flight. 
 
-{% include image-slider.html list=page.slider3 %}
+![image](https://raw.githubusercontent.com/RCmags/ServoFlappingControl/main/example_pics/servo_body_res.jpg)  
+
+![image](https://raw.githubusercontent.com/RCmags/ServoFlappingControl/main/example_pics/bottom_view_res.JPG)  
+
+![image](https://raw.githubusercontent.com/RCmags/ServoFlappingControl/main/example_pics/flap_motion.gif)  
 
 # Arduino Code
 The program is designed to receive 3 PWM inputs from an RC receiver operating in [MODE 2](https://www.rc-airplane-world.com/rc-transmitter-modes.html) and outputs 2 PWM signals for off-the-shelf hobby servos. The aileron (1) and elevator (2) channels are used to bias the dihedral angle of each wing, with the aileron rotating the wings in unison while the elevator changes the dihedral angle. The throttle channel (3) changes the amplitude of a fixed-frequency oscillation. 

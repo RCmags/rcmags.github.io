@@ -1,27 +1,11 @@
 ---
 layout: post
 title: "Tail-less airplane stabilized by an angle of attack sensor"
-
-# image sliders:
-slider1:
-- url: https://raw.githubusercontent.com/RCmags/TailLessStability/main//example_pictures/top_view_res.jpg
-- url: https://raw.githubusercontent.com/RCmags/TailLessStability/main//example_pictures/front_view_res.jpg
-- url: https://raw.githubusercontent.com/RCmags/TailLessStability/main//example_pictures/side_view_res.jpg
-
-slider2:
-- url: /img/figures/thrustline_side.jpg
-- url: /img/figures/thrustline_top.jpg
-
-slider3:
-- url: /img/figures/larger_flap_top.jpg
-- url: /img/figures/larger_flap_bottom.jpg
-
 ---
 
 # Introduction to concept
 
-For an airplane to maintain stability in flight, it must have the ability to self-correct in the face of external disturbances. When this occurs, the aircraft must cause the disturbance to decrease with time. We can refine this concept by separating it into two components: [static stability](https://ocw.tudelft.nl/wp-content/uploads/Hand-out-Stability_01.pdf) and [dynamic stability](https://www.aircraftflightmechanics.com/Dynamics/ModesofMotion.html). As the names imply, static stability is concerned with the forces acting on the aircraft in the absence of motion. That is, whether the forces acting on the aircraft reach [static equilibrium](https://physicscourses.colorado.edu/phys1110/phys1110_fa12/LectureNotes/StaticEquilibrium.pdf) and mutually oppose each other out. Dynamic stability is focused on whether the aircraft will slow down if pushed away from this equilibrium.  
-
+For an airplane to maintain stability in flight, it must have the ability to self-correct in the face of external disturbances. When this occurs, the aircraft must cause the disturbance to decrease with time. We can refine this concept by separating it into two components: [static stability](https://ocw.tudelft.nl/wp-content/uploads/Hand-out-Stability_01.pdf) and [dynamic stability](https://www.aircraftflightmechanics.com/Dynamics/ModesofMotion.html). As the names imply, static stability is concerned with the forces acting on the aircraft in the absence of motion. That is, whether the forces acting on the aircraft reach [static equilibrium](https://physicscourses.colorado.edu/phys1110/phys1110_fa12/LectureNotes/StaticEquilibrium.pdf) and mutually oppose each other out. Dynamic stability is focused on whether the aircraft will slow down if pushed away from this equilibrium.
 
 With these definitions, we can also notice that dynamic stability depends on static stability. Static stability ensures an equilibrium state, and dynamic stability ensures the aircraft can return to it. We can also observe an aircraft has multiple axes about which it can be stable. It can translate about three perpendicular directions, and it can rotate about these same axes:
 
@@ -30,7 +14,8 @@ With these definitions, we can also notice that dynamic stability depends on sta
 
 Because the aircraft can move in six different directions, there are different ways these motions can combine to yield converging or diverging trajectories. These trajectories are known as [modes of stability](https://courses.cit.cornell.edu/mae5070/DynamicStability.pdf), and they determine the behavior of an uncontrolled aircraft. We can best understand these modes by watching them occur and then analyzing them through diagrams.
 
-{% include youtube.html id='rFWfrmjAQxY' %}   
+{% include youtube.html id='aEPf0QHVuMM' %}   
+[![video](https://img.youtube.com/vi/rFWfrmjAQxY/hqdefault.jpg)](https://youtu.be/rFWfrmjAQxY) 
 <p align="center"> Video 1. Modes of stability </p> 
 
 Out of these possible trajectories, let us focus on the longitudinal stability of the aircraft, and in particular, the short period mode. This mode can be understood as the “elasticity and damping” of the aircraft with respect to the angle of attack. Video 1 shows behavior at the [2:53 minute](https://www.youtube.com/watch?v=rFWfrmjAQxY&t=173s) mark. This motion is caused by a restoring torque that rotates the aircraft about the pitch axis. If this torque is sufficiently strong, it will ensure that the aircraft maintains static and dynamic stability.
@@ -78,7 +63,7 @@ This configuration has the advantage that the flap must deflect downward with a 
 [See: Albatross, Active Pitch Glider](http://www.charlesriverrc.org/articles/asfwpp/lelke_activepitch.htm)
 
 # Preliminary concept
-Inspired by the above aircraft, this project concerns itself with developing an actively stabilized airplane using inexpensive equipment. The design consists of two high-speed servos, an Arduino nano, a potentiometer, and a foam airframe. The potentiometer is used as an angle of attack sensor and is connected to the Arduino. The Arduino then uses this signal to control the servos connected to the control surfaces. Whenever the sensor measures a change in angle, the Arduino commands the servos to deflect the control surfaces and stabilize the aircraft.  
+Inspired by the above aircraft, this project concerns itself with developing an actively stabilized airplane using inexpensive equipment. The design consists of two high-speed servos, an Arduino nano, a potentiometer, and a foam airframe. The potentiometer is used as an angle of attack sensor and is connected to the Arduino. The Arduino then uses this signal to control the servos connected to the control surfaces. Whenever the sensor measures a change in angle, the Arduino commands the servos to deflect the control surfaces and stabilize the aircraft. 
 
 The simplest angle-of-attack sensor is a [simple low-friction potentiometer attached to a weathervane](https://www.ilmailu.org/forum/index.php?action=dlattach;topic=5147.0;attach=10336). As the weathervane will closely follow the local airflow, it can be used as a reference from which to measure the angle of attack. Likewise, the Arduino can be programmed to use the analog signal from the sensor as the proportional term of a [PID controller](https://en.wikipedia.org/wiki/PID_controller). By adjusting the appropriate coefficients, the static and dynamic stability of the aircraft can be greatly enhanced. 
 
@@ -87,7 +72,6 @@ The simplest angle-of-attack sensor is a [simple low-friction potentiometer atta
 __Iteration 1:__
 
 The first version of the aircraft was designed to have _passive stability_. The idea was to enhance its stability electronically and use this _excess_ stability to move the center of mass aft. This stability would make it easy to progressively move the mass and observe the behavior of the aircraft. Eventually, the mass would move aft enough to cause the aircraft to depend on the active stabilization. As a consequence, the flaps would deflect downwards to maintain equilibrium. 
-
 
 The aircraft was also equipped with a motor and a propeller to fly under its own power. However, this made it difficult to place the angle of attack sensor. The local airflow felt by the sensor is greatly affected by its location on the aircraft. Any regions behind the wing are disturbed by the large [downwash](https://www.grc.nasa.gov/www/k-12/airplane/downwash.html), and the [powerful slipstream](https://web.mit.edu/16.unified/www/FALL/thermodynamics/notes/node86.html) affects anything behind the propeller. A simple solution was to place the sensor atop a long vertical stabilizer. If it were tall enough, the sensor would lie outside the propeller's slipstream. Likewise, any lift caused by the fin would be perpendicular to the rotation of the sensor. This would minimize any effects it had on the measured angle.
 
@@ -99,7 +83,11 @@ The angle of attack sensor was very simple. The weathervane was a stick with a f
 
 This is what the completed airplane looked like:  
 
-{% include image-slider.html list=page.slider1 %}
+![image](https://raw.githubusercontent.com/RCmags/TailLessStability/main//example_pictures/top_view_res.jpg)  
+
+![image](https://raw.githubusercontent.com/RCmags/TailLessStability/main//example_pictures/front_view_res.jpg)  
+
+![image](https://raw.githubusercontent.com/RCmags/TailLessStability/main//example_pictures/side_view_res.jpg)
 
 Unfortunately, test flights revealed the [thrust line](https://www.flitetest.com/articles/Motor_angles_for_pusher_planes) was far below the center of mass. This offset caused the aircraft to raise its nose to the point it was very difficult to recover. Secondly, the response of the elevons about the pitch axis was very sluggish and made piloting the aircraft somewhat uncomfortable. Despite this, the airplane was capable of gliding without active stabilization. This behavior indicated there was an ample margin of passive stability. 
 
@@ -107,25 +95,28 @@ __Iteration 2:__
 
 For the second iteration, the thrust line of the aircraft was rotated by tilting the firewall of the motor. Through trial and error, the motor was aligned such that the thrust did not generate a noticeable torque about the pitch and yaw axes. This was verified by running the motor at full throttle and letting the airplane enter free fall to see how it rotated.
 
-{% include image-slider.html list=page.slider2 local='yes' %}
+![image](/img/figures/thrustline_side.jpg)  
+
+![image](/img/figures/thrustline_top.jpg)  
 
 The elevons were also made twice as large to increase the control authority and reduce lag in the control response. By extending the surfaces aft, not only did the area increase but so too did the lever arm with respect to the center of mass.
 
-{% include image-slider.html list=page.slider3 local='yes' %}  
+![image](/img/figures/larger_flap_top.jpg)  
+
+![image](/img/figures/larger_flap_bottom.jpg)  
 
 These modifications greatly enhanced the stability of the aircraft. Changes in throttle had a neutral effect on the attitude, and the pitch response was much faster. The next step was to adjust the PID controller and observe its effects on stability. 
 
-- **Proportional term:**
+- _Proportional term:_
 At low settings, the gain had a negligible effect on stability. The aircraft rotated more slowly for a given elevator command as the gain increased. This change made the control response slightly faster. However, after a certain amount of gain, the aircraft would shake very rapidly if it gained enough airspeed. Because of this unstable behavior, the gain was set to a value slightly below this threshold.    
 
-- **Derivative term:**
+- _Derivative term:_
 This had a similar effect to the proportional gain. It tended to slow down the aircraft's rotation and made the response "crisper". The aircraft settled to its new state with very little if any visible wobbling. Like before, the derivative gain would cause instability at higher speeds, so this threshold limited the maximum gain. 
 
-- **Integral term:**
-Unlike the previous terms that increased the resistance to pitch disturbances, this term didn't seem to increase the stability. Rather, the integral term did very little at low values, and at higher gains, it induced a very strong delay in the control response. This caused the aircraft to become unwieldy to pilot as prolonged inputs caused the aircraft to stay rotating for some time. Due to this delayed response, the integral term was disabled.  
+- _Integral term:_
+Unlike the previous terms that increased the resistance to pitch disturbances, this term didn't seem to increase the stability. Rather, the integral term did very little at low values, and at higher gains, it induced a very strong delay in the control response. This caused the aircraft to become unwieldy to pilot as prolonged inputs caused the aircraft to stay rotating for some time. Due to this delayed response, the integral term was disabled.   
   
 Having obtained a level of excess stability, it was possible _destabilize_ the aircraft by moving the weight aft. This was done by taping a coin to the tail. Test flights showed it was only possible to shift the center of mass by a moderate amount. Beyond this point, the servos were _incapable of reacting quickly enough_ to stabilize the aircraft. It was evident the aircraft still depended on passive stability as the flaps still had _reflex_ while in flight.  
-
 
 Given this limitation, the aircraft will need to employ faster servos to eliminate its dependency on passive stability. An alternative solution is to slow down the dynamics by increasing the [moment of inertia](http://hyperphysics.phy-astr.gsu.edu/hbase/mi.html) of the pitch axis. This would allow the servos slowly at the cost of a sluggish pitch response.
 

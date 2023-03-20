@@ -1,25 +1,6 @@
 ---
 layout: post
 title: "Autogyro stabilized by an offset hinge without a horizontal stabilizer"
-
-# image sliders:
-slider1:
-- url: https://rcmags.github.io/img/autogyro/offset_pos.png
-- url: https://rcmags.github.io/img/autogyro/offset_neg.png
-
-slider2:
-- url: https://raw.githubusercontent.com/RCmags/rcmags.github.io/main/img/autogyro/version1/front.JPG
-- url: https://raw.githubusercontent.com/RCmags/rcmags.github.io/main/img/autogyro/version1/side.JPG
-
-slider3:
-- url: https://raw.githubusercontent.com/RCmags/rcmags.github.io/main/img/autogyro/version1/rotor1.JPG
-- url: https://raw.githubusercontent.com/RCmags/rcmags.github.io/main/img/autogyro/version1/rotor2.JPG 
-
-slider4:
-- url: https://raw.githubusercontent.com/RCmags/rcmags.github.io/main/img/autogyro/version2/front.JPG
-- url: https://raw.githubusercontent.com/RCmags/rcmags.github.io/main/img/autogyro/version2/side.JPG
-- url: https://raw.githubusercontent.com/RCmags/rcmags.github.io/main/img/autogyro/version2/rotor.JPG
-
 ---
 
 # Introduction to concept
@@ -59,7 +40,9 @@ In the absence of a horizontal stabilizer the autogyro needs another mechanism t
 
 As the spring is elastic, it will deflect when the force changes. With more angle of attack, the axial force increases and the spring expands. With less angle of attack, the axial force decreases and the spring compresses. These deflections move the line-of-action of the force relative to the center of mass and generate a moment that rotates the aircraft to a smaller angle of attack.
 
-{% include image-slider.html list=page.slider1 %}
+![image](https://rcmags.github.io/img/autogyro/offset_pos.png)  
+
+![image](https://rcmags.github.io/img/autogyro/offset_neg.png)
 
 # Design iterations and development
 
@@ -72,10 +55,14 @@ The first iteration used a conventional landing gear configuration. While it was
 
 The design of the offset hinge also went through 2 iterations. Initially it was a lever connected to a spring. While it worked it felt excessively complicated. The spring was also too soft and caused pitch control to be unresponsive. The second iteration was a flexible strap that behaved like a leaf spring. It was much simpler and could be made stiffer by increasing the thickness.
 
-{% include image-slider.html list=page.slider2 %}
+![image](https://raw.githubusercontent.com/RCmags/rcmags.github.io/main/img/autogyro/version1/front.JPG)  
+
+![image](https://raw.githubusercontent.com/RCmags/rcmags.github.io/main/img/autogyro/version1/side.JPG)
 <p align="center"> Lateral views of Autogyro </p>
 
-{% include image-slider.html list=page.slider3 %}
+![image](https://raw.githubusercontent.com/RCmags/rcmags.github.io/main/img/autogyro/version1/rotor1.JPG)  
+
+![image](https://raw.githubusercontent.com/RCmags/rcmags.github.io/main/img/autogyro/version1/rotor2.JPG)
 <p align="center"> Rotor head: hinge with spring and later leaf spring  </p>
 
 {% include youtube.html id='ps-KYJPquqs' %}     
@@ -93,8 +80,13 @@ In addition to this, the motor mount was modified to one adjust the position of 
 
 Should this happen, the aircraft will suddenly pitch forward in an unrecoverable dive when the rotor unloads. Another modification was a softer hinge. After these changes the aircraft was farly stable and easy to fly by an experienced pilot. The pitch stability was somewhat better but it was still neutral compared to an airplane. 
 
-{% include image-slider.html list=page.slider4 %}
+![image](https://raw.githubusercontent.com/RCmags/rcmags.github.io/main/img/autogyro/version2/front.JPG)  
+
+![image](https://raw.githubusercontent.com/RCmags/rcmags.github.io/main/img/autogyro/version2/side.JPG)
 <p align="center"> Lateral views of Autogyro </p>
+
+![image](https://raw.githubusercontent.com/RCmags/rcmags.github.io/main/img/autogyro/version2/rotor.JPG)
+<p align="center"> Rotor head </p>
 
 {% include youtube.html id='b1p8pCHiuWo' %}     
 <p align="center"> Video 2. Flight of 2nd iteration </p>

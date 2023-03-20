@@ -2,6 +2,13 @@
 layout: page
 title: About
 permalink: /about/
+
+# image sliders:
+slider1:
+- url: https://raw.githubusercontent.com/RCmags/HeliFlightController/main//example_pictures/front_view_res.JPG
+- url: https://raw.githubusercontent.com/RCmags/TailLessStability/main//example_pictures/front_view_res.jpg
+- url: https://raw.githubusercontent.com/RCmags/FourBarSimulation/main/example_pics/short_bar_anim.gif
+
 ---
 
 <!-- Site banner --> 	
@@ -11,16 +18,5 @@ Hi! I'm a mechanical engineer and this site is dedicated to documenting my perso
 
 Here's some of my stuff:  
 
-![image](https://raw.githubusercontent.com/RCmags/TrackRobot/main/images/disturbance.gif)  
-<p align="center">Autonomous tank</p>  
-
-![image](https://raw.githubusercontent.com/RCmags/HeliFlightController/main//example_pictures/front_view_res.JPG)  
-<p align="center">Helicopter flight controller</p>
-
-![image](https://raw.githubusercontent.com/RCmags/TailLessStability/main//example_pictures/front_view_res.jpg)  
-<p align="center">Actively stabilized airplane</p>  
-
-![image](https://raw.githubusercontent.com/RCmags/FourBarSimulation/main/example_pics/short_bar_anim.gif)
-<p align="center">Four-bar linkage</p>  
-
+{% include image-slider.html list=page.slider1 %}
 
