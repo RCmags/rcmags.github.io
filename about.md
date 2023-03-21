@@ -20,5 +20,3 @@ Hi! I'm a mechanical engineer and this site is dedicated to documenting my perso
 Here's some of my stuff:  
 
 {% include image-slider.html list=page.slider1 %}
-
-&#128210;

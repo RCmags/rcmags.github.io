@@ -2,7 +2,7 @@
   	<div>
   	{% for image in include.list %}
     	<div>
-    		<p>{{ forloop.index }} / {{ forloop.length }}</p>
+    		<span>{{ forloop.index }} / {{ forloop.length }}</span>
       		{% if include.local %}
       			<img loading="lazy" src="{{ site.baseurl }}{{ image.url }}">
       		{% else %}

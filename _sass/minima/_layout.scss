@@ -8,14 +8,13 @@
 
   // Positioning context for the mobile navigation icon
   position: relative;
+  background: #f8f9f9;
 }
 
 .site-title {
-  @include relative-font-size(2.0); // Original = 1.625
-  font-weight: 300;
+  @include relative-font-size(2); // Original = 1.625
   line-height: $base-line-height * $base-font-size * 2.25;
-  letter-spacing: -1px;
-  margin-bottom: 0;
+  padding-left: 0px;
   float: left;
 
   &,
@@ -112,6 +111,7 @@
 .site-footer {
   border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
+  background:  #f8f9f9;
 }
 
 .footer-heading {
@@ -188,10 +188,13 @@
  * Page content
  */
 .page-content {
-  padding: $spacing-unit 0;
+  padding: $spacing-unit;
   flex: 1;
-  // Align text in posts
+ 
   //text-align: justify;
+  p {
+	padding-bottom: 8px;
+  }
 }
 
 .page-heading {
