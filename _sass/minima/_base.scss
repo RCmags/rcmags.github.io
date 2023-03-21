@@ -197,6 +197,7 @@ pre {
   margin-left: auto;
   padding-right: $spacing-unit;
   padding-left: $spacing-unit;
+   
   @extend %clearfix;
 
   @include media-query($on-laptop) {
@@ -225,13 +226,15 @@ pre {
  */
 
 .svg-icon {
-    width: 16px;
-    height: 16px;
+    width: 36px;
+    height: 36px;
     display: inline-block;
     fill: #{$grey-color};
     padding-right: 5px;
     vertical-align: text-top;
 }
+
+
 
 .social-media-list {
   li + li {

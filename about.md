@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+icon: "&#10067;"
 
 # image sliders:
 slider1:
@@ -20,3 +21,4 @@ Here's some of my stuff:
 
 {% include image-slider.html list=page.slider1 %}
 
+&#128210;

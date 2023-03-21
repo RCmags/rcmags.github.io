@@ -23,28 +23,7 @@ collections:
 # social links
 github_username: RCmags
 youtube_username: XXXmags
-youtube_username_display: RCmags # Added variable to change display name
-
-# Add as link?
-#rcgroups_username: XXXmags
-#rcgroups_username_id: u=189488 # Username id https://www.rcgroups.com/forums/member.php?u=189488
-
-#twitter_username: jekyllrb
-# dribbble_username: jekyll
-# facebook_username: jekyll
-# flickr_username: jekyll
-# instagram_username: jekyll
-# linkedin_username: jekyll
-# pinterest_username: jekyll
-# googleplus_username: +jekyll
-
-# Mastodon instances
-# mastodon:
-# - username: jekyll
-#   instance: example.com
-# - username: jekyll2
-#   instance: example.com
-
+rcgroups_username_id: "189488"
 
 show_excerpts: false # set to true to show excerpts on the homepage
 
@@ -52,14 +31,6 @@ show_excerpts: false # set to true to show excerpts on the homepage
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
 minima:
   date_format: "%-d %b %Y"
-
-# If you want to link only specific pages in your header, uncomment
-# this and add the path to the pages in order as they should show up
-#header_pages:
-# - about.html
-
-# Build settings
-#theme: minima
 
 plugins:
  - jekyll-feed
