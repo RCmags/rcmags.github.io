@@ -12,10 +12,7 @@ slider1:
 
 ---
 
-<!-- Site banner --> 	
-<img src="../img/website_banner.jpg" style="width: 100%; margin-bottom: 5px; border-radius: 10px;"> 
-
-Hi! I'm a mechanical engineer and this site is dedicated to documenting my personal projects. They're mostly about model aircraft, but there's some programing projects as well. Complementing this are my post on [RCGroups](https://www.rcgroups.com/forums/member.php?u=189488), so check them out!  
+Hi! I'm a mechanical engineer and this site is about my personal projects. They're mostly about model aircraft but there's some programing as well. Complementing this are my post on [RCGroups](https://www.rcgroups.com/forums/member.php?u=189488), so check them out!  
 
 Here's some of my stuff:  
 
