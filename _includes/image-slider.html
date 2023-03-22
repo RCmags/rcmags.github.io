@@ -1,13 +1,17 @@
+<style>
+{% if include.aspect_ratio %}
+	.aspect_ratio {
+		aspect-ratio: {{ include.aspect_ratio }} !important;
+	}
+{% endif %}
+</style>
+
 <div class="image-slider">	
-  	<div>
+  	<div class="container_out">
   	{% for image in include.list %}
-    	<div>
-    		<span>{{ forloop.index }} / {{ forloop.length }}</span>
-      		{% if include.local %}
-      			<img loading="lazy" src="{{ site.baseurl }}{{ image.url }}">
-      		{% else %}
-      			<img loading="lazy" src="{{ image.url }}">
-      		{% endif %}
+    	<div class="aspect_ratio container_in">
+    		<span class="counter">{{ forloop.index }} / {{ forloop.length }}</span>      		
+      			<img class="image" loading="lazy" src="{{ image.url }}">
     	</div>
     {% endfor %}
   	</div>		

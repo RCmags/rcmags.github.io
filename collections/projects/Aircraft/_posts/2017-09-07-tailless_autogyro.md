@@ -30,11 +30,11 @@ One can think of an autogyro as a machine with a pneumatic transmission. Instead
 
 {% include youtube.html id='_25H9ZPE2So' %}   
 
-Because the air drives the motion, the rotor does not create a reaction torque like a helicopter. The drawback is that a pneumatic transmission is not as efficient as a mechanical transmission. The rotor is a kind of an axial wind turbine and operates an angle to the airflow. Like all wind turbines, the rotor cannot absorb all of the power in the incoming air. Add to this the inefficiency in the propeller and the overall efficiency is poor compared to a gearbox If properly lubricated a gearbox can achieve an efficiency in excess of 90%.
+Because the air drives the motion, the rotor does not create a reaction torque like a helicopter. The drawback is that a pneumatic transmission is not as efficient as a mechanical transmission. The rotor is a kind of an axial wind turbine and operates an angle to the airflow. Like all wind turbines, the rotor cannot absorb all of the power in the incoming air. Add to this the inefficiency in the propeller and the overall efficiency is poor compared to a gearbox. If properly lubricated, a gearbox can achieve an efficiency in excess of 90%.
 
 Nonetheless, the air-driven rotor has a significant advantage when it comes to stability. As the air flows through the bottom of the rotor, the rotor induces a force parallel to the plane of the disk that tends to stabilize the autogyro. By comparison, a helicopter has a top-to-bottom airflow that reverses the planar force and destabilizes the aircraft. Hence, one faces the compromise between stability versus efficiency when comparing an autogyro with a helicopter.
 
-![image](http://www.aviastar.org/theory/rotor_4.gif)
+{% include image.html src="http://www.aviastar.org/theory/rotor_4.gif" maxwidth="400px" %}
 
 # Initial design
 _Landing gear_:

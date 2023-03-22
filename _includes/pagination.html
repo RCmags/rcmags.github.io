@@ -25,24 +25,4 @@
 </div>
 
 <!-- Post list -->
-{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
- 
-<ul class="paginator-list"> 
-	<div id="container_out">
-	{% for post in paginator.posts %}
-		<li>
-			<div id="container_in">
-				<div id="list_in">
-					<a href="{{ post.url | relative_url }}"> {{ post.title | escape }} </a>	
-					<div>
-					{% for category in post.categories %}
-						<small> [{{ category }}] </small>
-					{% endfor %}
-					</div>
-    			</div>
-    			<span> {{ post.date | date: date_format }} </span> 
-			</div>
-		</li>
-	{% endfor %}
-	</div>
-</ul>
+{% include paginator-list.html src=paginator %}

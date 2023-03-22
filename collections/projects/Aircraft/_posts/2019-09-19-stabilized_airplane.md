@@ -107,11 +107,11 @@ __Iteration 2:__
 
 For the second iteration, the thrust line of the aircraft was rotated by tilting the firewall of the motor. Through trial and error, the motor was aligned such that the thrust did not generate a noticeable torque about the pitch and yaw axes. This was verified by running the motor at full throttle and letting the airplane enter free fall to see how it rotated.
 
-{% include image-slider.html list=page.slider2 local='yes' %}
+{% include image-slider.html list=page.slider2 aspect_ratio="16/9" %}
 
 The elevons were also made twice as large to increase the control authority and reduce lag in the control response. By extending the surfaces aft, not only did the area increase but so too did the lever arm with respect to the center of mass.
 
-{% include image-slider.html list=page.slider3 local='yes' %}  
+{% include image-slider.html list=page.slider3 %}  
 
 These modifications greatly enhanced the stability of the aircraft. Changes in throttle had a neutral effect on the attitude, and the pitch response was much faster. The next step was to adjust the PID controller and observe its effects on stability. 
 

@@ -1,0 +1,26 @@
+<!-- display all posts -->
+{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+ 
+<ul class="paginator-list"> 
+	<div id="container_out">
+	{% for post in include.src.posts %}
+		<li>
+			<div id="container_in">
+				<div id="list_in">
+					<a href="{{ post.url | relative_url }}"> {{ post.title | escape }} </a>	
+					<div>
+					<!-- directory -->
+					{% for category in post.categories %}
+						<small>{{ category }}</small>		
+						{% unless forloop.last %}
+							<small>/</small>
+						{% endunless %} 	
+					{% endfor %}
+					</div>
+    			</div>
+    			<span> {{ post.date | date: date_format }} </span> 
+			</div>
+		</li>
+	{% endfor %}
+	</div>
+</ul>

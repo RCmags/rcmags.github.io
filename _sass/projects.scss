@@ -9,13 +9,18 @@
 		justify-content: space-between;
 	}
 	
+	.button {
+		padding-left: 10px;
+	}
+	
 	details {
 		.button_on {
-			display: block;
+			@extends .button;
 			color: blue;
-			padding-left: 10px;
+			display: block;
 		}
 		.button_off {
+			@extends .button;
 			display: none;
 		}		
 	}
@@ -25,9 +30,8 @@
 			display: none;
 		}
 		.button_off {
-			display: block;
 			color: red;
-			padding-left: 10px;
+			display: block;
 		}
 	}
 	
