@@ -3,6 +3,9 @@
   display: flex;
   justify-content: center;
   
+  list-style-type: circle;
+  //list-style: none;
+  
   #container_out {
   	width: 100%;
   }
@@ -17,10 +20,10 @@
   	display: flex;
   	flex-direction: column;
   }
-  
-  li {
-  	margin-bottom: 10px;
-  	margin-left: 10px;
+   
+  .list_item {
+  	margin-bottom: 20px;
+  	//margin-left: 10px;
   }
   
   #categories {
@@ -36,7 +39,7 @@
 }
 
 
-@media (max-width: $on-laptop) {
+@media (max-width: $on-palm) {
 	.paginator-list {
 		justify-content: left;
 		#container_out {

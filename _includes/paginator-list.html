@@ -1,10 +1,20 @@
 <!-- display all posts -->
+<style>
+.forlast {
+	margin-bottom: 0px !important;
+}
+</style>
+
 {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
  
 <ul class="paginator-list"> 
 	<div id="container_out">
 	{% for post in include.src.posts %}
-		<li>
+		{% if forloop.last %}
+			<li class="list_item forlast">
+		{% else %}
+			<li class="list_item">
+		{% endif %}
 			<div id="container_in">
 				<div id="list_in">
 					<a href="{{ post.url | relative_url }}"> {{ post.title | escape }} </a>	

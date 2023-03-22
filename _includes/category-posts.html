@@ -1,3 +1,9 @@
+<style>
+.forlast {
+	margin-bottom: 0px !important;
+}
+</style>
+
 <!-- post list -->
 <div class="archive-group">
 	{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
@@ -5,10 +11,14 @@
 	<ul class="paginator-list">
 		<div id="container_out">
 		{% for post in site.categories[include.category] %}
-			<li>
+		{% if forloop.last %}
+			<li class="list_item forlast">
+		{% else %}
+			<li class="list_item">
+		{% endif %}
 				<div id="container_in">
     				<a href="{{ post.url | relative_url }}"> {{ post.title | escape }} </a>	
-    				<span> {{ post.date | date: date_format }} </span> 
+    				<span id="date"> {{ post.date | date: date_format }} </span> 
 				</div>
 			</li>
 		{% endfor %}
