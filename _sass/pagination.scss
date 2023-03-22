@@ -17,13 +17,17 @@
   	display: flex;
   	flex-direction: column;
   }
-    
+  
   li {
   	margin-bottom: 10px;
   	margin-left: 10px;
   }
   
-  span {
+  #categories {
+  	color: $grey-color-dark;
+  }
+  
+  #date {
 	color: gray;
 	text-align: right;
 	font-size: 14px;
@@ -41,7 +45,7 @@
 		#container_in {
 			flex-direction: column;
 		}
-		span {
+		#date {
 			text-align: left;
 		}
 	}
@@ -92,7 +96,7 @@
 	
 	h3 {
 		text-align: center; 
-		color: gray;
+		color: $grey-color-dark;
 		margin-left: 10px;
 		margin-right: 10px;
 	}
