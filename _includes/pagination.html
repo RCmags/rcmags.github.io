@@ -1,3 +1,6 @@
+<!-- Post list -->
+{% include paginator-list.html src=paginator %}
+
 <!-- Pagination buttons -->
 <div class="pagination">
 	<!-- Previous button -->
@@ -6,7 +9,7 @@
 			&#9664;
 		</a>
 	{% else %}
-		<span class="button"> &#9664; </span>	
+		<span class="button_null"> &#9664; </span>	
 	{% endif %}	
 	
   	<!-- pages -->
@@ -20,9 +23,6 @@
 			&#9654; 
 		</a>
 	{% else %}
-		<span class="button"> &#9654; </span>
+		<span class="button_null"> &#9654; </span>
 	{% endif %}	
 </div>
-
-<!-- Post list -->
-{% include paginator-list.html src=paginator %}
