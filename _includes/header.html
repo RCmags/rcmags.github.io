@@ -3,12 +3,11 @@
   <div class="wrapper">
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
-    <!--
-	<a class="site-title" href="{{ site.baseurl }}/search.html"> 
-		&#128269; 
+    
+	<a class="site-title" rel="author" href="{{ "/" | relative_url }}">
+		<img class="home_icon" src="{{ site.baseurl }}/assets/icons/page/news.svg">
+		Home
 	</a>
-	-->	
-	<a class="site-title" rel="author" href="{{ "/" | relative_url }}">&#128467;&#65039; Home</a>
 	
     {%- if page_paths -%}
       <nav class="site-nav">
@@ -28,7 +27,7 @@
             	<a class="page-link" href="{{ my_page.url | relative_url }}">
             		{{ my_page.title | escape }}
             		{%- if my_page.icon -%}
-            			<span> {{ my_page.icon }}</span>
+            			<img class="page_icon" src="{{ site.baseurl }}/assets/icons/page/{{my_page.icon}}">
             		{%- endif -%}
             	</a>
             {%- endif -%}

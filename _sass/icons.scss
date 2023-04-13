@@ -1,0 +1,23 @@
+.icon {
+	display: inline;
+	width: 32px;
+	height: 32px;
+}
+
+.page_icon {
+	@extend .icon;
+	padding-left: 10px;
+	padding-right: 5px;
+}
+
+.home_icon {
+	@extend .icon;
+	padding-right: 0px;
+	padding-bottom: 10px; 
+}
+
+.postlist_icon {
+	display: inline;
+	height: 48px;
+	width: 48px;
+}
