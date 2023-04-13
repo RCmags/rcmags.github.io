@@ -1,19 +1,21 @@
 .youtube {
-  position: relative;
-  width: 100%;
-  max-width: $max-image-size;
-  aspect-ratio: 16/9;
-  
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 16px;
-  
-  iframe {
-  	position: absolute;
-  	top: 0;
-  	left: 0;
-  	width: 100%;
-  	aspect-ratio: 16/9;
-  	border: 0;
-  }
+	position: relative;
+	padding-bottom: min(56.25%, $max-image-size * 0.5625);
+  	margin-bottom: 16px;	
+		
+	iframe {
+		border: 0;
+		
+		// position
+		position: absolute;
+		top: 0; 		
+  		left: 50%;
+  		transform: translateX(-50%);
+		
+		// sizing
+		width: 100%;
+		height: 100%;
+  		max-width: $max-image-size;	
+  		max-height: $max-image-size * 0.5625;
+	}
 }

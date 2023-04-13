@@ -10,12 +10,18 @@
 		flex-direction: row;
 		justify-content: space-between;
 		color: $grey-color-dark;
+		outline:none;
+	}
+		// hide default arrow
+	summary::-webkit-details-marker {
+  		display:none;
 	}
 	
 	.button {
 		padding-left: 10px;
 	}
 	
+	// button state
 	details {
 		.button_on {
 			@extends .button;
@@ -27,7 +33,7 @@
 			display: none;
 		}		
 	}
-	
+		
 	details[open] {
 		.button_on {
 			display: none;
