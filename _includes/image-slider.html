@@ -3,7 +3,7 @@
   	{% for image in include.list %}
     	<div class="container_in" 
     	{% if include.aspect_ratio %} 
-    		style="aspect-ratio: {{aspect_ratio}} !important;"
+    		style="aspect-ratio: {{include.aspect_ratio}} !important;"
     	{% endif %}>
     		<span class="counter">{{ forloop.index }} / {{ forloop.length }}</span>      		
       		<img class="image" loading="lazy" src="{{ image.url }}">

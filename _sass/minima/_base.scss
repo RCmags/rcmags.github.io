@@ -9,11 +9,12 @@ dl, dd, ol, ul, figure {
 }
 
 
-// text formatting
+// general text formatting, colors!
 li, p {
-  color: grey;
+  //color: grey;
 }
 
+	/* margin */
 p {
   padding-bottom: 10px;
 }
@@ -80,7 +81,7 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 5px;
+  border-radius: $img-radius;
 }
 
 
