@@ -1,4 +1,29 @@
 .image-slider {
+	// scroll bar
+		/* width */
+	::-webkit-scrollbar {
+  		height: 10px;	
+	}
+	
+		/* Track */
+	::-webkit-scrollbar-track {
+  		box-shadow: inset 0 0 3px grey; 
+  		//border: 1px solid grey;
+  		border-radius: 5px;
+	}
+ 	
+		/* Handle */
+	::-webkit-scrollbar-thumb {
+  		background: LightGray; 
+  		border-radius: 5px;
+	}
+	
+		/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+  		background: gray; 
+	}
+
+	// containers
   	width: 100%;
   	margin-bottom: 16px;  	
   	max-width: $max-image-size;
