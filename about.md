@@ -2,7 +2,7 @@
 layout: page
 title: About
 permalink: /about/
-icon: "monkey.svg"
+icon: "question.svg"
 
 # image sliders:
 slider1:

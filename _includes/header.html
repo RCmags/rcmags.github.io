@@ -3,14 +3,11 @@
   <div class="wrapper">
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
-    
-	<a class="site-title" rel="author" href="{{ "/" | relative_url }}">
-		<img class="home_icon" src="{{ site.baseurl }}/assets/icons/page/news.svg">
-		Home
-	</a>
-	
+    	
     {%- if page_paths -%}
       <nav class="site-nav">
+      
+      	<!-- Hamburger menu -->
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
           <span class="menu-icon">
@@ -21,17 +18,23 @@
         </label>
 
         <div class="trigger">
+        <!-- home -->
+        <a class="page-link" href="{{ "/" | relative_url }}">
+			Home
+			<img class="page_icon" src="{{ site.baseurl }}/assets/icons/page/news.svg">
+		</a>
+        
+          <!-- page links -->
           {%- for path in page_paths -%}
-            {%- assign my_page = site.pages | where: "path", path | first -%}
-            {%- if my_page.title -%}
-            	<a class="page-link" href="{{ my_page.url | relative_url }}">
-            		{{ my_page.title | escape }}
-            		{%- if my_page.icon -%}
-            			<img class="page_icon" src="{{ site.baseurl }}/assets/icons/page/{{my_page.icon}}">
+            {%- assign page = site.pages | where: "path", path | first -%}
+            {%- if page.title -%}
+            	<a class="page-link" href="{{ page.url | relative_url }}">
+            		{{ page.title | escape }}
+            		{%- if page.icon -%}
+            			<img class="page_icon" src="{{ site.baseurl }}/assets/icons/page/{{page.icon}}">
             		{%- endif -%}
             	</a>
             {%- endif -%}
-            
           {%- endfor -%}
         </div>
       </nav>
