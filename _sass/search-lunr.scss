@@ -1,16 +1,41 @@
 #lunrsearchresults {
 	padding-top: 0.2rem;
 	margin-left: 10px;
+
+	ul {
+		list-style: none;
+		padding-left: 0px;
+	}
+	
+	.forlast {
+		border-bottom: none !important;
+	}
+	
+	.list-item {
+		padding-bottom: 5px;
+		margin-bottom: 25px;
+		border-bottom: 1px dotted LightGray;
+		
+		// inner tags
+		.title {
+			font-size: 24px;
+			color: $post-color;
+		}
+			
+		a {
+			display: block; 
+			color: #777;
+		}
+		a:hover, a:focus {
+			text-decoration: none;
+		}
+		a:hover {
+			.title {text-decoration: underline;}
+		}
+	}
 }
 
-.lunrsearchresult {padding-bottom: 1rem;}
-.lunrsearchresult .title {color: #d9230f;}
-.lunrsearchresult .url {color: silver;}
-.lunrsearchresult a {display: block; color: #777;}
-.lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
-.lunrsearchresult a:hover .title {text-decoration: underline;}
-
-.form-control {
+.lunr-form-control {
 	display: flex;
  	justify-content: center;
  	width: 100%;
@@ -32,6 +57,8 @@
  	}
 }
 
-.result-indicator {
-	font-size: 32px;
+.lunr-result-indicator {
+	font-size: 18px;
+	padding-top: 15px;
+	color: FireBrick;
 }
