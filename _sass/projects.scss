@@ -32,7 +32,7 @@
 	details {
 		.button_on {
 			@extend .button;
-			color: DodgerBlue;
+			color: CornflowerBlue;
 			display: block;
 		}
 		.button_off {
@@ -65,4 +65,9 @@
 	.content {
 		padding-top: 15px;
 	}
+}
+
+.class-header {
+	@extend .post-header;
+	padding-bottom: 15px;
 }

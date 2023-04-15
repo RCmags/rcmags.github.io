@@ -15,16 +15,16 @@ $img-radius:		5px;
 $text-color:       darken(gray, 15%);				//#111 !default;
 $background-color: white;						//#fdfdfd !default;
 $brand-color:      DodgerBlue; 						//#2a7ae2 !default;
-$post-color:	   darken(DodgerBlue, 10%); 		// darken(CornflowerBlue, 15%); //darken(LightSteelBlue, 40%);
+$post-color:	   darken(DodgerBlue, 18%); 		// darken(CornflowerBlue, 15%); //darken(LightSteelBlue, 40%);
 
 $grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
-$grey-color-dark:  darken($grey-color, 25%) !default;
+$grey-color-dark:  darken($grey-color, 28%) !default;
 
 $table-text-align: left !default;
 
-$header-color: #f8f9f9;
-$footer-color: darken($header-color, 4%);
+$header-color: darken(#f8f9f9, 1%);
+$footer-color: darken($header-color, 2%);
 
 // Width of the content area
 $content-width:    1000px !default;
