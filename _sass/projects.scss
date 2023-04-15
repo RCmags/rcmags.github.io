@@ -13,12 +13,13 @@
 	}
 	
 	summary {
+		list-style: none; // hide arrow
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		outline:none;
 	}
-		// hide default arrow
+		// hide arrow
 	summary::-webkit-details-marker {
   		display:none;
 	}
