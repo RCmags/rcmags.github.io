@@ -25,17 +25,18 @@
 	
 	.button {
 		padding-left: 10px;
+		min-width: 60px;
 	}
 	
 	// button state
 	details {
 		.button_on {
-			@extends .button;
-			color: SlateGrey;
+			@extend .button;
+			color: DodgerBlue;
 			display: block;
 		}
 		.button_off {
-			@extends .button;
+			@extend .button;
 			display: none;
 		}		
 	}
