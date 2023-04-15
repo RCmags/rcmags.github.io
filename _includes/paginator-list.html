@@ -21,7 +21,7 @@
 					<div id="categories">
 					<!-- directory -->
 					{% for category in post.categories %}
-						<span class="text">{{ category }}</span>		
+						<a class="text" href="{{ site.baseurl }}/{{ site.data.directory[category].url }}">{{ category }}</a>		
 					{% endfor %}
 					</div>
     			</div>

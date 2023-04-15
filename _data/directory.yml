@@ -1,0 +1,27 @@
+# Projects directory
+
+projects:
+    url: "projects.html"
+    
+Aircraft:
+    url: "projects/aircraft.html"
+    
+Arduino Libraries:
+    url: "projects/arduino-libraries.html"
+
+Miscellaneous:
+    url: "projects/miscellaneous.html"
+
+Robots:
+    url: "projects/robots.html"
+     
+# Blog directory
+
+blog:
+    url: "blog.html"
+
+cat1:
+    url: "blog/cat1.html"
+
+cat2:
+    url: "blog/cat2.html"

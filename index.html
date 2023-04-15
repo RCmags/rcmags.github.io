@@ -2,6 +2,7 @@
 layout: default
 ---
 
+<!-- title -->
 <header class="header-holder">
 	<span class="header-title">
 		Home
@@ -11,4 +12,6 @@ layout: default
 	</span>
 </header>
 
-{% include pagination.html %}
+<!-- Post list -->
+{% include paginator-list.html src=paginator %}
+{% include paginator-buttons.html %}
