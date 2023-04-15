@@ -1,8 +1,15 @@
-.project-list {
-  	//list-style: none;
+.project-container {
+	display: flex;
+	justify-content: center;
+}
 
-	#category {
-		font-size: 24px;
+.project-list {
+  	list-style: none;
+  	width: 100%;		
+
+	.category {
+		font-size: 40px;
+		color: $post-color;
 	}
 	
 	summary {
@@ -24,7 +31,7 @@
 	details {
 		.button_on {
 			@extends .button;
-			color: blue;
+			color: SlateGrey;
 			display: block;
 		}
 		.button_off {
@@ -38,18 +45,23 @@
 			display: none;
 		}
 		.button_off {
-			color: red;
+			color: Salmon;
 			display: block;
 		}
 	}
 	
-	#list_out {
+	.list_out {
 		padding-bottom: 20px;
-		//margin-left: 10px;
+		margin-bottom: 25px;
 		margin-right: 10px;
+		border-bottom: 1px solid LightGray;
 	}
 	
-	#content {
+	.forlast {
+		border-bottom: none !important;
+	}
+	
+	.content {
 		padding-top: 15px;
 	}
 }

@@ -17,8 +17,14 @@
 			<li class="list_item">
 		{% endif %}
 				<div id="container_in">
-    				<a href="{{ post.url | relative_url }}"> {{ post.title | escape }} </a>	
-    				<span id="date"> {{ post.date | date: date_format }} </span> 
+    				<a class="title" href="{{ post.url | relative_url }}"> {{ post.title | escape }} </a>	
+					
+					<div id="date">
+    					<span id="text">{{ post.date | date: date_format }}</span>
+    					<i id="icon">
+    						<img class="date_icon" src="{{ site.baseurl }}/assets/icons/page/calendar.svg"> 
+    					</i>
+    				</div>
 				</div>
 			</li>
 		{% endfor %}

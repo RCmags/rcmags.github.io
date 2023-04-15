@@ -1,22 +1,29 @@
 <!-- Collapsible list of sub-categories -->
 
+<div class="project-container">
 <ul class="project-list">
 {% for post in site[include.parent] %}
-	<li id="list_out">
-		<div id="container_list">
-    		<a id="category" href="{{ post.url | relative_url }}"> {{ post.title }} </a>
+{% if forloop.last %}
+	<li class="list_out forlast">
+{% else %}
+	<li class="list_out">
+{% endif %}
+		<div class="container_list">
+    		<!-- category -->
+    		<a class="category" href="{{ post.url | relative_url }}"> {{ post.title }} </a>
 
+			<!-- dropdown -->
     		<details>
     			<summary>
     				{% if post.description %}
     					<span>{{ post.description }}</span>
     				{% endif %}
-    				
-    				<span class="button_on">[show]</span>
-    				<span class="button_off">[hide]</span>	
+    				<!-- buttons -->	
+    				<span class="button_on">[show] &#9666;</span>
+    				<span class="button_off">[hide] &#9662;</span>	
     			</summary>
 				
-				<div id="content">
+				<div class="content">
     				{% include category-posts.html category=post.category %}
     			</div>
     		</details>			    				
@@ -24,3 +31,4 @@
 	</li>
 {% endfor %}
 </ul>
+</div>

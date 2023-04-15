@@ -22,7 +22,7 @@ collections:
     
 # social links
 github_username: RCmags
-youtube_username: XXXmags
+youtube_username: RCmags
 rcgroups_username_id: "189488"
 
 show_excerpts: false # set to true to show excerpts on the homepage
@@ -30,7 +30,7 @@ show_excerpts: false # set to true to show excerpts on the homepage
 # Minima date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
 minima:
-  date_format: "%-d %b %Y"
+  date_format: "%-d %b, %Y"
 
 plugins:
  - jekyll-feed

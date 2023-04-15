@@ -121,12 +121,11 @@
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid $grey-color-light;
-  border-bottom: none;//5px solid $grey-color-dark;
+  border-top: 2px solid $grey-color-light;
   padding: $spacing-unit 0;
  
   box-shadow: 0px -1px 6px $grey-color-light;
-  background:  $header-color; //#ff9933; //
+  background:  $footer-color; 
 }
 
 .footer-heading {
