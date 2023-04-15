@@ -12,10 +12,10 @@ $base-line-height: 1.5 !default;
 $spacing-unit:     12px !default;
 $img-radius:		5px;
 
-$text-color:       gray;	//#111 !default;
-$background-color: #fdfdfd !default;
-$brand-color:      DodgerBlue; //#2a7ae2 !default;
-$post-color:	   darken(SteelBlue, 0%); // darken(CornflowerBlue, 15%); //darken(LightSteelBlue, 40%);
+$text-color:       darken(gray, 15%);				//#111 !default;
+$background-color: white;						//#fdfdfd !default;
+$brand-color:      DodgerBlue; 						//#2a7ae2 !default;
+$post-color:	   darken(DodgerBlue, 10%); 		// darken(CornflowerBlue, 15%); //darken(LightSteelBlue, 40%);
 
 $grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;

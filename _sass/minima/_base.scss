@@ -19,14 +19,13 @@ p {
   padding-bottom: 10px;
 }
 
-
 /**
  * Basic styling
  */
 body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   color: $text-color;
-  //background-color: $background-color;  
+  background-color: $background-color;  
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
      -moz-font-feature-settings: "kern" 1;
@@ -122,6 +121,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: $base-font-weight;
   // Location of headers
   text-align: left;
+  color: black;
 }
 
 
