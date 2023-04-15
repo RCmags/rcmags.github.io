@@ -147,7 +147,7 @@
 		text-align: center;
 		font-size: 16px;
 		color: gray;
-		transform: TRANSLATEY(-26px);
+		//transform: TRANSLATEY(-26px);
 	}
 	summary:focus {
 		outline: none;
@@ -172,7 +172,7 @@
   		display: grid;
   		grid-template-columns: repeat(6, 1fr);
   		grid-gap: 10px;
-  		transform: TRANSLATEY(-10px);
+  		//transform: TRANSLATEY(-10px);
 	}
 	.grid-item {
   		font-size: 18px;
