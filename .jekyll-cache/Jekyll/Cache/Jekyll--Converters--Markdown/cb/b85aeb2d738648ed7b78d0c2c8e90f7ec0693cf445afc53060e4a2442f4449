@@ -1,9 +1,0 @@
-I"�<p>This is a simple calculator GUI made with tkinter that is written in <strong>python 3</strong>. The calculator can perform basic operations such as addition, subtraction, multiplication and division. Beyond that it can delete the last input character (DEL) and it can clear the stored input (CE). It effectively mimmicks a cheap hand-held calculator.</p>
-
-<p>To use the calculator, simply execute “simple_calc.py” with the python shell. If succesful, this should be the output:
-<img src="https://raw.githubusercontent.com/RCmags/Calculator-GUI/main/sample_shot.png" alt="image" /></p>
-
-<h3 id="github-repo">Github Repo:</h3>
-<p><a href="https://github.com/RCmags/Calculator-GUI">Calculator-GUI</a></p>
-
-:ET

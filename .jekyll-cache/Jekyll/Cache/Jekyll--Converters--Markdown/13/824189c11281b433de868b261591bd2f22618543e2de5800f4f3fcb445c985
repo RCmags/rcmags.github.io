@@ -1,8 +1,0 @@
-I"a<p>The purpose of this library is to make a basic and lightweight interface for the MPU6050. It can do the following:</p>
-<ul>
-  <li>Configure the inbuilt low pass filter</li>
-  <li>Configure the sensitivity of the accelerometer and gyro</li>
-  <li>Retrieve the raw output of the sensor</li>
-  <li>Output scaled accelerometer and gyro values</li>
-</ul>
-:ET

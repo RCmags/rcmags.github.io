@@ -101,10 +101,10 @@
   align-items:center;
   
   .box {
-  	margin: 0px 25px;
   	padding: 6px;  	
   	height: 20px;
   	line-height: 20px;
+  	margin: 0px 35px;
   }
   
   .button {
@@ -143,23 +143,24 @@
 	flex-direction: row;
 	justify-content: center;
 	
-	summary::-webkit-details-marker {
-  		display:none;
-	}
 	summary {
 		text-align: center;
 		font-size: 16px;
 		color: gray;
 		transform: TRANSLATEY(-26px);
 	}
-	summary:hover, details[open] {
+	summary:focus {
+		outline: none;
+	}
+	details summary::-webkit-details-marker {
+  		display:none;
+	}
+	
+	details[open] {
 		.label {
 			color: white;
 			background: $brand-color;
 		}
-	}
-	summary:focus {
-		outline: none;
 	}
 	
 	.label {

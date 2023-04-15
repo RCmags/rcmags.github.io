@@ -1,2 +1,0 @@
-I"c<p>This is a library for 3d vectors and quaternions. It includes two structs to define each datatype. Both vectors and quaternions can perform basic operations such as addition, subtraction, multiplication, division, increment, decrement, and their analogs for multiplication and division. Vectors and quaternions are also compatible with each other.</p>
-:ET

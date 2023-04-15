@@ -1,2 +1,0 @@
-I"x<p>This is an Arduino library for ADNS3080 mouse sensor. It provides a simple interface to retrieve motion and frame data from the sensor. It is generally sold as a module with a lens attached. This code was written for such a module. The following schematic shows how to connect the module to an arduino uno. It’s the same for other boards except the SPI spins change.</p>
-:ET
