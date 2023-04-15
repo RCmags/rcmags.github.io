@@ -1,8 +1,7 @@
-title: Unusual Vehicles
-author: Raul G.
+title: RCmags
+author: random-internet-guy
 email: memoryofatrufestival@gmail.com
-description: > # this means to ignore newlines until "twitter_username:"
-  Personal blog about model aircraft and small robots
+description: blog n' stuff
 
 # index pagination
 plugins:
