@@ -5,4 +5,4 @@ This site is built using [jekyll](http://jekyllrb.com/) and its default [minima 
 ## :interrobang: Content
 This site meant as a repository to display my projects and a place to host my blog. There's no real theme to the content besides, well, whatever is on it. Still, it provides an overview of what I like to work on.  
 
-Thanks _random internet person__ [:skull:](https://www.youtube.com/@SexuaLobster) for being a creeper taking a look! :sweat_smile:
+Thanks __random internet person__ [:skull:](https://www.youtube.com/@SexuaLobster) for taking an interest in what I do! :sweat_smile:
