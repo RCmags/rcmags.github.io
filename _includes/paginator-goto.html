@@ -1,0 +1,18 @@
+{% assign npages = paginator.total_pages %}
+
+{% if npages > 1 %}
+<div class="paginator-goto">
+<details>
+	<summary>
+		<span class="label">{{ paginator.page }}/{{ paginator.total_pages }}</span>
+	</summary>
+	<!-- list -->
+	<div class="grid-container">
+		<a class="grid-item" href="{{ site.baseurl }}/">1</a>
+		{% for index in (2..npages) %}
+			<a class="grid-item" href="{{ site.baseurl }}/page{{ index }}">{{index}}</a>
+		{% endfor %}
+	</nav>
+</details>
+</div>
+{% endif %}

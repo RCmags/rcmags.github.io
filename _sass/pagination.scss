@@ -101,6 +101,7 @@
   align-items:center;
   
   .box {
+  	margin: 0px 25px;
   	padding: 6px;  	
   	height: 20px;
   	line-height: 20px;
@@ -116,6 +117,7 @@
   	@extend .box;
   	font-size: 24px;
   	border-radius: 5px;
+  	z-index: 1;
   }
   
   .button_link:hover {
@@ -131,23 +133,55 @@
      
   .page_number {
   	@extend .box;
-  	border-left: none;
-  	border-right: none;
   	color: gray;
   }
 }
 
-// Other options
-.pagination_options {
+// Go to page
+.paginator-goto {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	padding-top: 10px;
 	
-	h3 {
-		text-align: center; 
-		color: $grey-color-dark;
-		margin-left: 10px;
-		margin-right: 10px;
+	summary::-webkit-details-marker {
+  		display:none;
+	}
+	summary {
+		text-align: center;
+		font-size: 16px;
+		color: gray;
+		transform: TRANSLATEY(-26px);
+	}
+	summary:hover, details[open] {
+		.label {
+			color: white;
+			background: $brand-color;
+		}
+	}
+	summary:focus {
+		outline: none;
+	}
+	
+	.label {
+		padding: 5px 10px;
+		border-radius: 10px;
+	}
+		
+	.grid-container {
+  		display: grid;
+  		grid-template-columns: repeat(6, 1fr);
+  		grid-gap: 10px;
+  		transform: TRANSLATEY(-10px);
+	}
+	.grid-item {
+  		font-size: 18px;
+  		text-align: center;
+  		padding: 0px 10px;
+  		border: 1px solid LightGray;
+  		border-radius: 8px;
+	}
+	.grid-item:hover {
+		text-decoration: none;
+		box-shadow: 0px 0px 2px 1px LightGray;	
 	}
 }

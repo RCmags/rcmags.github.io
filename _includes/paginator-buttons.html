@@ -8,11 +8,6 @@
 		<span class="button_null"> &#9664; </span>	
 	{% endif %}	
 	
-  	<!-- pages -->
-	<span class="page_number">
-		<p>{{ paginator.page }}/{{ paginator.total_pages }}</p>
-	</span>
-	
 	<!-- Next button -->	
 	{% if paginator.next_page %}
 		<a class="button_link" href="{{ paginator.next_page_path }}">
@@ -22,3 +17,7 @@
 		<span class="button_null"> &#9654; </span>
 	{% endif %}	
 </div>
+
+<!-- Pages -->
+{% include paginator-goto.html %}
+
