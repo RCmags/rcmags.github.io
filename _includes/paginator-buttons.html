@@ -1,23 +1,47 @@
-<div class="pagination">
-	<!-- Previous button -->
-	{% if paginator.previous_page %}
-		<a class="button_link" href="{{ paginator.previous_page_path }}">
-			&#9664;
-		</a>
-	{% else %}
-		<span class="button_null"> &#9664; </span>	
-	{% endif %}	
+{% assign npages = paginator.total_pages %}
+
+<div class="paginator-buttons">
+<details>
+	<!-- button menu -->
+	<summary>
 	
-	<!-- Next button -->	
-	{% if paginator.next_page %}
-		<a class="button_link" href="{{ paginator.next_page_path }}">
-			&#9654; 
-		</a>
-	{% else %}
-		<span class="button_null"> &#9654; </span>
-	{% endif %}	
+		<!-- Previous button -->
+		{% if paginator.previous_page %}
+			<a class="button_link" href="{{ paginator.previous_page_path }}">
+		{% else %}
+			<a class="button_null">
+		{% endif %}
+		<svg style="height: 20px; width: 20px">
+  			<polygon points="0,10 20,20 20,0">
+		</svg></a>
+		
+		<!-- Goto button -->
+		{% if npages > 1 %}
+			<span class="label">{{ paginator.page }}/{{ paginator.total_pages }}</span>
+		{% endif %}
+
+
+		<!-- Next button -->	
+		{% if paginator.next_page %}
+			<a class="button_link" href="{{ paginator.next_page_path }}">			 
+		{% else %}
+			<a class="button_null">
+		{% endif %}
+		<svg style="height: 20px; width: 20px">
+  			<polygon points="20,10 0,20 0,0">
+		</svg></a>
+		
+	</summary>
+	
+	<!-- list -->
+	{% if npages > 1 %}
+	<div class="grid-container">
+		<a class="grid-item" href="{{ site.baseurl }}/">1</a>
+		{% for index in (2..npages) %}
+			<a class="grid-item" href="{{ site.baseurl }}/page{{ index }}">{{index}}</a>
+		{% endfor %}
+	</nav>
+	{% endif %}
+	
+</details>
 </div>
-
-<!-- Pages -->
-{% include paginator-goto.html %}
-

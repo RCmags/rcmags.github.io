@@ -1,0 +1,91 @@
+// Page selection
+.paginator-buttons {
+	// 1. Containers
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+
+	summary {
+		list-style: none; 	// hide arrow
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	summary:focus {
+		outline: none;
+	}
+	
+	// hide arrow
+	summary::-webkit-details-marker, summary::marker {
+  		display:none;
+	}
+		
+	// 2. Page change buttons
+  	.button {
+  		font-size: 30px;
+  		margin: 0px 6px;
+  		padding: 0px 10px;
+  		border-radius: 40%;
+  		vertical-align: middle;
+  	}
+	
+  	.button_link {
+  		@extend .button;
+  		z-index: 10;
+  		polygon {
+  			fill: $brand-color;
+  		}
+  	}
+  	
+  	.button_link:hover {
+  		text-decoration: none;
+  		 polygon {
+  			fill: $text-color;
+  		}
+  	}
+  	
+  	.button_null {
+  		@extend .button;
+  		polygon {
+  			fill: $grey-color-light;
+  		}
+  	}
+  	.button_null:hover {
+  		text-decoration: none;
+  	}	
+	
+	// 3. Goto button
+
+	.label {
+		@extend .button;
+		box-shadow: 0px 0px 1px 1px LightGray;	
+		padding: 5px 10px;
+		border-radius: 10px;
+		font-size: 16px;
+		color: gray;
+	}
+		
+	details[open] .label {
+		color: white;
+		background: $brand-color;
+		border: none;
+	}
+	
+	// 4. Dropdown menu:
+		
+	.grid-container {
+  		display: grid;
+  		grid-template-columns: repeat(6, 1fr);	// 6 columns
+  		grid-gap: 10px;
+	}
+	.grid-item {
+  		font-size: 18px;
+  		text-align: center;
+  		padding: 0px 10px;
+  		border: 1px solid LightGray;
+  		border-radius: 8px;
+	}
+	.grid-item:hover {
+		text-decoration: none;
+		box-shadow: 0px 0px 2px 1px LightGray;	
+	}
+}

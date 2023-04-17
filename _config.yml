@@ -1,7 +1,7 @@
 title: RCmags
 author: random-internet-guy
 email: memoryofatrufestival@gmail.com
-description: blog n' stuff
+description: Projects and other things
 
 # index pagination
 plugins:
@@ -24,7 +24,8 @@ github_username: RCmags
 youtube_username: XXXmags
 rcgroups_username_id: "189488"
 
-show_excerpts: false # set to true to show excerpts on the homepage
+# toggled
+google_analytics: true
 
 # Minima date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
