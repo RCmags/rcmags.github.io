@@ -13,15 +13,13 @@ slider1:
 ---
 
 ### The author
-I'm some guy on the internet that made a github account to showcase his stuff. My life's story is pretty simple. I liked RC-planes and video games as a kid, then went to college and took some coding classes and got a degree in mechanical engineering. The intersection of these interests led me to make some pretty cool projects and I've felt the need to write about them. 
+I'm some guy on the internet that made a github account to showcase his stuff. My life's story is pretty simple. I liked RC-planes and video games as a kid, then went to college and took some coding classes and got a degree in mechanical engineering. The intersection of these interests led me to make some pretty cool projects and I've felt the need to write about them. I believe that some of these projects, especially the experimental model aircraft, represent some very good and unique concepts. They can definitely serve as inspiration for anyone interested in pursuing similar designs. 
 
-I believe that some of these projects, especially the experimental model aircraft, represent some very good and unique concepts. They can definitely serve as inspiration for anyone interested in pursuing similar designs. 
-
-With time, I came to realize I needed a blog to just write about stuff and get it out of my head. It seems like a good way to maintain mental clarity and peace of mind. 
+I've also realized I needed a blog to get stuff out of my head. It seems like a good way to maintain mental clarity and peace of mind. 
 
 {% include image.html src="/img/about/skyline.jpg" %}
 <p align="center">
-<i>Staring into the horizon feels good</i>
+<i>Sometimes staring into the horizon feels good</i>
 </p>
 
 ### About this site 
