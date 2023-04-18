@@ -17,7 +17,7 @@ I'm some guy on the internet that made a github account to showcase his stuff. M
 
 I believe that some of these projects, especially the experimental model aircraft, represent some very good and unique concepts. They can definitely serve as inspiration for anyone interested in pursuing similar designs. 
 
-With time, I've also realized I needed a blog to just write about stuff and get it out of my head. It seems like a good way to maintain mental clarity and peace of mind. 
+With time, I came to realize I needed a blog to just write about stuff and get it out of my head. It seems like a good way to maintain mental clarity and peace of mind. 
 
 {% include image.html src="/img/about/skyline.jpg" %}
 <p align="center">
