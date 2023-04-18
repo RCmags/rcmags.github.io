@@ -1,0 +1,9 @@
+{% assign dir = include.dir %}
+
+<svg style="height: 20px; width: 20px">
+  	{% if dir == "left" %}
+  		<polygon points="0,10 20,20 20,0">
+  	{% elsif dir == "right" %}
+  		<polygon points="20,10 0,20 0,0">
+  	{% endif %}
+</svg>
