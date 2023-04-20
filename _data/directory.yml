@@ -20,8 +20,8 @@ Robots:
 blog:
     url: "blog.html"
 
-cat1:
-    url: "blog/cat1.html"
+Research:
+    url: "blog/research.html"
 
-cat2:
-    url: "blog/cat2.html"
+Travel:
+    url: "blog/travel.html"
