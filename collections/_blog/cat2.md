@@ -1,5 +1,5 @@
 ---
 layout: category-page
-category: cat2
-description: "category2"
+category: Travel
+description: "Thoughts about places I have been to"
 ---

@@ -1,5 +1,5 @@
 ---
 layout: category-page
-category: cat1
-description: "category1"
+category: Research
+description: "Record of progress through graduate school"
 ---
