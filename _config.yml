@@ -1,5 +1,5 @@
 title: RCmags
-author: random-internet-guy
+author: Mags
 email: memoryofatrufestival@gmail.com
 description: Projects and other things
 
@@ -35,6 +35,7 @@ minima:
 plugins:
  - jekyll-feed
  - jekyll-seo-tag
+ - jekyll-paginate
 
 # Order menu
 #header_pages:
