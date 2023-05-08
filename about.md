@@ -11,7 +11,7 @@ Hi. I'm some guy on the internet whose story is pretty simple: I liked airplanes
 <!-- bird image -->
 <p align="center">
 	<img src="/img/about/avatar.jpg" style="border-radius: 50%; max-width: 300px; padding-bottom: 10px;">	
-	<i>The author identifies greatly with this image. <br>Seriously, what do you expect out of some random website?</i>
+	<i>What do you expect out of some random website?</i>
 </p>
 
 ### This website 
