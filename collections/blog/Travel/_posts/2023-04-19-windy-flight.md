@@ -25,7 +25,7 @@ I tried this before and it ended about as one would expect. All seemed well at f
 
 Needless to say, the slope I chose as my site of sacrifice was pretty windy, but it was also a fairly steady wind. The best way I can describe it is like being in front of a very smooth fan. Since I was atop a big-ass mountain, I spent a few seconds preparing myself mentally to have to walk a few kilometers down a gulch to pick this thing up. With less courage than before, I strapped the aerobird together with some rubber hands, held my transmitter close, and threw it into the air:
 
-{% include youtube.html id='aEPf0QHVuMM' %}   
+{% include youtube.html id='BOzrmk3ns_M' %}   
 <p align="center"><i>It flew! and quite straight at that!</i></p>
 
 The flight was interesting to say the least. For one, the model didn't crash, which was a major success, and my palms weren't too sweaty after it landed. The washout definately did its job and eliminated the death-inducing tip stalls. This was essential as without this degree of stability, the aircraft would have flipped over given how aggressively the wind was causing it to bank.
