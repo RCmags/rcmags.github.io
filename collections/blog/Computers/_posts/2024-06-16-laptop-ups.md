@@ -14,4 +14,4 @@ How exactly can this be done? Batteries differ greatly from AC power supplies. T
 {% include youtube.html id='ZQjazsiyr8s' %}   
 <p align="center">Video 1. DIY laptop powerbank</p>
 
-(more text to add.. images etc)...
+![image](/img/laptop-ups/laptop-ups.png)
