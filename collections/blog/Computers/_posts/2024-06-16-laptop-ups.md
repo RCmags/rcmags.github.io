@@ -25,20 +25,31 @@ How exactly can this be done? Batteries differ greatly from AC power supplies. T
 
 It's possible to make something very similar with a few inexpesive components. These may inclue:
 
-- A large capacity battery: Its possible to use any kind of battery so long as its rechargable and can safely output the power needed by the laptop. To this, one can use an inexpesive lead-acid battery, or a slightly more expensive and better performing lithium-ion battery.  For this project, we shall stick to a 12v 3S Lithium-Ion pack made of multiple 18650 cells. 
+- __A large capacity battery__: Its possible to use any kind of battery so long as its rechargable and can safely output the power needed by the laptop. To this, one can use an inexpesive lead-acid battery, or a slightly more expensive and better performing lithium-ion battery.  For this project, we shall stick to a 12v 3S Lithium-Ion pack made of multiple 18650 cells. 
 
-- DC-to-DC step down converter: This component serves as the charging module for the ups. By settings its maximum current and voltage output, we can easily charge a wide range of arbitrary batteries. Whatever is used, the input voltage to this module MUST exceed the charge voltage of the battery. On the other hand, the maximum current will be limited to what's safe for the battery, and the power output of the voltage input source.
+![image](/img/laptop-ups/parts/battery.jpeg)
 
-- An AC-to-DC power converter: A typical 65W charger brick from a laptop will work well. They are rated at approximately __20v__ output and a maximum current of __3.25A__. It's possible to use any similar converter so long as the voltage is higher than the fully charged voltage of the battery, and the maximum power is greater than that of the laptop plus the step-down converter at constant current.
+- __DC-to-DC step down converter__: This component serves as the charging module for the ups. By settings its maximum current and voltage output, we can easily charge a wide range of arbitrary batteries. Whatever is used, the input voltage to this module MUST exceed the charge voltage of the battery. On the other hand, the maximum current will be limited to what's safe for the battery, and the power output of the voltage input source.
 
-- DC-to-DC step up converter: Since the battery has a variable output voltage that changes with capacity and instantaenous current load, we need a module to regulate this variable voltage into a steady output. By assuming that our battery will always have a lower voltage than that required by the load (in our case, 20v for the laptop), we must always increase the battery voltage.
+![image](/img/laptop-ups/parts/step-down.jpg)
 
-- Some communation module or a relay: The ups needs to switch between charging and discharging the battery, so some kind of device needs to be used to redirect the AC current into either case, depending on whether AC is available or not. To this end, a very simple solution is a relay switch and that activates with the AC current, and connects the battery to the step-down converter/charger.
+- __An AC-to-DC power converter__: A typical 65W charger brick from a laptop will work well. They are rated at approximately __20v__ output and a maximum current of __3.25A__. It's possible to use any similar converter so long as the voltage is higher than the fully charged voltage of the battery, and the maximum power is greater than that of the laptop plus the step-down converter at constant current.
+
+![image](/img/laptop-ups/parts/ac-charger.jpg)
+
+- __DC-to-DC step up converter__: Since the battery has a variable output voltage that changes with capacity and instantaenous current load, we need a module to regulate this variable voltage into a steady output. By assuming that our battery will always have a lower voltage than that required by the load (in our case, 20v for the laptop), we must always increase the battery voltage.
+
+![image](/img/laptop-ups/parts/step-up.jpg)
+
+- __Some communation module or a relay__: The ups needs to switch between charging and discharging the battery, so some kind of device needs to be used to redirect the AC current into either case, depending on whether AC is available or not. To this end, a very simple solution is a relay switch and that activates with the AC current, and connects the battery to the step-down converter/charger.
+
+![image](/img/laptop-ups/parts/relay.jpg)
 
 With this combination of components we can make a system that automatically switches between AC and DC power. In the case of AC power failure, the relay will quickly switch to battery power to maintain power. However, since the relay is a mechanical device it will take a finite ammount of time to change state. This delay will cause power to the laptop to be dissabled momentarily, meaning the laptop will have to be powered by its internal battery for a short ammount of time while the UPS transitions. As a consequence, this design means we have __interrupted power supply__. Despite this drawback of a relay, it comes with some advantages:
 
-- A relay has very little contact resistance since its just a mechanical switch. Either when its coil is powered or unpowered, the voltage drop across it is small. 
-- There is little heat loss by the relay in its unpowered state. This is also helped by the low contact resistance since it the very low loss means even less heat.
+1. A relay has very little contact resistance since its just a mechanical switch. Either when its coil is powered or unpowered, the voltage drop across it is small. 
+
+2. There is little heat loss by the relay in its unpowered state. This is also helped by the low contact resistance since it the very low loss means even less heat.
 
 By comparison, other switching methods like transistors or diodes will generate more heat when current flows through them. On the upside, being solid-state devices their switching time is instant compared to a mechanical switch. 
 
