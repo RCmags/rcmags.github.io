@@ -3,16 +3,16 @@ layout: post
 title: "DIY Laptop powerbank / Battery power supply"
 
 slider1:
-- url: /img/hawkmoth/view/hawkmoth-1.jpg
-- url: /img/hawkmoth/view/hawkmoth-2.jpg
-
-slider1:
-- url: /img/hawkmoth/view/hawkmoth-1.jpg
-- url: /img/hawkmoth/view/hawkmoth-2.jpg
-
-slider1:
-- url: /img/hawkmoth/view/hawkmoth-1.jpg
-- url: /img/hawkmoth/view/hawkmoth-2.jpg
+- url: /img/laptop-ups/complete/ups-0.jpg
+- url: /img/laptop-ups/complete/ups-1.jpg
+- url: /img/laptop-ups/complete/ups-2.jpg
+- url: /img/laptop-ups/complete/ups-3.jpg
+- url: /img/laptop-ups/complete/ups-4.jpg
+- url: /img/laptop-ups/complete/ups-5.jpg
+- url: /img/laptop-ups/complete/ups-6.jpg
+- url: /img/laptop-ups/complete/ups-6b.jpg
+- url: /img/laptop-ups/complete/ups-7.jpg
+- url: /img/laptop-ups/complete/ups-8.jpg
 
 ---
 
@@ -56,5 +56,11 @@ By comparison, other switching methods like transistors or diodes will generate 
 Putting all of this information together, we can assemble the components into the diagram below:
 
 ![image](/img/laptop-ups/laptop-ups.png)
+<p align="center">Schematic of UPS circuit</p>
 
 Note how overall system is fairly simple. It's essentially a pass-through for the AC-to-DC converter, and an automatic charger for the battery. Moreover, the __input voltage__ from the AC-DC converter just has to be __higher__ than the __battery voltage__, but it does NOT have to match the voltage required by the laptop. As a consequence, the we can use a ~12v converter up to a ~20v converter with this design. It's input voltage is very flexible. 
+
+{% include image-slider.html list=page.slider1 %}
+<p align="center">Views of the completed direct-current UPS</p>
+
+As the images show above, the completed diagram shows how the assembled UPS is fairly compact and functional. It can be completely turned off by unplugging the AC-DC power supply and disconecting the battery from the rest of the circuit (via the power switch). Moreover, by addings a handle to the device it can be easily moved around. 
