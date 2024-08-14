@@ -22,7 +22,11 @@ It sported a mighty [Celeron N3050](https://ark.intel.com/content/www/us/en/ark/
 
 That's a tremedous difference of power draw for the similar computational power. The celeron (with 14nm lithography) was released in 2015 and the Operton (90nm lithography) in 2005, and the difference in power consumption is tremedous! As I understand it, this huge decrease in power is due to the reduction height between the layers that make up the processors. The thinner layers cut through [lithography](https://inc42.com/glossary/lithography/) means much less heat. 
 
-Technical details aside, for years I used this laptop until I couldn't take how slow it was. How I ever thought it was usable when I bought it is an ode to my ignorance of computers at the time. That aside, I do see the value it represented and how it, in retrospect, taught me to squeeze out the performance of a computer with limited hardware performance. More importantly, it taught me about the impact **light-weight** software has user experience, and how beneficial it is to **optimize** software even if its easy to run. Both of these adjustments will greatly enhance the perceived performance of a device. 
+Technical details aside, for years I used this laptop until I couldn't take how slow it was. In retrospect, struggling with this device wsa not entirely a bad idea. It taught me to squeeze out the performance of a computer with limited hardware performance. More importantly, it taught me about the impact **light-weight** software has user experience, and how beneficial it is to **optimize** software even if its easy to run. Both of these adjustments will greatly enhance the perceived performance of a device. At some point, no matter the software chosen, if the task is too computationally intensive, the machine will slow down. So while optimization has its place, the hardware ultimately limits the tasks one can comfortable perform. 
+
+The HP laptop came installed with a version of [Windows 10 Home 2016 Edition](https://pureinfotech.com/windows-10-pro-vs-home-which-you-should-buy/). At first the version of windows it was running did not feel completely sluggish. What was obvious though, was the atrocious aggreesiveness with which the anti-virus ran. Windows defender was always keeping the processor saturated doing god-knows-what. It would randomly make the computer slow down out of nowhere. 
+
+![image](https://skyeybureau.weebly.com/uploads/1/2/4/3/124340256/348029392.png)
 
 
  
