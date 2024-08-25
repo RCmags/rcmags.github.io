@@ -1,0 +1,17 @@
+# Projects directory
+
+projects:
+    Vehicles:
+        - "Aircraft"
+        - "Robots"
+        - "More data"
+        - "Specs"
+
+# Blog directory
+
+blog:
+  Personal:
+    - Travel
+    - Computers
+  Work:
+    - Research

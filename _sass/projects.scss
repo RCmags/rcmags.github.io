@@ -5,11 +5,28 @@
 
 .project-list {
   	list-style: none;
-  	width: 100%;		
+  	width: 100%;
 
 	.category {
 		font-size: 40px;
 		color: $post-color;
+	}
+	
+	.supra_category {
+		font-size: 40px;
+		color: black;
+		text-align: left;
+	}
+	
+	.category_icon {
+		font-size: 16px;
+		weight: none !important;
+		vertical-align: middle;
+		color: blue;
+	}
+	
+	.list_category {
+		padding-bottom: 50px;
 	}
 	
 	summary {
@@ -53,8 +70,8 @@
 	}
 	
 	.list_out {
-		padding-bottom: 20px;
-		margin-bottom: 25px;
+		padding-bottom: 18px;
+		margin-bottom: 6px;
 		margin-right: 10px;
 		border-bottom: 1px solid LightGray;
 	}
@@ -69,6 +86,3 @@
 	}
 }
 
-.class-header {
-	padding-bottom: 15px;
-}

@@ -2,33 +2,52 @@
 
 <div class="project-container">
 <ul class="project-list">
-{% for post in site[include.parent] %}
-{% if forloop.last %}
-	<li class="list_out forlast">
-{% else %}
-	<li class="list_out">
-{% endif %}
-		<div class="container_list">
-    		<!-- category -->
-    		<a class="category" href="{{ post.url | relative_url }}"> {{ post.title }} </a>
-
-			<!-- dropdown -->
-    		<details>
-    			<summary>
-    				{% if post.description %}
-    					<span>{{ post.description }}</span>
-    				{% endif %}
-    				<!-- buttons -->	
-    				<span class="button_on">[show] &#9666;</span>
-    				<span class="button_off">[hide] &#9662;</span>	
-    			</summary>
+	<!-- First nester layer -->
+	{% for sub_category in site.data[include.parent] %}
+		<li class="list_category">
+			<!-- Parent category -->
+			{% assign main_category = sub_category.first %}
+			<a href="#{{ main_category }}">
+				<h2 id="{{ main_category }}" class="supra_category">
+					{{ main_category }}
+					<span class="category_icon">&#9739;<span>
+				</h2>
+			</a>
+			
+			<!-- Child categories | Second layer -->
+			{% for category in sub_category.last %}
 				
-				<div class="content">
-    				{% include category-posts.html category=post.category %}
-    			</div>
-    		</details>			    				
-		</div>
-	</li>
-{% endfor %}
+				<ul class="project-list">
+				{% for post in site[include.parent] %}
+					<!--filter posts by category -->
+					{% if post.category == category %}
+						<li class="list_out">
+							<div class="container_list">
+    							<!-- category -->
+    							<a class="category" href="{{ post.url | relative_url }}"> {{ post.title }} </a>
+					
+								<!-- dropdown -->
+    							<details>
+    								<summary>
+    									{% if post.description %}
+    										<span>{{ post.description }}</span>
+    									{% endif %}
+    									<!-- buttons -->	
+    									<span class="button_on">[show] &#9666;</span>
+    									<span class="button_off">[hide] &#9662;</span>	
+    								</summary>
+									
+									<div class="content">
+    									{% include category-posts.html category=post.category %}
+    								</div>
+    							</details>			    				
+							</div>
+						</li>
+					{% endif %}			
+				{% endfor %}
+				</ul>			
+			{% endfor %}
+		</li>
+	{% endfor %}
 </ul>
 </div>
