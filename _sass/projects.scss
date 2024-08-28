@@ -14,7 +14,7 @@
 	
 	.supra_category {
 		font-size: 22px;
-		color: black;
+		color: gray;
 		text-align: left;
 	}
 	
@@ -26,7 +26,7 @@
 	}
 	
 	.list_category {
-		padding-bottom: 40px;
+		padding-bottom: 20px;
 	}
 	
 	summary {
@@ -74,7 +74,8 @@
 		margin-bottom: 6px;
 		margin-right: 10px;
 		margin-left: 12px;
-		border-bottom: 1px solid LightGray;
+		//border-bottom: 1px solid LightGray;
+		border-bottom: none;
 	}
 	
 	.forlast {
