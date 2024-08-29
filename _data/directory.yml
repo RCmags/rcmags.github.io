@@ -3,9 +3,18 @@
 projects:
     url: "projects.html"
     
-Aircraft:
-    url: "projects/aircraft.html"
-    
+Airplanes:
+    url: "projects/airplanes.html"
+
+Autogyros:
+    url: "projects/autogyros.html"
+
+Helicopters:
+    url: "projects/helicopters.html"
+
+Ornithopters:
+    url: "projects/ornithopters.html"
+
 Arduino Libraries:
     url: "projects/arduino-libraries.html"
 

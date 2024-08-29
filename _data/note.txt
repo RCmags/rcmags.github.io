@@ -1,0 +1,1 @@
+Each category needs to be explicitly written into the list of a supra-category.
