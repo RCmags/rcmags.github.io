@@ -32,8 +32,23 @@ blog:
 Research:
     url: "blog/research.html"
 
-Travel:
-    url: "blog/travel.html"
+Journal:
+    url: "blog/journal.html"
 
 Computers:
     url: "blog/computers.html"
+
+Brazil:
+    url: "blog/brazil.html"
+
+Colombia:
+    url: "blog/colombia.html"
+
+Venezuela:
+    url: "blog/venezuela.html"
+
+Mexico:
+    url: "blob/mexico.html"
+
+United-States:
+    url: "blog/united-states.html"
