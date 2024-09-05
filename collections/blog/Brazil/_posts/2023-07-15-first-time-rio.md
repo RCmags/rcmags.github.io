@@ -16,9 +16,9 @@ slider2:
 - url: /img/aerobird/slope-flight/DSC_0035-res.JPG
 ---
 
-               
+Brazil! After thinking about this country I finally made it Brazil! Hurray! 
 
-{% include image-slider.html list=page.slider2 aspect_ratio="16/9" %}
-<p align="center"><i>The sunset was really nice on the way back</i></p>
+I had wanted to travel to this country for a long time and I finally did it. It was a very pleasing feeling to make it here at long last. What isn't there to be exited by? The largest economy in Latin America and one of the largest in the world? The largest portuguese speaking country in the world by far? (it accounts for more than half of all native speakers). 
 
-08/22/2019
+
+
