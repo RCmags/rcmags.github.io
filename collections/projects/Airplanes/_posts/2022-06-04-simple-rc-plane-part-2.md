@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "AR-1 | Simple low wing-loading RC airplane | Part 2 | Inverted tail"
+title: "AR-1 | Experiments with an inverted V-tail"
 
 # image sliders:
 slider1:
@@ -31,6 +31,7 @@ Once tested in the air, the inverted V-tail showed that it didn’t make much di
 
 If we simplify an ornithopter to something like an airplane with two propellers, yawing the aircraft causes one propeller to move faster through the air than the other, which generates a thrust difference that resists the rotation—this results in strong [angular damping](https://en.wikipedia.org/wiki/Damping). Therefore, an ornithopter requires a constant torque to maintain the aircraft's rotation, while an airplane with a single propeller requires much less torque. Thus, the inverted V-tail only plays a significant role if the tail produces **strong** torque. If the torque is small, the orientation of the tail will have little effect. In an ornithopter, where the required torque is much larger, the tail's torque also plays a larger role. Here's how the airplanes flew with the modest effects of modified tail:
 
-
+{% include youtube.html id='6PYJGD716CE' %}  
+<p align="center"><i>A soothing flight on a cloudy day</i></p>
 
 While the inverted V-tail was an interesting modification, it did not improve control significantly, and another method will be needed to enhance control during gliding flight. The obvious next step would be to add [ailerons](https://en.wikipedia.org/wiki/Aileron) to the aircraft. Despite this setback, the airplane flew well overall.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "AR-1 | Simple low wing-loading RC airplane | Part 1"
+title: "AR-1 | Simple low wing-loading RC airplane"
 
 # image sliders:
 slider1:
