@@ -13,6 +13,7 @@ slider1:
 In the last iteration of the simple RC airplane, I experimented with an inverted V-tail to enhance roll control. However, it didn't work as expected and did little to improve control response. Since that approach failed, the next logical step was to add roll control by changing the wing camber using [ailerons](https://en.wikipedia.org/wiki/Aileron). The model was only equipped with two servos and I didn’t want to add more just for this purpose. This imposed the constraint of using two servos with V-tail mixing to implement ailerons. Roll control wasn’t an issue, as the servos would deflect in unison to raise or lower the ailerons. The challenge came with pitch control: in this case, both ailerons would move up or down together. 
 
 ![image](/img/simple-rc-airplane/part-3/vtail-mix-control.png)
+<p align="center"><i>Pitch and roll control through V-tail mixing of full span flaps</i></p>
 
 Assuming the airplane’s wing isn’t stalled, up elevator benefits from increased wing camber, meaning the ailerons need to deflect downward to increase lift. Conversely, down elevator benefits from raising the ailerons to decrease lift. In this way, the airplane gains automatic flap control through the V-tail mixing. This control concept can be seen in [wingerons](https://aviation.stackexchange.com/questions/97242/is-it-possible-to-use-a-planes-entire-wing-as-an-elevon), where the entire wing is rotated to achieve the same effect. Here’s an example:
 
@@ -24,13 +25,14 @@ One drawback of this system is the higher load on the servos, as they have to ro
 ![image](https://upload.wikimedia.org/wikipedia/commons/a/ab/Bundesarchiv_Bild_146-1980-005-05%2C_Fl%C3%BCgel_einer_Messerschmitt_Me_109.jpg)  
 <p align="center"><i>The BF-109 had slats that extended at low airspeeds and high angles of attack</i></p>
 
-Although the V-tail flaps in the RC airplane are manually controlled, flight dynamics impose complementary control deflections. When the aircraft flies slowly and needs to maintain lift, the elevator is deflected upwards, which in turn lowers the flaps. At higher airspeeds, the elevator is lowered, causing the flaps to add reflex, reducing lift and increasing stability:
+Although the V-tail flaps in the RC airplane are manually controlled, flight dynamics impose complementary control deflections. When the aircraft flies slowly and needs to maintain lift, the elevator is deflected upwards, which in turn lowers the flaps. At higher airspeeds, the elevator is lowered, causing the flaps to add [reflex](https://www.mh-aerotools.de/airfoils/nf_3.htm), reducing lift and increasing stability:
 
-![image](/img/simple-rc-airplane/part-3/automatic-flap-control.png)
+![image](/img/simple-rc-airplane/part-3/implicit-airspeed-deflection.png)
 
 Another benefit of adding ailerons is that the airplane can now maintain consistent roll control, independent of the propeller propwash hitting the tail. This consistency becomes especially important when flying in gusty wind conditions. Here’s how the model looked after the flaps were added to the wing:
 
-![image](/img/simple-rc-airplane/part-3/implicit-airspeed-deflection.png)
+![image](/img/simple-rc-airplane/part-3/sliders.png)
+<p align="center"><i>The full span flaps did not have gap covers while testing the concept</i></p>
 
 The improvement was as expected. Pitch control was slightly better, though not dramatically so, but roll control was significantly enhanced. The model reacted faster to control inputs and maintained better control at lower airspeeds. Here’s the result:
 
