@@ -36,5 +36,5 @@ Another benefit of adding ailerons is that the airplane can now maintain consist
 
 The improvement was as expected. Pitch control was slightly better, though not dramatically so, but roll control was significantly enhanced. The model reacted faster to control inputs and maintained better control at lower airspeeds. Here’s the result:
 
-{% include youtube.html id='6PYJGD716CE' %}  
+{% include youtube.html id='l2lmqK2Ux4Y' %}  
 <p align="center"><i>Improved control through ailerons and automatic flaps</i></p>
