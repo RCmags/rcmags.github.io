@@ -4,9 +4,29 @@ title: "AR-1 | Combined aileron and flap mixing with elevons"
 
 # image sliders:
 slider1:
-- url: /img/simple-rc-airplane/part-3/airplane-1.jpg
-- url: /img/simple-rc-airplane/part-3/airplane-2.jpg
-- url: /img/simple-rc-airplane/part-3/airplane-3.jpg
+- url: /img/simple-rc-airplane/part-3/views/view-diagonal-1.jpg
+- url: /img/simple-rc-airplane/part-3/views/view-diagonal-2.jpg
+- url: /img/simple-rc-airplane/part-3/views/view-front-1.jpg
+- url: /img/simple-rc-airplane/part-3/views/view-front-2.jpg
+- url: /img/simple-rc-airplane/part-3/views/view-front-3.jpg
+- url: /img/simple-rc-airplane/part-3/views/view-side-1.jpg
+
+slider2:
+- url: /img/simple-rc-airplane/part-3/views/view-bottom.jpg
+- url: /img/simple-rc-airplane/part-3/views/view-bottom-3.jpg
+- url: /img/simple-rc-airplane/part-3/views/view-bottom-2.jpg
+
+slider3:
+- url: /img/simple-rc-airplane/part-3/views/view-controls-2.jpg
+- url: /img/simple-rc-airplane/part-3/views/view-controls-1.jpg
+- url: /img/simple-rc-airplane/part-3/views/view-back.jpg
+- url: /img/simple-rc-airplane/part-3/views/view-back-1.jpg
+
+slider4:
+- url: /img/simple-rc-airplane/part-3/views/view-airfoil-1.jpg
+- url: /img/simple-rc-airplane/part-3/views/view-airfoil-2.jpg
+- url: /img/simple-rc-airplane/part-3/views/view-airfoil-3.jpg
+- url: /img/simple-rc-airplane/part-3/views/view-airfoil-4.jpg
 
 ---
 
@@ -31,8 +51,17 @@ Although the V-tail flaps in the RC airplane are manually controlled, flight dyn
 
 Another benefit of adding ailerons is that the airplane can now maintain consistent roll control, independent of the propeller propwash hitting the tail. This consistency becomes especially important when flying in gusty wind conditions. Here’s how the model looked after the flaps were added to the wing:
 
-![image](/img/simple-rc-airplane/part-3/sliders.png)
+{% include image-slider.html list=page.slider1 aspect_ratio="16/9" %}  
+<p align="center"><i>Views of the airplane with an inverted v-tail</i></p>
+
+{% include image-slider.html list=page.slider2 aspect_ratio="16/9" %}  
 <p align="center"><i>The full span flaps did not have gap covers while testing the concept</i></p>
+
+{% include image-slider.html list=page.slider3 aspect_ratio="16/9" %}  
+<p align="center"><i>The servos that controlled the tail also controlled the ailerons</i></p>
+
+{% include image-slider.html list=page.slider4 aspect_ratio="16/9" %}  
+<p align="center"><i>The flying surfaces had thin airfoils with rounded edges</i></p>
 
 The improvement was as expected. Pitch control was slightly better, though not dramatically so, but roll control was significantly enhanced. The model reacted faster to control inputs and maintained better control at lower airspeeds. Here’s the result:
 
