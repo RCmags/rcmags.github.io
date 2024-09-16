@@ -16,47 +16,50 @@ slider3:
 
 ---
 
-Some time had passed since the initial prototype of the self-balancing robot, and while it worked, I was ultimately left unsatisfied with the results. While the stabilization algorithm worked, it felt ad-hoc and poorly defined. This left me with the concern that there was likely a much better way to write a similar algorithm with less redudant operations and more explicit logic. The chasis of the vehicle could also be improved by increasing the height of the device to increase its moment of inertia. Lastly, to really try out the stabilization, it would be nessesary to externally control the robot to make it rotate and forward or backwards. Under these arbitry inputs, it would be possible to stress the stabilization to see how it reponded to abrupt state changes. 
+The [initial prototype](http://localhost:4000/projects/robots/2019/06/11/self_balancing_robot.html) of the self-balancing robot left me somewhat unsatisfied. While the stabilization algorithm worked, it felt disorganized and improvised. I was concerned that there might be a more efficient way to write a similar algorithm with fewer redundant operations and clearer logic. Additionally, the chassis of the robot could be improved by increasing its height to enhance its moment of inertia. To fully test the stabilization, it would also be necessary to control the robot externally to make it move forward, backward, and sideways. This would stress the stabilization system and reveal how well it handled abrupt state changes.
 
-Out of these goals, the easiest modification was the chasis. This was simple and involved replacing the vertical spacers that seperated the acrylic sheets with larger spacers. The quickest solution I found was to use steel tubes with brass threads glued to each end. That way, the acrylic sheets could easily be screwed to the new spacers without having to change other parts. 
+Among these goals, modifying the chassis was the simplest task. It involved replacing the vertical spacers that separated the acrylic sheets with larger ones. The quickest solution I found was to use steel tubes with brass threads glued to each end. This allowed me to easily attach the acrylic sheets to the new spacers without having to alter any other parts.
 
 {% include image-slider.html list=page.slider1 aspect_ratio="16/9" %}
 <p align="center"><i>The extended frame supports elevated the center of mass</i></p>
 
-In terms of electronic components, an inexpensive **6ch 2.4ghz receiver** was installed to the chasis to send control signals to the Arduino. This way, I could use a remote control to guide the command the robot and test its response. To keep the electronics together and tidy, I soldered every component except the receiver to a prototype board. This way they could be mounted onto the chasis as a single unit that connected via jumper wires to the receiver. Moreover, since the receiver was not permanently wired to the robot, it could be reused in other purposes without disturbing the components of the robot. 
+For the electronics, I installed an inexpensive **6-channel 2.4 GHz receiver** on the chassis to send control signals to the Arduino. This setup allowed me to use a remote control to guide the robot and test its response. To keep the electronics organized, I soldered every component except the receiver to a prototype board. This way, they could be mounted on the chassis as a single unit and connected via jumper wires to the receiver. Since the receiver was not permanently wired to the robot, it could be reused for other purposes without affecting the robot's components.
 
 {% include image-slider.html list=page.slider2 aspect_ratio="16/9" %}
-<p align="center"><i>The completed robot had foam pads to ease impacts when falling over</i></p>
+<p align="center"><i>The completed robot had foam pads to cushion impacts when falling</i></p>
 
-Onto the prototype board was soldered an arduino nano, an MPU-6050 and two half burt H-bridged I had lying around. These boards half worked in that they could drive a single motor when they were intended to run two at the same time. Still, they worked well enough to drive motors independantly for each side. Here's what the electronics looked like when mounted on the frame:
+On the prototype board, I soldered an Arduino Nano, an MPU-6050, and two half-burnt H-bridges that I had on hand. Although these H-bridges were intended to drive two motors, they could only drive one motor each. Nevertheless, they worked well enough to drive the motors independently on each side. Here’s what the electronics looked like when mounted on the frame:
 
 {% include image-slider.html list=page.slider3 aspect_ratio="16/9" %}
 <p align="center"><i>Every component was modular in case it needed to be replaced</i></p>
 
-With the mechanical aspects of the robot completed, it was time to work on the core of the project which was the code and stabilization algorithm. To this end, I took a different approach to the last case by avoiding unnessary functions. It uses three PID loops acting simultaneously:
+With the mechanical aspects of the robot completed, I turned my attention to the core of the project: the code and stabilization algorithm. I approached this differently from before by avoiding unnecessary functions. The algorithm uses three PID loops acting simultaneously:
 
-- __Pitch stabilization:__ This is the dominant PID controller of the system. It uses the pitch angle of the vehicle as a proportional term to keep the vehicle upright by accelerating into gravity. 
+- **Pitch Stabilization:** This is the primary PID controller of the system. It uses the pitch angle of the vehicle as a proportional term to keep the vehicle upright by accelerating into gravity.
 
-- __Position stabilization:__ It estimates the velocity by integrating pitch angle, which is proportional to the _lateral acceleration_ (at small angles), and this is integrated again to approximate _position_ (the double integral of the pitch angle). Both are used as the derivative and proportional term respectively. Their combined effect prevent the vehicle from drifting laterally and counters any change in center of gravity.  
+- **Position Stabilization:** This estimates velocity by integrating the pitch angle, which is proportional to the _lateral acceleration_ (at small angles), and integrates it again to approximate _position_ (the double integral of the pitch angle). Both are used as the derivative and proportional terms, respectively. Their combined effect prevents the vehicle from drifting laterally and counters any change in the center of gravity.
 
-- __Yaw stabilization:__ A controller that maintains heading by using as a proportional term the angular velocity of the yaw axis. It counters the open-loop nature of the motor control, wherein one motor can spin faster and cause the vehicle to turn.
+- **Yaw Stabilization:** This controller maintains heading by using the angular velocity of the yaw axis as a proportional term. It counters the open-loop nature of motor control, where one motor can spin faster and cause the vehicle to turn.
 
 ![image](/img/self-balancing/version-2/equations.png)
 <p align="center"><i>Position and velocity can be estimated by integrating the bank angle</i></p>
 
-Ultimately, the unstable axis is only stabilized by the measured pitch angle. The yaw stabilization is nessesary to keep the heading fixed, but this is due to assymetries in the motors that would otherwise cause the robot to turn if controlled symmetrically. 
+Ultimately, the unstable axis is stabilized only by the measured pitch angle. Yaw stabilization is necessary to maintain a fixed heading, as asymmetries in the motors would otherwise cause the robot to turn if controlled symmetrically.
 
 ![image](/img/self-balancing/version-2/small-angle-ext.png)
 
-__Note:__ Both motors are driven with [pulse frequency modulation](https://en.wikipedia.org/wiki/Pulse-frequency_modulation) to counter magnetic cogging and stiction. The duty is cycle is long enough so that each pulse causes the motors to rotate one magnetic pole. Such a waveform provides precise control over low-speed rotation at the cost of jerky movement. This precision is necessary to reduce under and over correction when the vehicle is nearly vertical. 
+Both motors are driven with [pulse frequency modulation](https://en.wikipedia.org/wiki/Pulse-frequency_modulation) to counter magnetic [cogging](https://en.wikipedia.org/wiki/Cogging_torque) and [stiction](https://en.wikipedia.org/wiki/Stiction). The duty cycle is long enough so that each pulse causes the motors to rotate one magnetic pole. This waveform provides precise control over low-speed rotation at the cost of jerky movement. This precision is necessary to minimize under- and over-correction when the vehicle is nearly vertical. Driving the motors this way makes them behave similarly to stepper motors, though with less precision, larger steps, and reduced torque.
 
-Driving the motors like this causes them to behave similar to a stepper motor, albeit with much less precision, larger steps, and less torque. Incorportated into the control algorithm were two inputs from the radio reciever to set the target velocity of the robot when going forward and back, and the rate of angular velocity. The signals from the receiver were decoded by using pin change interrupts in the arduino, to measure the pulse width of the signals. The [pulseInput](https://github.com/RCmags/pulseInput) is a flexible example of how to read such signals. With all of these factors put together the robot worked quite well. It was significantly smoother than the first iteration, both likely due to the better stabily algorithm and the increased moment of inertia:
+The control algorithm incorporated two inputs from the radio receiver: one to set the target velocity of the robot for forward and backward movement, and one to set the rate of angular velocity. The receiver’s signals were decoded using pin change interrupts on the Arduino to measure pulse width. The [pulseInput](https://github.com/RCmags/pulseInput) library is a flexible example of how to read such signals. With all these factors combined, the robot performed quite well. It was significantly smoother than the first iteration, thanks to the improved stabilization algorithm and increased moment of inertia:
 
-{% include youtube.html id='I6z26LVu5y0' %}  
-<p align="center"><i>The robot was capable of maintaing balance and being guided via remote control</i></p>
+{% include youtube.html id='I6z26LVu5y0' %}
+<p align="center"><i>The robot was capable of maintaining balance and being guided via remote control</i></p>
 
-Overall, I'm quite pleased with the results. It is far from perfect and compared to more popular methods of control involving stepper motors, the results may be sub-par, but considering the simplicity with which the motors are controlled, this is still a valueable experiement. With better motors that suffer from much less stiction and cogging, such are brushed coreless motors, it is very likely the performance of the robot would greatly increase. If nothing else, it would have a much smoother response as there would not be a large minimum torque to rotate the wheels. 
+Overall, I’m pleased with the results. Although it's far from perfect and not as refined as more popular control methods involving stepper motors, this project demonstrates a valuable experiment and clever software workaround. If the same algorithm were paired with better motors (such as brushed coreless motors that suffer from less stiction and cogging), it’s likely the robot’s performance would improve significantly. At the very least, it would have a much smoother response due to the reduced minimum torque required to rotate the wheels.
 
-### Github Repo:
-The version of the code associated with this protoype can be found here: 
+![image](https://www.nidec.com/-/media/www-nidec-com/technology/motor/glossary/item/coreless_motor-01.jpg)
+<p align="center"><i>Coreless brushed DC motors have iron-less rotors that do not cause cogging</i></p>
+
+### GitHub Repo
+The version of the code associated with this prototype can be found here: 
 [SelfBalancingRobot - V1.2](https://github.com/RCmags/SelfBalancingRobot/releases/tag/v1.2)
