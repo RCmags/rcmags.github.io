@@ -3,16 +3,26 @@ layout: post
 title: "SB-1 | Updated Self-balancing robot with simpler control algorithm"
 
 slider1:
-- url: /img/self-balancing/version-1/side_view_res.jpg
-- url: /img/self-balancing/version-1/top_view_res.jpg
+- url: /img/self-balancing/version-2/extended-0.jpg
+- url: /img/self-balancing/version-2/extended-1.jpg
+- url: /img/self-balancing/version-2/extended-2.jpg
 
 slider2:
-- url: /img/self-balancing/version-1/balance_motion.gif
-- url: /img/self-balancing/version-1/motion_error.gif
+- url: /img/self-balancing/version-2/center-mass.jpg
+- url: /img/self-balancing/version-2/center-mass-1.jpg
 
 slider3:
-- url: /img/self-balancing/version-1/balance_motion.gif
-- url: /img/self-balancing/version-1/motion_error.gif
+- url: /img/self-balancing/version-2/body-side.jpg
+- url: /img/self-balancing/version-2/body-side-1.jpg
+- url: /img/self-balancing/version-2/body-side-2.jpg
+- url: /img/self-balancing/version-2/body-side-3.jpg
+
+slider4:
+- url: /img/self-balancing/version-2/electronics-5.jpg
+- url: /img/self-balancing/version-2/electronics-4.jpg
+- url: /img/self-balancing/version-2/electronics-3.jpg
+- url: /img/self-balancing/version-2/electronics-2.jpg
+- url: /img/self-balancing/version-2/electronics-1.jpg
 
 ---
 
@@ -21,16 +31,19 @@ The [initial prototype](http://localhost:4000/projects/robots/2019/06/11/self_ba
 Among these goals, modifying the chassis was the simplest task. It involved replacing the vertical spacers that separated the acrylic sheets with larger ones. The quickest solution I found was to use steel tubes with brass threads glued to each end. This allowed me to easily attach the acrylic sheets to the new spacers without having to alter any other parts.
 
 {% include image-slider.html list=page.slider1 aspect_ratio="16/9" %}
-<p align="center"><i>The extended frame supports elevated the center of mass</i></p>
+<p align="center"><i>The extended frame supports increased the moment of inertia</i></p>
+
+{% include image-slider.html list=page.slider2 aspect_ratio="16/9" %}
+<p align="center"><i>The center of mass was raised relative to the wheels</i></p>
 
 For the electronics, I installed an inexpensive **6-channel 2.4 GHz receiver** on the chassis to send control signals to the Arduino. This setup allowed me to use a remote control to guide the robot and test its response. To keep the electronics organized, I soldered every component except the receiver to a prototype board. This way, they could be mounted on the chassis as a single unit and connected via jumper wires to the receiver. Since the receiver was not permanently wired to the robot, it could be reused for other purposes without affecting the robot's components.
 
-{% include image-slider.html list=page.slider2 aspect_ratio="16/9" %}
+{% include image-slider.html list=page.slider3 aspect_ratio="16/9" %}
 <p align="center"><i>The completed robot had foam pads to cushion impacts when falling</i></p>
 
 On the prototype board, I soldered an Arduino Nano, an MPU-6050, and two half-burnt H-bridges that I had on hand. Although these H-bridges were intended to drive two motors, they could only drive one motor each. Nevertheless, they worked well enough to drive the motors independently on each side. Here’s what the electronics looked like when mounted on the frame:
 
-{% include image-slider.html list=page.slider3 aspect_ratio="16/9" %}
+{% include image-slider.html list=page.slider4 aspect_ratio="16/9" %}
 <p align="center"><i>Every component was modular in case it needed to be replaced</i></p>
 
 With the mechanical aspects of the robot completed, I turned my attention to the core of the project: the code and stabilization algorithm. I approached this differently from before by avoiding unnecessary functions. The algorithm uses three PID loops acting simultaneously:
