@@ -65,7 +65,7 @@ Both motors are driven with [pulse frequency modulation](https://en.wikipedia.or
 
 The control algorithm incorporated two inputs from the radio receiver: one to set the target velocity of the robot for forward and backward movement, and one to set the rate of angular velocity. The receiver’s signals were decoded using pin change interrupts on the Arduino to measure pulse width. The [pulseInput](https://github.com/RCmags/pulseInput) library is a flexible example of how to read such signals. With all these factors combined, the robot performed quite well. It was significantly smoother than the first iteration, thanks to the improved stabilization algorithm and increased moment of inertia:
 
-{% include youtube.html id='I6z26LVu5y0' %}
+{% include youtube.html id='lSFwQr3l5Ts' %}
 <p align="center"><i>The robot was capable of maintaining balance and being guided via remote control</i></p>
 
 Overall, I’m pleased with the results. Although it's far from perfect and not as refined as more popular control methods involving stepper motors, this project demonstrates a valuable experiment and clever software workaround. If the same algorithm were paired with better motors (such as brushed coreless motors that suffer from less stiction and cogging), it’s likely the robot’s performance would improve significantly. At the very least, it would have a much smoother response due to the reduced minimum torque required to rotate the wheels.
