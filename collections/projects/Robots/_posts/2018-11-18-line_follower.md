@@ -3,14 +3,19 @@ layout: post
 title: "Line following robot with a PID controller"
 
 slider1:
-- url: /img/simple-rc-airplane/part-2/inverted-tail-1.jpg
-- url: /img/simple-rc-airplane/part-2/inverted-tail-2.jpg
-- url: /img/simple-rc-airplane/part-2/inverted-tail-3.jpg
+- url: /img/line_follower/robot/robot-1.jpg
+- url: /img/line_follower/robot/robot-2.jpg
+- url: /img/line_follower/robot/robot-3.jpg
+- url: /img/line_follower/robot/robot-4.jpg
+- url: /img/line_follower/robot/robot-5.jpg
+- url: /img/line_follower/robot/robot-6.jpg
 
 slider2:
-- url: /img/simple-rc-airplane/part-2/inverted-tail-1.jpg
-- url: /img/simple-rc-airplane/part-2/inverted-tail-2.jpg
-- url: /img/simple-rc-airplane/part-2/inverted-tail-3.jpg
+- url: /img/line_follower/head/head-1.jpg
+- url: /img/line_follower/head/head-2.jpg
+- url: /img/line_follower/head/head-3.jpg
+- url: /img/line_follower/head/head-4.jpg
+- url: /img/line_follower/head/head-5.jpg
 ---
 
 When I was an undergraduate, I took a lab course in electronics where the final project involved building a line-following robot. This small wheeled vehicle needed to navigate a circuit without any external assistance, following a line until it reached the end or continued around a closed loop. Such projects are common when first learning about Arduinos as they provide a platform to explore not only electronics but also programming and closed-loop control. Here’s a great example of a fast line-following robot:
@@ -41,7 +46,7 @@ To address this problem, we controlled the motor speed using [pulse frequency mo
 
 With the control algorithm foundations established, we assembled the robot using __breadboards__ and __hook-up wires__ (See: [Guide to Breadboard Wires by Ankit Negi](https://www.etechnophiles.com/breadboard-wires/)). The end result was a neat and compact circuit that could be modified quickly.
 
-{% include image-slider.html list=page.slider1 aspect_ratio="16/9" %}
+{% include image-slider.html list=page.slider1 aspect_ratio="4/3" %}
 <p align="center"><i>The assembled robot made extensive use of hook-up wires.</i></p>
 
 The vehicle was only equipped with the infrared sensor array so its output was the sole variable determining the robot's behavior. The schematic of the robot’s electronics illustrates this:
@@ -64,7 +69,7 @@ For a detailed discussion of the control algorithm used in the robot, along with
 
 Since this was a group project, we equipped the robot with an additional Arduino connected to a speaker. Although it played no role in guiding the vehicle, it was a fun element to add at the end the project. We attached a doll head to the robot and made the speaker emit quirky sounds as it ran around the circuit. It was weird but it was definitely entertaining!
 
-{% include image-slider.html list=page.slider2 aspect_ratio="16/9" %}
+{% include image-slider.html list=page.slider2 aspect_ratio="4/3" %}
 <p align="center">The final "doll-head" version of the robot. Beware, it screams!</p>
 
 ### GitHub Repository
