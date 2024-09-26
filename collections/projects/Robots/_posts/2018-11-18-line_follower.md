@@ -1,28 +1,72 @@
 ---
 layout: post
-title: "Line following robot"
+title: "Line following robot with a PID controller"
+
+slider1:
+- url: /img/simple-rc-airplane/part-2/inverted-tail-1.jpg
+- url: /img/simple-rc-airplane/part-2/inverted-tail-2.jpg
+- url: /img/simple-rc-airplane/part-2/inverted-tail-3.jpg
+
+slider2:
+- url: /img/simple-rc-airplane/part-2/inverted-tail-1.jpg
+- url: /img/simple-rc-airplane/part-2/inverted-tail-2.jpg
+- url: /img/simple-rc-airplane/part-2/inverted-tail-3.jpg
 ---
 
-This is an arduino sketch for a [line following robot](https://www.electronicshub.org/arduino-line-follower-robot/) based on infrared LED's and an H-bridge. 
-The code uses a PID controller to control the wheels of the vehicle so it steers into a dark line. 
-To improve the likelihood of the vehicle from sliding off the line, 
-the code decreases the speed of the robot when it enters a sharp turn. 
-In an effort to improve the low speed performance, 
-the speed of the motors is controlled via [pulse frequency modulation](https://en.wikipedia.org/wiki/Pulse-frequency_modulation).
-This allows the motors to be moved under the influence of cogging torque and stiction as the pulses act like a jackhammer.
-The end result is motion similar to stepper motor as the motor moves in discrete jumps of variable length.
-At higher throttle settings the motors switch over to [PWM](https://en.wikipedia.org/wiki/Pulse-width_modulation) to smoothen the motion.  
+When I was an undergraduate, I took a lab course in electronics where the final project involved building a line-following robot. This small wheeled vehicle needed to navigate a circuit without any external assistance, following a line until it reached the end or continued around a closed loop. Such projects are common when first learning about Arduinos as they provide a platform to explore not only electronics but also programming and closed-loop control. Here’s a great example of a fast line-following robot:
 
-The code requires a circuit like the one shown in this schematic:  
-![image](https://raw.githubusercontent.com/RCmags/LineFollowingRobot/main/line_follower_robot_schem.png)
+{% include youtube.html id='KdNqmxu_V4A' %}
+<p align="center"><i>This small vehicle can follow an arbitrary line placed on a surface.</i></p>
 
-Below are images of the vehicle this code was written for:  
-![image](https://raw.githubusercontent.com/RCmags/LineFollowingRobot/main/img/bottom_view_res.jpg)
-![image](https://raw.githubusercontent.com/RCmags/LineFollowingRobot/main/img/diag_view_res.jpg)
-![image](https://raw.githubusercontent.com/RCmags/LineFollowingRobot/main/img/top_view_res.jpg) 
+At the time, a machine like the one above represented the kind of performance we could potentially achievable. Although the course provided the necessary equipment, we couldn't replicate the high-speed motion seen in the example due to limitations in the hardware that was available. However, we could still achieve a similar capability for accurately following an arbitrary circuit. The logic for guiding the robot could be executed through an [Arduino Nano](https://store.arduino.cc/products/arduino-nano), so it would allow us to implement various control algorithms. Mechanically, the robot consisted of a standard off-the-shelf chassis featuring an acrylic frame with two geared DC motors and a third, uncontrolled caster wheel at the front:
 
-{% include youtube.html id='NBQjQLE4u1M' %} 
-<p align="center">Video 1. Operation of the line following robot</p>
+![image](/img/line_follower/robot-chasis.jpg)
 
-### Github Repo:
+The freely moving wheel allowed for easy control through [differential wheel velocity](https://en.wikipedia.org/wiki/Differential_wheeled_robot), similar to how a tank or tractor operates. By rotating both wheels at the same velocity, the vehicle could move forward, while any speed difference would cause it to turn. This configuration enabled full control of the vehicle's velocity and orientation without significant mechanical complexity, allowing us to focus on developing the control algorithm. At the core of this system were a pair of infrared distance sensors:
+
+![image](/img/line_follower/ir-sensor.jpg)
+<p align="center"><i>Sensor module based on an infrared LED and a photodiode.</i></p>
+
+These devices measured the reflection of a surface illuminated by an infrared light source. Since dark surfaces reflect less light than white ones, the sensors could detect a dark object in front of them. We could then measure the displacement of a dark line between them by using two sensors in close proximity. This is because as the line passed beneath a sensor, it progressively decreased the reflected light until it was completely blocked. This proportional response allowed us to create a function mapping the sensor outputs to the lateral displacement of the robot relative to the dark line.
+
+![image](https://circuitdigest.com/sites/default/files/inlineimages/Turning-left-to-line-follow.gif)
+<p align="center"><i>See: <a href="https://circuitdigest.com/microcontroller-projects/line-follower-robot-using-arduino">Line Follower Robot using Arduino</a> by Circuit Digest's Saddam.</i></p>
+
+With the sensor providing a continuous value representing the position error, we employed a PID controller to adjust the robot's target rotation. This signal was fed to an [H-bridge](https://en.wikipedia.org/wiki/H-bridge) module, which connected directly to the motors and supplied the power needed to drive them. However, precisely controlling motor velocity posed challenges due to significant [stiction](https://en.wikipedia.org/wiki/Stiction) and [cogging torque](https://en.wikipedia.org/wiki/Cogging_torque) in the mounted motors. This meant they wouldn't rotate unless a minimum torque was applied to their rotors (the internal magnets connected to the output shaft). It was only once the motors began to move and a minimum speed was reached that motor velocity correlated directly with the applied voltage until. Thus, a corrective algorithm needed to be implemented in this slow-speed, non-linear behavior region, to accomplish fine velocity control.
+
+To address this problem, we controlled the motor speed using [pulse frequency modulation](https://en.wikipedia.org/wiki/Pulse-frequency_modulation). Each pulse of the waveform was long enough to dislodge the rotor and cause it to rotate slightly into a different "tooth" generated by cogging torque. As a result, the motors moved similarly to [stepper motors](https://en.wikipedia.org/wiki/Stepper_motor) that have discrete jumps in rotation. By increasing the pulse frequency of the waveform we could cause the motors to rotate faster. At some empirically determined frequency, we made the algorithm switch to [pulse-width modulation](https://en.wikipedia.org/wiki/Pulse-width_modulation) as the rotor gained enough inertia to continue rotating smoothly and PWM enhanced this motion.
+
+{% include youtube.html id='BEncZVaiEms' %} 
+<p align="center"><i>An example of a motor with cogging and one without.</i></p>
+
+With the control algorithm foundations established, we assembled the robot using __breadboards__ and __hook-up wires__ (See: [Guide to Breadboard Wires by Ankit Negi](https://www.etechnophiles.com/breadboard-wires/)). The end result was a neat and compact circuit that could be modified quickly.
+
+{% include image-slider.html list=page.slider1 aspect_ratio="16/9" %}
+<p align="center"><i>The assembled robot made extensive use of hook-up wires.</i></p>
+
+The vehicle was only equipped with the infrared sensor array so its output was the sole variable determining the robot's behavior. The schematic of the robot’s electronics illustrates this:
+
+![image](https://raw.githubusercontent.com/RCmags/LineFollowingRobot/refs/heads/main/images/diagram/schematic.png)
+<p align="center"><i>The control circuit consisted of an Arduino, the sensor array, and two motors.</i></p>
+
+To enhance the robot's ability to follow an arbitrary path, the control algorithm was made to reeduce the speed of the robot when it detected a large displacement from the sensor array. This adjustment allowed the robot to have enough time to rotate and continue tracking the line. While this solution doesn't guarantee the line is tracked under all conditions, it significantly improves functionality for most paths. The following video demonstrates the completed robot's operation:
+
+{% include youtube.html id='NBQjQLE4u1M' %}
+<p align="center">Operation of the completed line-following robot.</p>
+
+As shown, the robot performed well once the PID controller coefficients were correctly adjusted. However, this tuning was surprisingly challenging as the sensor array functioned accurately only over a narrow range of displacements above the line. Beyond this range, measurements became unreliable and the PID controller would fail to function properly. The difficulty in tuning stemmed from this limited band of stability that had to be maximally exploited. When the robot was stationary, this issue was manageable provided the line didn’t move beneath it too quickly. However, once the vehicle began moving forward the rotational response had to be swift to maintain the line tracking. Consequently, it was better to keep the PID controller __underdamped__ allowing it to track rapid movements more effectively than a critically damped system.
+
+![image](https://www.pmdcorp.com/hs-fs/hubfs/Diagrams/fig-over-under-critically-damped.png?width=1400&name=fig-over-under-critically-damped.png)
+
+For a detailed discussion of the control algorithm used in the robot, along with necessary signal processing and corrections applied to the sensor inputs, see the report submitted at the end of the course:
+
+**PDF: <a href="/pdfs/line_follower_report.pdf">Line Following Robot - Detailed Discussion of Circuit and Control Algorithm</a>**
+
+Since this was a group project, we equipped the robot with an additional Arduino connected to a speaker. Although it played no role in guiding the vehicle, it was a fun element to add at the end the project. We attached a doll head to the robot and made the speaker emit quirky sounds as it ran around the circuit. It was weird but it was definitely entertaining!
+
+{% include image-slider.html list=page.slider2 aspect_ratio="16/9" %}
+<p align="center">The final "doll-head" version of the robot. Beware, it screams!</p>
+
+### GitHub Repository
+The code for the robot can be found at the following repository: 
 [LineFollowingRobot](https://github.com/RCmags/LineFollowingRobot)
