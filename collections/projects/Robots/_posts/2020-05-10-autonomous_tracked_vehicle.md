@@ -3,9 +3,17 @@ layout: post
 title: "Review | Tracked vehicle capable of following waypoints on a 3D surface"
 
 slider1:
-- url: https://raw.githubusercontent.com/RCmags/TrackRobot/main/images/tank1_res.jpg
-- url: https://raw.githubusercontent.com/RCmags/TrackRobot/main/images/tank2_res.jpg
-- url: https://raw.githubusercontent.com/RCmags/TrackRobot/main/images/tank3_res.jpg
+- url: /img/tracked-robot/tank1.jpg
+- url: /img/tracked-robot/tank2.jpg
+- url: /img/tracked-robot/tank3.jpg
+- url: /img/tracked-robot/tank4.jpg
+- url: /img/tracked-robot/tank5.jpg
+
+slider2:
+- url: /img/tracked-robot/tank8.jpg
+- url: /img/tracked-robot/tank7.jpg
+- url: /img/tracked-robot/tank6.jpg
+
 ---
 
 ## Introduction to navigation
@@ -123,14 +131,21 @@ As an additional fallback to further increase the robustness of the navigation o
 
 {% include youtube.html id='CAqWehKD_z0' %}
 
+{% include youtube.html id='jEsJZh4MW3Q' %}
+
 Unlike inertial estimates which operate in the short-term, and elaborate math models which only capture parts of the vehicle's dynamics, a sensor that measures velocity is unambiguous. Unless something blocks the sensor or the conditions that allow it to measure velocity are no longer met, it is the most reliable authority on the state of the vehicle. Therefore, the addition of optical flow sensors to the robot is good idea, and the other methods discussed above can be use to estimate position if the optical flow sensors cannot be used.
 
-## Completed robot
+![image](https://i.ebayimg.com/images/g/iOEAAOSwfllma39h/s-l400.jpg)
+
+## Completed robot 
 
 The position of the vehile is estimated using a physical model of the vehicle, an accelerometer that is integrated twice, a gyroscope for heading, and the displacement measured by two optical flow sensors. All of this data is fused to obtain the net displacements relative to an initial position using rectangular coordinates. These position and orientation estimates are used to guide the vehicle to a specified location using two PID loops, one for displacements and one for heading.  
 
 {% include image-slider.html list=page.slider1 aspect_ratio="4/3" %}  
 <p align="center"><i>The tracked prototype was small and compact</i></p>
+
+{% include image-slider.html list=page.slider2 aspect_ratio="4/3" %}  
+<p align="center"><i>Bright white LEDs were placed under the chasis to illuminate the ground</i></p>
 
 The coordinates are stored in a buffer that can be filled in real time via a bluetooth module. Coordinates can be pushed or poped off the buffer. Once the vehicle is within a given radius of a coordinate, the following coodinate is made the target destination. This process will continue indefinitely and the vehicle will follow a closed path with the coordinates as the vertices. 
 
