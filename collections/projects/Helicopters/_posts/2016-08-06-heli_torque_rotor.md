@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Torque-compliant rotor for collective control"
+title: "Review | Torque-compliant rotor for collective control"
 ---
 
 # Introduction to concept
@@ -12,12 +12,12 @@ These changes in pitch can be accomplished automatically by using the torque act
 
 It must be mentioned that much of this project is inspired by the simplicity of the rotor of a radio-controlled autogyro. It is nothing more than a strap bolted onto a bearing housing in its simplest case. The blades attach to the strap, and [cyclic pitch](https://www.youtube.com/watch?v=04tJmP2aqcw) is accomplished by bending the strap. For part of the cycle the strap bends, and for the remaining half, it pitches the blades. 
 
-![image](http://www.bartonhewsons.uk/home/modelflying/helicopters/Resources/IMG_0793.jpg)
+![image](/img/torque_rotor/autogyro-rotor.jpg)
 [See: RC Autogyro - Panther build diary](http://www.bartonhewsons.uk/home/modelflying/helicopters/pantherbuilddiar.html)
 
 While an autogyro does not need collective pitch to fly, a helicopter greatly benefits from this ability. It allows the helicopter to rapidly change  lift and allows the rotor to transition from powered (positive pitch) and unpowered (little or negative pitch) flight. This is generally accomplished through a swashplate controlling the blades. 
 
-![image](https://www.rchelicopterfun.com/images/BellHead500pics.gif)
+![image](/img/torque_rotor/flybarless-rotor.jpg)
 [See: Flybarless helicopter](https://www.rchelicopterfun.com/flybarless.html)
 
 As can be inferred, a helicopter rotor with cyclic and collective is far more complex than the flexplate used by an autogyro. Evidently, it is very appealing to modify the flexplate design to include collective control while maintaining its simplicity. 

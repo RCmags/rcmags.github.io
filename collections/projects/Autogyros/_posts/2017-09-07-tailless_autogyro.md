@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Autogyro stabilized by an offset hinge without a horizontal stabilizer"
+title: "Review | Autogyro stabilized by an offset hinge without a horizontal stabilizer"
 
 # image sliders:
 slider1:
@@ -24,15 +24,11 @@ slider4:
 
 # Introduction to concept
 
-An autogyro is an aircraft kept aloft by a rotor that spins by moving through the air. The aircraft is powered by a propeller that pushes it to maintain airspeed. The rotor does not suffer from an abrupt stall like a wing and allows the aircraft to descent vertically like a parachute. However, the rotor needs motion between itself and the air to generate lift so an autogyro cannot hover in the air like a helicopter.
-
-One can think of an autogyro as a machine with a pneumatic transmission. Instead of the engine powering the rotor directly like in a helicopter, the engine imparts relative energy to the air that in turn drives the rotor. In this sence, air acts as a kind of working fluid that transfers power from the engine to the rotor.
+An autogyro is an aircraft kept aloft by a rotor that spins by moving through the air. The aircraft is powered by a propeller that pushes it to maintain airspeed. The rotor does not suffer from an abrupt stall like a wing and allows the aircraft to descent vertically like a parachute. However, the rotor needs motion between itself and the air to generate lift so an autogyro cannot hover in the air like a helicopter. One can think of an autogyro as a machine with a pneumatic transmission. Instead of the engine powering the rotor directly like in a helicopter, the engine imparts relative energy to the air that in turn drives the rotor. In this sence, air acts as a kind of working fluid that transfers power from the engine to the rotor.
 
 {% include youtube.html id='_25H9ZPE2So' %}   
 
-Because the air drives the motion, the rotor does not create a reaction torque like a helicopter. The drawback is that a pneumatic transmission is not as efficient as a mechanical transmission. The rotor is a kind of an axial wind turbine and operates an angle to the airflow. Like all wind turbines, the rotor cannot absorb all of the power in the incoming air. Add to this the inefficiency in the propeller and the overall efficiency is poor compared to a gearbox. If properly lubricated, a gearbox can achieve an efficiency in excess of 90%.
-
-Nonetheless, the air-driven rotor has a significant advantage when it comes to stability. As the air flows through the bottom of the rotor, the rotor induces a force parallel to the plane of the disk that tends to stabilize the autogyro. By comparison, a helicopter has a top-to-bottom airflow that reverses the planar force and destabilizes the aircraft. Hence, one faces the compromise between stability versus efficiency when comparing an autogyro with a helicopter.
+Because the air drives the motion, the rotor does not create a reaction torque like a helicopter. The drawback is that a pneumatic transmission is not as efficient as a mechanical transmission. The rotor is a kind of an axial wind turbine and operates an angle to the airflow. Like all wind turbines, the rotor cannot absorb all of the power in the incoming air. Add to this the inefficiency in the propeller and the overall efficiency is poor compared to a gearbox. If properly lubricated, a gearbox can achieve an efficiency in excess of 90%. Nonetheless, the air-driven rotor has a significant advantage when it comes to stability. As the air flows through the bottom of the rotor, the rotor induces a force parallel to the plane of the disk that tends to stabilize the autogyro. By comparison, a helicopter has a top-to-bottom airflow that reverses the planar force and destabilizes the aircraft. Hence, one faces the compromise between stability versus efficiency when comparing an autogyro with a helicopter.
 
 {% include image.html src="/img/autogyro/airflow-types.jpg" maxwidth="400px" %}
 
@@ -99,3 +95,4 @@ Should this happen, the aircraft will suddenly pitch forward in an unrecoverable
 {% include youtube.html id='b1p8pCHiuWo' %}     
 <p align="center"> Video 2. Flight of 2nd iteration </p>
 
+After some minor adjustments, this iteration of the autogyro flew quite well and was acceptably stable. It was not as easy to fly as a model with a horizontal stabilizer, but it proved that tail-less pitch stabilization is very possible. Despite this fact, it’s not clear whether a tail-less configuration is __worth__ pursuing. A horizontal stabilizer adds very little weight to the aircraft and is greatly beneficial for stability under all flight conditions. Therefore, while this project serves as an interesting proof of concept, the method of tail-less stability cannot be recommended as a general solution over simply installing a [horizontal stabilizer](https://en.wikipedia.org/wiki/Tailplane) on an autogyro. 

@@ -87,7 +87,6 @@ __Iteration 1:__
 
 The first version of the aircraft was designed to have _passive stability_. The idea was to enhance its stability electronically and use this _excess_ stability to move the center of mass aft. This stability would make it easy to progressively move the mass and observe the behavior of the aircraft. Eventually, the mass would move aft enough to cause the aircraft to depend on the active stabilization. As a consequence, the flaps would deflect downwards to maintain equilibrium. 
 
-
 The aircraft was also equipped with a motor and a propeller to fly under its own power. However, this made it difficult to place the angle of attack sensor. The local airflow felt by the sensor is greatly affected by its location on the aircraft. Any regions behind the wing are disturbed by the large [downwash](https://www.grc.nasa.gov/www/k-12/airplane/downwash.html), and the [powerful slipstream](https://web.mit.edu/16.unified/www/FALL/thermodynamics/notes/node86.html) affects anything behind the propeller. A simple solution was to place the sensor atop a long vertical stabilizer. If it were tall enough, the sensor would lie outside the propeller's slipstream. Likewise, any lift caused by the fin would be perpendicular to the rotation of the sensor. This would minimize any effects it had on the measured angle.
 
 ![image](/img/figures/sensor_airstream.png)
@@ -124,7 +123,6 @@ This had a similar effect to the proportional gain. It tended to slow down the a
 Unlike the previous terms that increased the resistance to pitch disturbances, this term didn't seem to increase the stability. Rather, the integral term did very little at low values, and at higher gains, it induced a very strong delay in the control response. This caused the aircraft to become unwieldy to pilot as prolonged inputs caused the aircraft to stay rotating for some time. Due to this delayed response, the integral term was disabled.  
   
 Having obtained a level of excess stability, it was possible _destabilize_ the aircraft by moving the weight aft. This was done by taping a coin to the tail. Test flights showed it was only possible to shift the center of mass by a moderate amount. Beyond this point, the servos were _incapable of reacting quickly enough_ to stabilize the aircraft. It was evident the aircraft still depended on passive stability as the flaps still had _reflex_ while in flight.  
-
 
 Given this limitation, the aircraft will need to employ faster servos to eliminate its dependency on passive stability. An alternative solution is to slow down the dynamics by increasing the [moment of inertia](http://hyperphysics.phy-astr.gsu.edu/hbase/mi.html) of the pitch axis. This would allow the servos slowly at the cost of a sluggish pitch response.
 
