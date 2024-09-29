@@ -22,7 +22,6 @@ slider3:
 
 For an airplane to maintain stability in flight, it must have the ability to self-correct in the face of external disturbances. When this occurs, the aircraft must cause the disturbance to decrease with time. We can refine this concept by separating it into two components: [static stability](https://ocw.tudelft.nl/wp-content/uploads/Hand-out-Stability_01.pdf) and [dynamic stability](https://www.aircraftflightmechanics.com/Dynamics/ModesofMotion.html). As the names imply, static stability is concerned with the forces acting on the aircraft in the absence of motion. That is, whether the forces acting on the aircraft reach [static equilibrium](https://physicscourses.colorado.edu/phys1110/phys1110_fa12/LectureNotes/StaticEquilibrium.pdf) and mutually oppose each other out. Dynamic stability is focused on whether the aircraft will slow down if pushed away from this equilibrium.  
 
-
 With these definitions, we can also notice that dynamic stability depends on static stability. Static stability ensures an equilibrium state, and dynamic stability ensures the aircraft can return to it. We can also observe an aircraft has multiple axes about which it can be stable. It can translate about three perpendicular directions, and it can rotate about these same axes:
 
 ![image](/img/active-tailless/aircraft-axes.png)

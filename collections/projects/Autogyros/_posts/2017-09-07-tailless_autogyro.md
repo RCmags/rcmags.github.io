@@ -34,7 +34,7 @@ Because the air drives the motion, the rotor does not create a reaction torque l
 
 Nonetheless, the air-driven rotor has a significant advantage when it comes to stability. As the air flows through the bottom of the rotor, the rotor induces a force parallel to the plane of the disk that tends to stabilize the autogyro. By comparison, a helicopter has a top-to-bottom airflow that reverses the planar force and destabilizes the aircraft. Hence, one faces the compromise between stability versus efficiency when comparing an autogyro with a helicopter.
 
-{% include image.html src="http://www.aviastar.org/theory/rotor_4.gif" maxwidth="400px" %}
+{% include image.html src="/img/autogyro/airflow-types.jpg" maxwidth="400px" %}
 
 # Initial design
 _Landing gear_:
@@ -68,7 +68,7 @@ The model autogyro required multiple iterations before it reached a satisfying d
 __Iteration 1:__  
 The first iteration used a conventional landing gear configuration. While it was simple and only required three wheels, the configuration was unstable during landings. The Friction of the front tires induced a braking force that unloaded the rear wheel. As the main wheels were in front of the center of mass, the torque caused by their cornering force caused the vehicle to rotate towards a sharper turn. This was destabilizing and caused the aircraft to roll over during landings.
 
-![image](https://hangar.modelairplanenews.com/members/files/2020/10/1.jpg)
+![image](/img/autogyro/wheel-positions.png)
 
 The design of the offset hinge also went through 2 iterations. Initially it was a lever connected to a spring. While it worked it felt excessively complicated. The spring was also too soft and caused pitch control to be unresponsive. The second iteration was a flexible strap that behaved like a leaf spring. It was much simpler and could be made stiffer by increasing the thickness.
 
