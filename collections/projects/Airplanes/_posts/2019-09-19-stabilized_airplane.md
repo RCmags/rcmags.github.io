@@ -4,9 +4,9 @@ title: "Tail-less airplane stabilized by an angle of attack sensor"
 
 # image sliders:
 slider1:
-- url: https://raw.githubusercontent.com/RCmags/TailLessStability/main//example_pictures/top_view_res.jpg
-- url: https://raw.githubusercontent.com/RCmags/TailLessStability/main//example_pictures/front_view_res.jpg
-- url: https://raw.githubusercontent.com/RCmags/TailLessStability/main//example_pictures/side_view_res.jpg
+- url: /img/active-tailless/set1/front_view_res.jpg
+- url: /img/active-tailless/set1/side_view_res.jpg
+- url: /img/active-tailless/set1/top_view_res.jpg
 
 slider2:
 - url: /img/figures/thrustline_side.jpg
@@ -25,7 +25,7 @@ For an airplane to maintain stability in flight, it must have the ability to sel
 
 With these definitions, we can also notice that dynamic stability depends on static stability. Static stability ensures an equilibrium state, and dynamic stability ensures the aircraft can return to it. We can also observe an aircraft has multiple axes about which it can be stable. It can translate about three perpendicular directions, and it can rotate about these same axes:
 
-![image](https://www.researchgate.net/profile/Kayhan-Kurul/publication/342106041/figure/fig1/AS:901245149650948@1591884996881/Aircraft-Principal-Axes.ppm)
+![image](/img/active-tailless/aircraft-axes.png)
 [See: Aircraft principal axes](https://en.wikipedia.org/wiki/Aircraft_principal_axes)
 
 Because the aircraft can move in six different directions, there are different ways these motions can combine to yield converging or diverging trajectories. These trajectories are known as [modes of stability](https://courses.cit.cornell.edu/mae5070/DynamicStability.pdf), and they determine the behavior of an uncontrolled aircraft. We can best understand these modes by watching them occur and then analyzing them through diagrams.
@@ -35,7 +35,7 @@ Because the aircraft can move in six different directions, there are different w
 
 Out of these possible trajectories, let us focus on the longitudinal stability of the aircraft, and in particular, the short period mode. This mode can be understood as the “elasticity and damping” of the aircraft with respect to the angle of attack. Video 1 shows behavior at the [2:53 minute](https://www.youtube.com/watch?v=rFWfrmjAQxY&t=173s) mark. This motion is caused by a restoring torque that rotates the aircraft about the pitch axis. If this torque is sufficiently strong, it will ensure that the aircraft maintains static and dynamic stability.
 
-![image](https://i1.wp.com/www.differencebetween.com/wp-content/uploads/2012/08/Dynamic-Stability.png?ssl=1)
+![image](/img/active-tailless/dynamic-stability.png)
 
 [See: Difference between static and dynamic stability](https://www.differencebetween.com/difference-between-static-stability-and-vs-dynamic-stability/)
 
@@ -134,7 +134,7 @@ The program used for this project was designed to receive 2 PWM inputs from an R
   
 Here's the schematic of the required circuit:
 
-![image](https://raw.githubusercontent.com/RCmags/TailLessStability/main/tail_less_circuit_schem.png)
+![image](/img/active-tailless/set1/tail_less_circuit_schem.png)
 
 __Github Repo:__
 [TailLessStability](https://github.com/RCmags/TailLessStability)
