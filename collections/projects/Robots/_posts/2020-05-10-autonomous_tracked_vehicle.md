@@ -127,30 +127,57 @@ The end result of these efforts was a model that would use as inputs the velocit
 
 ## Optical flow sensors
 
-As an additional fallback to further increase the robustness of the navigation of the robot, I chose to use a set of [optical flow](https://stevetheengineer.com/optical-flow/) sensors to directly measure the velocity. Optical flow sensors work by using a __camera__ to take pictures of its enviroment, and each frame is compared to the previous one to determine whether there has occured a displacement. While this may sound complex, there are sensors which perform these computations. Possibly the most common application is the optical mouse. It tracks the motion of the mouse via optical flow and sends the information to a computer.
+As an additional fallback to further increase the robustness of the navigation of the robot, I chose to use [optical flow](https://stevetheengineer.com/optical-flow/) sensors to directly measure the velocity. Unlike inertial estimates which operate in the short-term and elaborate math models which only capture parts of the vehicle's dynamics, a sensor that directly measures velocity is unambiguous. Unless something blocks the sensor or the conditions that allow it to measure velocity are no longer met, it is the most reliable authority on the state of the vehicle. Therefore, the addition of optical flow sensors to the robot is good idea, and the other methods discussed above can be use to estimate position if the optical flow sensors cannot be used.
 
-{% include youtube.html id='CAqWehKD_z0' %}
+Optical flow sensors work by using a __camera__ to take pictures of its enviroment, and each frame is compared to the previous one to determine whether there has occured a displacement. While this may sound complex, there are sensors which perform these computations automatically. Possibly the most common application for these sensors is inside optical mice. They use the sensors to track the motion of the mouse without any moving parts. It's for this reason that mice have a bright LED that shines on the surface they move across. It illuminates any small imperfections in the surface that the camera in the sensor can detect. 
 
-{% include youtube.html id='jEsJZh4MW3Q' %}
+{% include youtube.html id='SXQfT7c-9rU' %}
+<p align="center"><i>In-depth explanation of how a computer mouse operates</i></p>
 
-Unlike inertial estimates which operate in the short-term, and elaborate math models which only capture parts of the vehicle's dynamics, a sensor that measures velocity is unambiguous. Unless something blocks the sensor or the conditions that allow it to measure velocity are no longer met, it is the most reliable authority on the state of the vehicle. Therefore, the addition of optical flow sensors to the robot is good idea, and the other methods discussed above can be use to estimate position if the optical flow sensors cannot be used.
+A common and inexpensive optical flow sensor is the __ADNS-3080__ which conviniently is sold is a module for arduinos. It can comunicate through the SPI protocol with arduinos and there are multitude of examples that demonstrate how to do this. Unfortunately, at the time I purchased the modules, there we no easily used libraries for this sensor. One had to write their code to use the module, or modify a working example for your own particular use. I disliked this approach as it did not easily permit using multiple sensors with the same arduino. Therefore, I wrote a library that refactored some of the available working examples into a compact and easy to use interface. That way, I could connect multiple sensors to the arduino without writting a lot of redundant code while avoiding any mistakes this could cause. 
 
 ![image](https://i.ebayimg.com/images/g/iOEAAOSwfllma39h/s-l400.jpg)
+<p align="center"><i>The ADNS-3080 is sold is a module</i></p>
+
+See: <b><a href="https://github.com/RCmags/ADNS3080">ADNS-3080 Mouse sensor library</a></b>
+
+I eventually settled on using __two__ optical flow sensors as that was the minimum ammount required to determine both translation and rotation. In same way that odometry uses wheel rotation to determine displacements, we can replace these _inferred_ displacements with _actual_ measurements and still use the same equations. Therefore, we perform a kind of _optical odometry_ that has much higher precision. We can find examples of this type of system in multiple papers. See the following:
+
+__PDF__: [High-Precision Robot Odometry Using an Array of Optical Mice](https://www.chiefdelphi.com/uploads/default/original/3X/5/c/5c88a2cda05443b19726c570adc061066f52d0bd.pdf)   
+__PDF__: [Optical flow based odometry for mobile robots supported by multiple sensors and sensor fusion](https://www.researchgate.net/publication/305622748_Optical_flow_based_odometry_for_mobile_robots_supported_by_multiple_sensors_and_sensor_fusion)
+
+Because the optical flow sensors measure velocity instead of position we must integrate their output to obtain position. This will induce drift and in the long run, the estimated position will __diverge__ from its actual value. However, since the velocity _directly_ measured, the rate at which the position will diverge will occur relatively __slowly__. So, while we will _eventually_ have to calibrate our position estimate, it will not have to occur that frequency. Moreover, if the divergence is slow enough, the error that is accumulated may not be large enough to matter in a given application. In case of the mining robot, if the vehicle can complete multiple excavation and drop-off cycles, then it might be nessesary to recalibrate the position in order to achieve mission success.
 
 ## Completed robot 
 
-The position of the vehile is estimated using a physical model of the vehicle, an accelerometer that is integrated twice, a gyroscope for heading, and the displacement measured by two optical flow sensors. All of this data is fused to obtain the net displacements relative to an initial position using rectangular coordinates. These position and orientation estimates are used to guide the vehicle to a specified location using two PID loops, one for displacements and one for heading.  
+After the elements required to obtain the position of the robot were sufficiently developed, the actual physical robot was constructed as a final step. It consisted of the following components:
+
+- An [Arduino MEGA](https://store.arduino.cc/products/arduino-mega-2560-rev3) to connect to the multitude of sensors. 
+- Two ADNS-3080 optical flow sensors.
+- An MPU-6050 IMU sensor to obtain angular velocity and acceleration.
+- An [L298N H-bridge](https://projecthub.arduino.cc/Fouad_Roboticist/dc-motors-control-using-arduino-pwm-with-l298n-h-bridge-25b3b3) module to drive a set of motors.
+- An Aluminum tank chasis with geared motors driving a set tracks. Each motor had a set of rotary encoders. 
+- One 800 mah, 2S Lithium-Polymer battery to drive the electronics and motors. 
+
+<br>
+The assembled robot had the electronics exposed to easily modify any connections. This unfornately meant the wiring was rather messy, but it allowed a nessesary degree of flexibility as the protype was being developed.
 
 {% include image-slider.html list=page.slider1 aspect_ratio="4/3" %}  
 <p align="center"><i>The tracked prototype was small and compact</i></p>
 
+Once the optical flow sensors were mounted on the chasis, it became apparent that they required very intense light in order to operate properly. If the lighting was too dim, they would __not__ measure any displacement. Therefore, a set of very bright LEDS were mounted beneath the robot to illuminate the surface the optical sensors were tracking. The color of the light also played an important role. At first, it was expected that _red_ would be appropiate as that is generally what computer mice use. However, for this did not work very well, and after some trial and error I noticed that __white light__ provided the most consistent motion tracking. The reason for this became evident once I observed the images generated by the cameras. White light provided the best constrast between surface features compared to blue, red, or yellow light. 
+
 {% include image-slider.html list=page.slider2 aspect_ratio="4/3" %}  
 <p align="center"><i>Bright white LEDs were placed under the chasis to illuminate the ground</i></p>
 
-The coordinates are stored in a buffer that can be filled in real time via a bluetooth module. Coordinates can be pushed or poped off the buffer. Once the vehicle is within a given radius of a coordinate, the following coodinate is made the target destination. This process will continue indefinitely and the vehicle will follow a closed path with the coordinates as the vertices. 
+The position of the robot was estimated using all the methods mentioned above: the IMU was used to determine the heading of the robot and to estimate its short-term displacements with the accelerometer, and displacement was directly measured via the two optical flow sensors. All this data was then combined together via a [completementary filter](https://www.olliw.eu/2013/imu-data-fusing/) to obtain the position of the robot relative to an initial position. These position and orientation estimates were used to guide the vehicle to a specified coordinate using two [PID controllers](https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_controller) that set the required heading and lateral displacement. 
+
+Since the navigation algorithm considered the full __3-dimensional position__ of the robot, it was possible to precisely control it across uneven or inclined surfaces. These target coordinates were stored in a buffer that could be filled in real time via a bluetooth module. Once the vehicle lay within a given radius of a coordinate, the following coodinate in the buffer was made the new target destination. This process would continue indefinitely and the vehicle would follow a closed path formed by the stored coodinates. The end result of all this behavior can see in below:
 
 {% include youtube.html id='VYhLW5owS3A' %}
-<p align="center"><i>The autonomous robot worked well with acceptable precision</i></p>
+<p align="center"><i>The autonomous robot worked well with acceptable accuracy</i></p>
+
+Its plain to see the robot worked pretty well. It did drift from its original position when asked to move over very large distances, but  the error was rather small relative to its trayectory. For such a small and crude prototype, it demonstrated the feasability of the position estimation methods discussed in this article. In particular, the succesful use of an __accelerometer to obtain position__, even if in the short run, is especially noteworthy. 
 
 ### Github Repo:
 The code for the project can be found in the following repository:
