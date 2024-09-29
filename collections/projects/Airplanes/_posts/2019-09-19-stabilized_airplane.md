@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Tail-less airplane stabilized by an angle of attack sensor"
+title: "Review | Tail-less airplane stabilized by an angle of attack sensor"
 
 # image sliders:
 slider1:
