@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Flight controller for a weight-shift RC helicopter"
+title: "Review | Flight controller for a weight-shift RC helicopter"
 ---
 
 # Introduction to concept
@@ -8,7 +8,7 @@ title: "Flight controller for a weight-shift RC helicopter"
 Helicopters are naturally unstable aircraft. Without a system to augment their stability they will inevitably spiral towards the ground. Thankfully, theres a few ways to enhance their stability. A classic approach is to use a heavy bar placed at an angle relative to the rotor blades. Such a 
 system is known as a flybar, stabilizer-bar, or mechanical gyro.  
 
-![image](https://www.rchelicopterfun.com/images/HillerHead500pics.gif)
+![image](/img/heli_controller/HillerHead500pics.gif)
 [See: Bell-Hiller mixing]()
 
 This system works by exploiting the angular momentum of the bar. When disturbed, the bar will tend to stay rotating about its current plane. This "resistance" to changes in orientation can fed to the rotor blades to damp the rotation. There are many examples of this stabilization system, be it in large manned helicopters or in small radio-controlled models. Here is a video of what the bar's motion looks like on a small rc-helicopter:  
@@ -17,10 +17,10 @@ This system works by exploiting the angular momentum of the bar. When disturbed,
 
 For helicopters with more than two blades, the bar transforms into a star-shaped object or a ring. 
 
-![image](https://www.aviastar.org/foto/lok_xh-51.gif)
+![image](/img/heli_controller/lok_xh-51.gif)
 [See: Lockheed XH-51](https://www.aviastar.org/helicopters_eng/lok_xh-51.php)
 
-![image](https://www.aviastar.org/foto/lok_cl-475.gif)
+![image](/img/heli_controller/lok_cl-475.gif)
 [See: Lockheed CL-475](https://sites.google.com/site/stingrayslistofrotorcraft/lockheed-cl-475)
 
 While this system works, it comes at the cost of increased mechanical complexity. One can side-step this issue by using electronics to provide analogous control inputs. This greatly simplifies the rotor head but it transfers the complexity to an electronic circuit. With the onset of cheap microcontrollers, this complexity can be abstracted away and emphasis can be placed on the control algorithm.
@@ -60,7 +60,7 @@ While these functions were programmed succesfully, in practice it became evident
 
 To overcome this problem, a [simple first order low pass filter](http://www.tsdconseil.fr/tutos/tuto-iir1-en.pdf) was used to suppress the vibration noise. While this helped, it did not provide sufficient suppression. A straight forward, albeit naive, solution was to [cascade multiple 1rst order filters](https://2n3904blog.com/cascading-single-pole-filters/). This increased the noise suppression but came at the cost of a larger response delay.  
 
-![image](https://wiki.analog.com/_media/university/courses/alm1k/circuits1/cascade_rc_sim.png?w=600&tok=694820)
+![image](/img/heli_controller/cascade-response.png)
 [See: Cascaded filters](https://wiki.analog.com/university/labs/cascaded_rc_adalm2000)
 
 Unfortunately, this lag caused the PID controller to become unstable as they would not react in synch with the aircraft. This was especially noticeable with the proportional term. Therefore, tuning the filters became a compromise between noise supression and PID stability. After a lot tweaking it was possible to obtain a compromise between filter gain and PID gains. While it worked, the results were generally unsatisfactory as it left the helicopter marginally stable.  
@@ -76,7 +76,7 @@ The third iteration focused on improving the low pass filter. It was critical to
 
 The filter performed best when configured as a [Chebychev filter](https://web.archive.org/web/20200706034508/http://www.iowahills.com/IIRChebyshevFilters.html). This provided the best compromise between noise suppression and reponse delay. The step response was very underdamped but it didn't seem to matter. Since the helicopter rotated slowly and smoothly, the ringing was too small to be noticeable.  
 
-![image](https://build.openmodelica.org/Documentation/Modelica_LinearSystems2%202.3.2/Resources/Images/LowPassOrder4FiltersStepResponse.png)
+![image](/img/heli_controller/filter-step-response.png)
 
 Whatever the IIR configuration, the results were much better than with cascaded 1rst order filters. The noise suppression was stronger and the signal delay was lower. This allowed the PID gains to increase and made aircraft much more stable and easier to fly. 
  
@@ -93,10 +93,10 @@ To complement the filter, the helicopter was adjusted to reduce mechanical vibra
 
 Below is the third version of the helicopter along with improved flight controller:
 
-![image](https://raw.githubusercontent.com/RCmags/HeliFlightController/main//example_pictures/front_view_res.JPG)
+![image](https://raw.githubusercontent.com/RCmags/HeliFlightController/refs/heads/main/images/side_view.JPG)
 <p align="center">Overview of the helicopter</p>
 
-![image](https://raw.githubusercontent.com/RCmags/HeliFlightController/main//example_pictures/arduino_view_res.JPG)  
+![image](https://raw.githubusercontent.com/RCmags/HeliFlightController/refs/heads/main/images/arduino_view.JPG)  
 <p align="center">Closeup of the flight controller</p>
 
 ![image](/img/heli_controller/main_rotor.JPG)
@@ -108,7 +108,7 @@ Below is the third version of the helicopter along with improved flight controll
 # Arduino Code
 The code was designed to receive 4 PWM inputs from an RC receiver operating in MODE 2 and output 3 PWM signals. Two signals go to the cyclic servos and the third goes to a tail-servo or a speed controller. Since it is assumed only two servo motors are used for controlling the rotor, only a [90-degree swashplate](https://www.rchelicopterfun.com/ccpm.html) is supported. See the schematic for the tail-motor variant of the required circuit:
 
-![image](https://raw.githubusercontent.com/RCmags/HeliFlightController/main/heli_flight_control_schem.png)
+![image](https://raw.githubusercontent.com/RCmags/HeliFlightController/refs/heads/main/images/diagram/schematic.png)
 
 __Github Repo__:
 [HeliFlightController](https://github.com/RCmags/HeliFlightController)
