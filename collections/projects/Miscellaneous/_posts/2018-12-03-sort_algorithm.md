@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Soring algorithm comparison and linked list"
+title: "Sorting algorithm comparison and linked lists"
 ---
 
 These are programs to compare the speed of basic sorting algorithms an a linked list data type. For an array of 15000 elements, this is how the algorithms fare:  

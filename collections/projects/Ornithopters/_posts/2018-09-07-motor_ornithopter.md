@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Ornithopter powered by a motor with a crank-shaft"
+title: "Review | Ornithopter powered by a motor with a crank-shaft"
 
 # image sliders:
 slider1:
@@ -30,7 +30,24 @@ __Iteration 2:__
 {% include youtube.html id='peSMr35mHOE' %}   
 <p align="center">Video 2. Cambered wings and bias springs</p>
 
-{% include image-slider.html list=page.slider1 local='yes' %}
+{% include image-slider.html list=page.slider2 local='yes' %}
+
+__Iteration 3:__
+{% include youtube.html id='tKS_8ROoZw0' %}  
+<p align="center">Video 3. Pre-bent diagonal springs to provide wash-in</p>
+
+__Iteration 4:__
+{% include youtube.html id='Fi-wzo6SqOY' %} 
+<p align="center">Video 4. Active twist with simple rectangular wings</p>
+
+__Iteration 5:__
+{% include youtube.html id='uuSC9xBKHLg' %} 
+<p align="center">Video 5. Highly tapared tips with active twist</p>
+
+__Iteration 6:__
+{% include youtube.html id='r7xRDLjg0uo' %} 
+<p align="center">Video 6. Aerodynamic cowling placed round the fuselage</p>
+
 
 # Arduino Code
 This is a sketch for the [glide lock](http://ovirc.free.fr/GLDAB_English.php) of a crank-driven ornithopter.
@@ -58,12 +75,3 @@ This code was made to work for the following circuit:
 <p align="center">Video 3. Operation of glide-lock</p> 
 
 __Github Repo:__ [GlideLock](https://github.com/RCmags/GlideLock)
-
-# RCgroups build log
-For more informatio on this aircraft, see these posts on RCgroups:
-1. [Gearbox construction](https://www.rcgroups.com/forums/showpost.php?p=41363327&postcount=76)
-2. [Adding second stage to gearbox](https://www.rcgroups.com/forums/showpost.php?p=41380437&postcount=80)
-3. [Adding wings](https://www.rcgroups.com/forums/showpost.php?p=41415689&postcount=81)
-4. [Completing the frame and adding the electronics](https://www.rcgroups.com/forums/showpost.php?p=41423997&postcount=82)
-5. [Initial test flights](https://www.rcgroups.com/forums/showpost.php?p=41432795&postcount=85)
-6. [Succesful controlled flight](https://www.rcgroups.com/forums/showpost.php?p=41439849&postcount=87)
