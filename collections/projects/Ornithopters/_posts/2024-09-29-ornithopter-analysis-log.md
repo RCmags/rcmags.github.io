@@ -21,10 +21,12 @@ For much more detailed information on the steps taken to develop this aircraft, 
 
 7. [A simple model to determine servo speed and torque](https://www.rcgroups.com/forums/showpost.php?p=41350463&postcount=70)
 
+12. [Measured oscillations - Updated Servo controller code - servoMotor Library](https://www.rcgroups.com/forums/showpost.php?p=43079349&postcount=164)
+
 8. Analysis of the effects of wing elasticity:
 	- [Part 1](https://www.rcgroups.com/forums/showpost.php?p=43356729&postcount=172)
 	- [Part 2](https://www.rcgroups.com/forums/showpost.php?p=47154289&postcount=185)
-	
+		
 9. [Analysis of passive wing twist - effect of mass on thrust generation](https://www.rcgroups.com/forums/showpost.php?p=49734105&postcount=226)
 
 10. [Simple mechanism for active twist - part 1](https://www.rcgroups.com/forums/showpost.php?p=49734129&postcount=227)
