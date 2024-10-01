@@ -4,43 +4,43 @@ title: "Review | Ornithopter powered and controlled by servos"
 
 # image sliders:
 slider1:
-- url: /img/servo_orni/version1-1.jpg
-- url: /img/servo_orni/version1-2.JPG
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a11667767-33-IMG_3996.JPG
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a11664479-90-IMG_3909.JPG
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a11667823-141-sparView.jpg
+- url: /img/servo_orni/version1/version1-1.jpg
+- url: /img/servo_orni/version1/version1-2.JPG
+- url: /img/servo_orni/version1/version1-3.jpg
+- url: /img/servo_orni/version1/version1-4.jpg
+- url: /img/servo_orni/version1/version1-5.jpg
 
 slider2:
-- url: /img/servo_orni/version2-1.JPG
-- url: /img/servo_orni/version2-2.jpg
-- url: /img/servo_orni/version2-3.jpg
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a11703423-15-IMG_4935.JPG
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a11703395-52-IMG_4933.JPG
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a11703391-129-IMG_4930.JPG
+- url: /img/servo_orni/version2/version2-1.JPG
+- url: /img/servo_orni/version2/version2-2.jpg
+- url: /img/servo_orni/version2/version2-3.jpg
+- url: /img/servo_orni/version2/version2-4.jpg
+- url: /img/servo_orni/version2/version2-5.jpg
+- url: /img/servo_orni/version2/version2-6.jpg
 
 slider3:
-- url: /img/servo_orni/servo_body_res.jpg
-- url: /img/servo_orni/bottom_view_res.JPG
-- url: /img/servo_orni/side_view_res.JPG
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a12344749-114-IMG_5981.JPG
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a12344735-44-IMG_5956.JPG
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a12347625-172-IMG_6020.JPG
+- url: /img/servo_orni/version3/servo_body_res.jpg
+- url: /img/servo_orni/version3/bottom_view_res.JPG
+- url: /img/servo_orni/version3/side_view_res.JPG
+- url: /img/servo_orni/version3/version3-1.jpg
+- url: /img/servo_orni/version3/version3-2.jpg
+- url: /img/servo_orni/version3/version3-3.jpg
 
 slider4:
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a17408751-246-DSC_0032.jpg
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a17411939-133-DSC_0060.jpg
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a17411935-97-DSC_0062.jpg
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a17411921-56-DSC_0125.jpg
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a17411933-50-DSC_0118.jpg
+- url: /img/servo_orni/version3b/version3b-0.jpg
+- url: /img/servo_orni/version3b/version3b-1.jpg
+- url: /img/servo_orni/version3b/version3b-2.jpg
+- url: /img/servo_orni/version3b/version3b-3.jpg
+- url: /img/servo_orni/version3b/version3b-4.jpg
 
 slider5:
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a17463729-148-DSC_0085.jpg
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a17463737-87-DSC_0117.jpg
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a17463735-196-DSC_0118.jpg
+- url: /img/servo_orni/version3b/heavy-wing-1.jpg
+- url: /img/servo_orni/version3b/heavy-wing-2.jpg
+- url: /img/servo_orni/version3b/heavy-wing-3.jpg
 
 slider6:
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a17487995-89-DSC_0134.jpg
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a17487993-167-DSC_0133.jpg
+- url: /img/servo_orni/version3b/failure-1.jpg
+- url: /img/servo_orni/version3b/failure-2.jpg
 
 ---
 
@@ -77,7 +77,7 @@ We can attempt to build an ornithopter and therefore replicate the flight of ani
 
 Therefore, this project concerns itself with developing a radio-controlled ornithopter powered and controlled by two servos. Each servo is connected to a wing and flapped independently. This allows the motion of the wings to be controlled through software rather than through a specially designed mechanism. There are many advantages to this approach, mainly that it is very easy to adjust the amplitude of the flapping motion, and the wings may be oscillated asymmetrically to achieve directional control. 
 
-![image](https://www.researchgate.net/profile/Yanghai-Nan/publication/280948641/figure/fig1/AS:614244433289216@1523458693052/Control-via-flapping-amplitude-offset-modulation.png)  
+![image](/img/servo_orni/amplitude-control.png)  
 
 Through the use of servos, it's also possible to change the waveform that's used to drive the wings. That means that if a particular waveform is better suited for a certain flight condition, this modification can be made on the fly rather than requiring complex mechanical changes to an existing design.
 
@@ -124,7 +124,7 @@ The next solution was to increase the power of the servos that drove the wings. 
 
 Unfortunately, the extended wings had the consequence of reducing the torsional elasticity of the wings so that the wing tips would come very close to [fluttering](https://en.wikipedia.org/wiki/Aeroelasticity#Flutter) when the aircraft was in level flight. To alleviate this problem, the wings were doped with a polyurethane coating to make them more rigid and waterproof. Moreover, a small piece of lead was installed at the tips to move their __center of mass__ forward of the local aerocenter. While these changes helped suppress flutter, they unfortunately increased the [moment of inertia](https://openstax.org/books/university-physics-volume-1/pages/10-4-moment-of-inertia-and-rotational-kinetic-energy) of the wings such that they became harder to accelerate. The greater inertia meant a significant portion of the available power was being wasted beating the wings back and forth. This greatly hindered the ability for the servos to flap the wings and the aircraft was no longer capable of maintaining altitude. 
 
-{% include image-slider.html list=page.slider5 %}
+{% include image-slider.html list=page.slider5 aspect_ratio='16/9'%}
 <p align="center"><i>Heavier wings massively decreased performance</i></p>  
 
 {% include youtube.html id='a1R3ABDJG4w' %} 
@@ -140,7 +140,7 @@ Since adding more power greatly benefited the ability of the aircraft to fly, vo
 {% include youtube.html id='miTvQq-EhuA' %} 
 <p align="center"><i>Video 7. Flight performance began to decay shortly afterwords. A sign of bad batteries</i></p>
 
-{% include image-slider.html list=page.slider6 %}
+{% include image-slider.html list=page.slider6 aspect_ratio='16/9' %}
 <p align="center"><i>The steel roots of the wings broke due to the huge loads</i></p>  
 
 # Conclusion
