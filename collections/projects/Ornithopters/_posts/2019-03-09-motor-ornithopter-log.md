@@ -4,7 +4,7 @@ title: "Log | Ornithopter powered with a crankshaft driven by a motor"
 
 ---
 
-This page is a repository for posts regarding the development of a [motor-driven ornithopter](http://localhost:4000/projects/ornithopters/2019/03/09/motor_ornithopter.html). These posts were originally made on [rcgroups.com](https://www.rcgroups.com/forums/showthread.php?3221699-Attempt%28s%29-at-a-servo-flap-ornithopter) and this page is meant to organize them in chronological order.
+This page is a repository for posts regarding the development of a [motor-driven ornithopter](https://rcmags.github.io/projects/ornithopters/2019/03/09/motor_ornithopter.html). These posts were originally made on [rcgroups.com](https://www.rcgroups.com/forums/showthread.php?3221699-Attempt%28s%29-at-a-servo-flap-ornithopter) and this page is meant to organize them in chronological order.
 
 
 # Posts

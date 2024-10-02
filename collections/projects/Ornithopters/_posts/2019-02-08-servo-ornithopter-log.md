@@ -4,7 +4,7 @@ title: "Log | Ornithopter powered and controlled by servo motors"
 
 ---
 
-This page is a repository for posts regarding the development of a [servo-driven ornithopter](/projects/ornithopters/2019/02/08/servo_ornithopter.html). These posts were originally made on [rcgroups.com](https://www.rcgroups.com/forums/showthread.php?3221699-Attempt%28s%29-at-a-servo-flap-ornithopter) and this page is meant to organize them in chronological order.
+This page is a repository for posts regarding the development of a [servo-driven ornithopter](https://rcmags.github.io/projects/ornithopters/2019/02/08/servo-ornithopter-log.html). These posts were originally made on [rcgroups.com](https://www.rcgroups.com/forums/showthread.php?3221699-Attempt%28s%29-at-a-servo-flap-ornithopter) and this page is meant to organize them in chronological order.
 
 ### Posts
 
