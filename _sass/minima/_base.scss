@@ -9,6 +9,7 @@ dl, dd, ol, ul, figure {
 }
 
 
+
 // general text formatting, colors!
 li, p {
   //color: grey;
@@ -101,10 +102,12 @@ figcaption {
 /**
  * Lists
  */
-ul, ol {
-  //margin-left: $spacing-unit;
+ol { // initially set at zero 
+  margin-left: 2 * $spacing-unit;
   //margin-right: 0px;
 }
+
+// note: ul needs magin=0 to prevent offset in page listings
 
 li {
   > ul,
