@@ -15,6 +15,7 @@ This page is a repository for posts regarding the development of a [servo-driven
 2. [the build begins! - Part 2](https://www.rcgroups.com/forums/showpost.php?p=41133001&postcount=25)
 
 #### II. Underpowered servos 
+
 3. [New frame and servo horns](https://www.rcgroups.com/forums/showpost.php?p=41166873&postcount=37)
 
 4. [Wing build](https://www.rcgroups.com/forums/showpost.php?p=41183483&postcount=40)
@@ -42,6 +43,7 @@ This page is a repository for posts regarding the development of a [servo-driven
 15. [Direct and indirect drive](https://www.rcgroups.com/forums/showpost.php?p=42099773&postcount=118)
 
 #### III. Succesful design	
+
 16. [Constructing the fuselage](https://www.rcgroups.com/forums/showpost.php?p=42335531&postcount=125)
 
 17. [Adding electronics and Tail](https://www.rcgroups.com/forums/showpost.php?p=42352337&postcount=130)
