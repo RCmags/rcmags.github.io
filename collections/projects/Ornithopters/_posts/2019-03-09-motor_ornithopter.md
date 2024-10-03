@@ -4,76 +4,74 @@ title: "Review | Ornithopter powered by a motor with a crank-shaft"
 
 # image sliders:
 slider1:
-- url: /img/motor_orni/crank-1.JPG
-- url: /img/motor_orni/front-vtail.JPG
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a11833243-118-IMG_5567.JPG
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a11833307-24-IMG_5584.JPG
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a11833241-164-IMG_5562.JPG
-- url: https://www.rcgroups.com/forums/attachmentNew.php?attachmentid=11838875
+- url: /img/motor_orni/version1/crank-1.JPG
+- url: /img/motor_orni/version1/front-vtail.JPG
+- url: /img/motor_orni/version1/version1-1.jpg
+- url: /img/motor_orni/version1/version1-2.jpg
+- url: /img/motor_orni/version1/version1-3.jpg
+- url: /img/motor_orni/version1/version1-4.jpg
+
 
 slider2:
-- url: /img/motor_orni/front-inverted.JPG
-- url: https://www.rcgroups.com/forums/attachmentNew.php?attachmentid=11843077
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a11843067-226-FlapCycle-Dive_short.png
+- url: /img/motor_orni/version2/front-inverted.JPG
+- url: /img/motor_orni/version2/version2-1.jpg
+- url: /img/motor_orni/version2/version2-2.jpg
 
 slider3:
-- url: /img/motor_orni/crank-2.JPG
-- url: /img/motor_orni/front-inverted-cambered.JPG
-- url: /img/motor_orni/side-2.JPG
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a16368743-92-IMG_5768.JPG
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a16368787-230-IMG_5803.JPG
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a16368747-88-IMG_5771.JPG
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a16368741-106-IMG_5765.JPG
+- url: /img/motor_orni/version3/crank-2.JPG
+- url: /img/motor_orni/version3/front-inverted-cambered.JPG
+- url: /img/motor_orni/version3/version3-1.jpg
+- url: /img/motor_orni/version3/version3-2.jpg
+- url: /img/motor_orni/version3/version3-3.jpg
 
 slider4:
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a16436363-249-IMG_6585.JPG
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a16436355-155-IMG_6583.JPG
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a16436351-127-IMG_6576.JPG
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a16436343-161-IMG_6574.JPG
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a16436365-219-IMG_6587.JPG
+- url: /img/motor_orni/version4/version4-1.jpg
+- url: /img/motor_orni/version4/version4-2.jpg
+- url: /img/motor_orni/version4/version4-3.jpg
+- url: /img/motor_orni/version4/version4-4.jpg
+- url: /img/motor_orni/version4/version4-5.jpg
 
 slider5:
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a16483983-72-IMG_6853.JPG
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a16483979-245-IMG_6846.JPG
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a16483987-124-IMG_6856.JPG
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a16483965-153-IMG_6831.JPG
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a16483967-11-IMG_6830.JPG
+- url: /img/motor_orni/version5/version5-1.jpg
+- url: /img/motor_orni/version5/version5-2.jpg
+- url: /img/motor_orni/version5/version5-3.jpg
+- url: /img/motor_orni/version5/version5-4.jpg
+- url: /img/motor_orni/version5/version5-5.jpg
 
 slider6:
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a16484419-9-IMG_6870.JPG
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a16484427-248-IMG_6873.JPG
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a16484417-39-IMG_6872.JPG
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a16484415-45-IMG_6840.JPG
+- url: /img/motor_orni/version5/version5-6.jpg
+- url: /img/motor_orni/version5/version5-7.jpg
+- url: /img/motor_orni/version5/version5-8.jpg
+- url: /img/motor_orni/version5/version5-9.jpg
 
 slider7:
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a16514453-235-DSC_0002.jpg
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a16514465-189-DSC_0010.jpg
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a16514467-160-DSC_0012.jpg
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a16528467-182-DSC_0013-2.jpg
+- url: /img/motor_orni/version6/wing-1.jpg
+- url: /img/motor_orni/version6/wing-2.jpg
+- url: /img/motor_orni/version6/wing-3.jpg
+- url: /img/motor_orni/version6/wing-4.jpg
 
 slider8:
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a16534355-93-DSC_0005.jpg
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a16534319-30-DSC_0075.jpg
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a16534331-96-DSC_0082.jpg
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a16534345-156-DSC_0094.jpg
-
+- url: /img/motor_orni/version7/body-1.jpg
+- url: /img/motor_orni/version7/body-2.jpg
+- url: /img/motor_orni/version7/body-3.jpg
+- url: /img/motor_orni/version7/body-4.jpg
+ 
 slider9:
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a16534359-245-DSC_0150.JPG
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a16534363-231-DSC_0163.JPG
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a16534357-43-DSC_0148.JPG
-- url: https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a16534347-94-DSC_0098.jpg
-
+- url: /img/motor_orni/version7/version6-1.jpg
+- url: /img/motor_orni/version7/version6-2.jpg
+- url: /img/motor_orni/version7/version6-3.jpg
+- url: /img/motor_orni/version7/version6-4.jpg
 ---
 
 # Introduction
 [Ornithopters](https://en.wikipedia.org/wiki/Ornithopter) are fascinating aircraft in that they are capable of mimicking [animal flight](https://en.wikipedia.org/wiki/Flying_and_gliding_animals) by flapping their wings to stay aloft. This type of motion can be accomplished through a multitude of different mechanisms. One such approach is to use a __crank shaft__ that converts rotary motion into reciprocating motion. An example of this mechanism is a [piston engine](https://en.wikipedia.org/wiki/Reciprocating_engine), wherein a shaft connected through a crank moves a piston back and forth. A great advantages of using a reciprocating mechanism is that it allows the motor that drives the entire mechanism to rotate continuously in one direction.
 
-![image](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fgs-post-images.grdp.co%2F2022%2F11%2Fslider-crank-image-img1669807820445-26-rs.png&f=1&nofb=1&ipt=9c9838fef53934f5070468a81a7bb18cebf6e974ea75d34b29a8962852c89a0f&ipo=images)
+![image](/img/motor_orni/crank.png)
 <p align="center"><i>A crank can be used to convert rotaty motion into reciprocating motion</i></p>
 
 This is very [efficient](http://lancet.mit.edu/motors/motors3.html) as it allows the motor to operate in a single direction at an ideal torque and angular velocity. By comparison, a reciprocating motor cannot obtain this efficiency as the motor is constantly forced to change direction, having an angular velocity and torque output that changes with time. While a reciprocating drive can easily adjust the motion of its output by simply changing the __commanded velocity__ at which it rotates, along with the direction in which it moves in, a crank mechanism cannot do this. It is restricted to moving in the [waveform](https://en.wikipedia.org/wiki/Waveform) generated by mechanism based on the rotation of the input motor. Therefore, we can see that a crank-based system exchanges _controllability_ for _efficiency_ compared to a reciprocating system that gains controllability but loses efficiency.
 
-![image](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fislproducts.com%2Fwp-content%2Fuploads%2Fdc-motor-performance-curve-basics.png&f=1&nofb=1&ipt=d9db4318f71ac32e3e59a6a5381a6c9e59328a0bcbd43d2beeb5567a7fbd643c&ipo=images)
+![image](/img/motor_orni/motor-efficiency.jpg)
 <p align="center"><i>Electric motors obtain maximum efficiency at a specific speed</i></p>
 
 # Motivation of project
@@ -84,7 +82,7 @@ In the process of developing a [servo-based ornithopter](https://rcmags.github.i
 #### Iteration 1: 
 The first iteration of the motor-powered ornithopter was very simple and consisted of a set of tubes that were joined together to make a frame. The wings were driven by a __two-stage gearbox__ that connected to a crankshaft, that then drove a set of wings through a reciprocating [conrod](https://en.wikipedia.org/wiki/Connecting_rod). A [transverse crankshaft](https://ornithopter.org/how.flap.shtml) was chosen because of the direction it would generate any resulting torque from the motor. In this mechanism, the crank rotates in an axis that is at 90 degrees from the axis of rotation of the wings. This configuration makes the conrod move in two directions, meaning that it cannot be mounted on single-axis bearings, but must be mounted on the equivalent of [ball and socket joints](https://en.wikipedia.org/wiki/Ball-and-socket_joint). These joints tend to increase the friction of rotating the crank mechanism. The transverse configuration ensures that the oscillation of the wings remains symmetrical.
 
-![image](https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.ornithopter.org%2Fmobile%2Fimages%2Fgol2.jpg&f=1&nofb=1&ipt=5645d87647f8a73198fe81c3d009a17ac9b9d3d87d6e0900164e8e659533d8d1&ipo=images)
+![image](/img/motor_orni/transverse-crank.png)
 <p align="center"><i>A transverse crank ensured symmetrical wing motion</i></p>
 
 To further increase the simplicity of the ornithopter, the wings and the tail were given a [rectangular planform](https://en.wikipedia.org/wiki/Wing_configuration). The tail was initially built in an [upright V-tail](https://en.wikipedia.org/wiki/V-tail) configuration, but unfortunately this configuration proved to be very inefficient at changing the direction of the aircraft. On the other hand, the wings, along with the motor and crank system, proved to be sufficiently powerful to keep the aircraft aloft, albeit with a very marginal [rate of climb](https://en.wikipedia.org/wiki/Rate_of_climb). To improve the control authority, the tail was rotated 180 degrees so that it faced downward. This [inverted V-tail](https://www.rcgroups.com/forums/showthread.php?1332900-V-Tail-setup/page3) proved to be far more effective at changing the direction of the aircraft.
@@ -103,7 +101,7 @@ The controls were now very efficient and aggressive, and it was even possible to
 #### Iteration 2: 
 In an another effort further improve the wings, both in terms of the thrust they produced and the lift they were capable of generating, a set of __ribs__ were installed along their span. The ribs close to the root of the wing were bent to provide an [undercambered](https://en.wikipedia.org/wiki/Camber_(aerodynamics)) [airfoil](https://en.wikipedia.org/wiki/Airfoil), while the ribs near the tip of the wing were left flat to provide a __symmetrical airfoil__.
 
-![image](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.sstatic.net%2FT1tg1.png&f=1&nofb=1&ipt=8d727fd52a628fc97d7c777f4a3f10b0150134ffd6f98d0b72dede08a5435091&ipo=images)
+![image](/img/motor_orni/airfoil-types.png)
 
 The logic behind this configuration was that airflow at the root of the wing would not be affected greatly by the [tangential velocity](https://en.wikipedia.org/wiki/Tangential_speed) generated by the wing oscillation. As such, the _root_ sections of the wing could focus on _generating lift_ to counter the weight of the aircraft. On the other hand, since the wingtips were _greatly_ affected by the tangential velocity, they would most likely see a _reversal of angle of attack_ during the upstroke. Under these conditions, a symmetrical airfoil is better suited because it can efficiently generate lift indifferent of whether the angle of attack is positive or negative, therefore maximizing the _thrust generated by the wingtips_.
 
@@ -120,7 +118,7 @@ While these modifications appeared to be very good on paper, in practice, they b
 #### Iteration 3: 
 Unsure of what else to do, I focused on changing the characteristics of the wings in an effort to decrease the power needed to keep the ornithopter in flight. These experiments involved changing the __planform__ of the wing along with trying out different diagonal spars that would affect the [torsional rigidity](https://en.wikipedia.org/wiki/Torsion_(mechanics)) of the wings. After multiple iterations, the most successful wings had relatively flexible diagonal spars with a bend in at middle that generated [wash-in](https://en.wikipedia.org/wiki/Washout_(aeronautics)) (the opposite of washout) at the wing tips.
 
-![image](https://static.rcgroups.net/forums/attachments/1/8/9/4/8/8/a16450209-197-wing-washin.png)
+![image](/img/motor_orni/wing-washin.png)
 <p align="center"><i>Pre-bent diagonal spars counter twist due to weight</i></p>
 
 This inbuilt twist meant that when the wings were not loaded, tips would have a degree of downwards twist. But once the wings began to generate lift, tips would rise, making the entire wing have almost no twist when carrying the weight of the aircraft. This was a finely tuned configuration, meaning that any _increase or decrease in the weight_ of the aircraft would _bias the twist_ of the wings while in flight. Another modification to the ornithopter was a reduction of the [incidence angle](https://en.wikipedia.org/wiki/Angle_of_incidence_(aerodynamics)) of the tail with respect to the wings. This meant that the wings would operate at a lower angle of attack, which would force the ornithopter to fly at a higher airspeed.
@@ -152,11 +150,10 @@ These modifications increase the weight of the aircraft, so the battery voltage 
 {% include youtube.html id='Fi-wzo6SqOY' %} 
 <p align="center"><i>Video 4. Active twist with simple rectangular wings</i></p>
 
-
 #### Iteration 5: 
 Unfortunately, the higher loads generated by the increase in flapping frequency, along with the greater weight of the aircraft, made the wings and crank mechanism __fail__ on multiple occasions. It was also observed that the performance of the aircraft began to decay after multiple flights. Its unclear why this happened, but a combination of gearbox ware along with degrading batteries likely played a role. In an effort to decrease these loads and to further increase the performance of the aircraft, a series of experiments were begun to modify the shape of the foam wings. After multiple experiments with different planforms, along with variations in the [amplitude](https://en.wikipedia.org/wiki/Amplitude) at which the wings flapped, it was identified that __long wings with tapered tips__ provided the best performance.
 
-![image](https://static.sciencelearn.org.nz/images/images/000/000/705/full/FLT_SCI_ART_04_Wing_aspect_ratio_Highedited.png?1674164746)
+![image](/img/motor_orni/induced-drag.png)
 <p align="center"><i>Induced drag reduces the thrust generated by the wing-tips</i></p>
 
 This was likely due to two reasons. Longer wings move the tips farther out which increases their tangential velocity and thus increases the thrust they produce. Since the tips are acting as the [propeller](https://web.mit.edu/16.unified/www/FALL/thermodynamics/notes/node86.html) region of the wings, it's also beneficial if they have a high aspect ratio to decrease as much as possible the [induced drag](https://en.wikipedia.org/wiki/Lift-induced_drag) they generate. This requires that the wings become progressively narrower at the tips. Moreover, by decreasing the area of the wingtips, there is less mass being accelerated in that region, so the entire [moment of inertia](https://en.wikipedia.org/wiki/Moment_of_inertia) of the wing is decreased. The end result is that these long thin wings with tapered tips can generate the same amount of lift and thrust for __less power__ than short and broad wings.
@@ -186,9 +183,11 @@ The cowling had a multitude of effects. For one, it was noticed that the aircraf
 <p align="center"><i>Video 6. Aerodynamic cowling placed round the fuselage</i></p>
 
 # Conclusion
-The final ornithopter configuration was capable of flying significantly __faster__ than its original iteration and while also __climbing better__ despite being much __heavier__. These changes indicated a clear improvement in the design of the wings, which could then be transplanted over to a servo-driven ornithopter with a much weaker and less efficient reciprocating drive. However, it was noted that the inertia of the wings played a very large role in the efficiency of the ornithopter. Unfortunately, only a small fraction of the energy imparted into accelerating the wings is ultimately recuperated by the crank mechanism. This constant energetic drain can be a very significant fraction of the overall power used by the aircraft. 
+The final ornithopter configuration was capable of flying significantly __faster__ than its original iteration and while also __climbing better__ despite being much __heavier__. These changes indicated a clear improvement in the design of the wings, which could then be transplanted over to a servo-driven ornithopter with a much weaker and less efficient reciprocating drive. However, it was noted that the inertia of the wings played a very large role in the efficiency of the ornithopter. Unfortunately, only a small fraction of the energy imparted into accelerating the wings is ultimately recuperated by the crank mechanism. This constant energetic drain can be a very significant fraction of the overall power used by the aircraft. See the following paper:
 
-![image](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fnas-national-prod.s3.amazonaws.com%2Fstyles%2Fwysiwyg_slide%2Fs3%2F5014998569_30b4b0bc4a_o.jpg%3Fitok%3DmgQq22Qu&f=1&nofb=1&ipt=b08a6df749a211897c83b4d1affab19d624d63b14ab228dc9a6413aeb54320c9&ipo=images)
+**PDF: <a href="https://www.researchgate.net/publication/13904663_Moment_of_inertia_of_bird_wings_and_the_inertial_power_requirement_for_flapping_flight">The Moment of Inertia of Bird Wings and the Inertial Power Requirement for Flapping Flight</a>**
+
+![image](/img/motor_orni/bird-wing.png)
 <p align="center"><i>Bird wings have very low moments of inertia</i></p>
 
 It was calculated that [the active twist design wasted roughly 30% of its input power](https://www.rcgroups.com/forums/showpost.php?p=51335431&postcount=279) just oscillating the wings. This serves as a warning that inertial losses must be factored in to make an efficient wing design. It is __critical__ that the inertia of the wings is minimized such that the energy loss is as low as possible. Otherwise, the efficiency of the ornithopter will be _low_ compared to other aircraft. 
