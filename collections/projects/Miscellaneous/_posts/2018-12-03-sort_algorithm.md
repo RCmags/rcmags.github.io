@@ -3,140 +3,47 @@ layout: post
 title: "Sorting algorithm comparison and linked lists"
 ---
 
-For this emperical study four different sorting algorithms were compared. 
-These were: Selection sort, Bubble sort, Insert sort, and Merge sort.
+# Sorting Algorithms
 
-Each algorithm was asked to sort an array filled with random interger values.
-The length of the array was 15000 entries long, while the random values were 
-kept in the range of 0 to 1000. 
+During college, I took a course in [data structures](https://en.wikipedia.org/wiki/Data_structure) based on C++. This was a standard course required for anyone interested in computer science. As part of the final grade, I had to submit a report comparing different [sorting algorithms](https://en.wikipedia.org/wiki/Sorting_algorithm). I analyzed their effectiveness and the time taken for each to complete its operations. This comparison was meaningful because different algorithms converge towards a specific [time complexity](https://en.wikipedia.org/wiki/Time_complexity) when dealing with large datasets. 
 
-To improve the consistency of the results, a single random array was generated
-and each algorithm was asked to sort it. The execution time of each algorithm 
-was then recorded and stored.
+For example, an algorithm's execution time can increase __linearly__ with the size of the dataset; if you double the dataset, it takes twice as long for the algorithm to complete. Alternatively, an algorithm can increase __logarithmically__ with the dataset, meaning a significant increase in the amount of information has a relatively minor effect on the processing time. This is ideal, as the algorithm can handle more data without a substantial slowdown. Conversely, some algorithms exhibit __quadratic__ behavior; if you double the sample size, the execution time increases fourfold. This is problematic, as even minor increases in data can significantly extend processing time. Analyzing these algorithms allows us to predict their execution times, which is crucial in time-critical situations where optimal performance is desired.
 
-By doing so, a fairer comparison could be made between the algorithms as they 
-would sort the same array. Any differences in the excution time could then be
-atritubed to the algorithms themselves rather than due to favorable or unfavorable
-input arrays. 
+In this empirical study, four different sorting algorithms were compared: [Selection sort](https://en.wikipedia.org/wiki/Selection_sort), [Bubble sort](https://en.wikipedia.org/wiki/Bubble_sort), [Insertion sort](https://en.wikipedia.org/wiki/Insertion_sort), and [Merge sort](https://en.wikipedia.org/wiki/Merge_sort). Each algorithm was tasked with sorting an array filled with random integer values. The array contained _15,000 entries_, and the random values ranged from _0 to 1000_. To ensure consistent results, a single random array was generated for each algorithm to sort, and the execution time of each was recorded.
 
-Once this sequence of testing was complete, the entire process was then repeated with 
-a newly generated random array. This larger event was then  repeated 20 times. 
+This approach allowed for a fair comparison, as all algorithms sorted the same array. Any differences in execution time could then be attributed to the algorithms themselves rather than to variations in the input arrays. Once the initial testing sequence was complete, the entire process was repeated with a newly generated random array, and this was done _20 times_. The results of the twenty separate tests revealed a clear trend when average times were analyzed:
 
+1. Overall, __Merge sort__ was the fastest of all the algorithms, with an average execution time an order of magnitude lower than the others. This superior performance is likely due to its efficiency in avoiding unnecessary comparisons.
 
-The results of the twenty seperate tests show a definite trend when average times are 
-analyised: 
-	
-	1) On the whole, Merge sort was the fastest of all the algorithms. With an	
-	average execution time an order of magnitude lower than all other sorts, it
-	dominated in terms of performance. In all likelihood this is due to it not 
-	wasting time repeatedly scanning and comparing entries it already visited.
-	
-	2) Bubble sort was by far the slowest of all algorithms. On average it took
-	almost twice as long as the next slowest algorithm. As it only compares adjacent
-	array entries, it has no way of identifying more distant entries that could be 
-	compared and swapped. Consequently it performs many unnecesary swaps that do little
-	sorting.
-	
-	3) Selection sort was the second slowest algorithm. While it does not execute as 
-	many trivial swaps as Bubble sort, it still leaves the array mostly unchanged after
-	it performs a swap. This means the time it spends scanning the array does nothing to
-	sort it. Naturally this leads to more scans, swaps, and excution time. 
-	
-	4) Insertion sort was the second fastest algorithm. While nowhere near as fast as 
-	merge sort, it still outperformed the other algorithms by a large margin. This can 
-	be atritubed to the way it "slides" the entries of an array as it scans them. This 
-	tends to reduces the number of unnecesary comparisons by biasing EVERY seemingly 
-	larger value towards one side of the array. 
-	
+2. __Bubble sort__ was the slowest algorithm, taking nearly twice as long as the next slowest. It only compares adjacent entries, which limits its ability to identify more distant entries that could be compared and swapped. As a result, it performs many unnecessary swaps with minimal sorting effect.
 
-In terms of the variation between excutions of the same algorithm, a different trend is 
-apparent: 
+3. __Selection sort__ was the second slowest algorithm. Although it does not perform as many trivial swaps as Bubble sort, it often leaves the array mostly unchanged after a swap, leading to more scans, swaps, and extended execution time.
 
-	1) 	Merge sort had a much lower standard deviation than other algorithms. This 
-	means that its execution time varied little with input array. The extent to which 
-	the radom array was ordered had little effect. Apparently there was no "favorable" 
-	input, but likewise no "unfavorable" input.
-	
-	2) Bubble sort had the largest standard deviation. How "sorted" the input array was 
-	had a large effect on the excution time of this algorithm. 
-	
-	3) Selection sort and Insertion sort had similar standard deviations. Between the
-	two, Insertion sort was more sensitive to how "ordered" the input array was, but not
-	by much. In either case, the "sorting" of the input had a significant effect on 
-	excution time.
-	
-Even though merge sort was the fastest and most consistent of all the algorithms, this 
-consistency may be a drawback. If the input array is partially sorted, an atractive quality 
-may be that the sorting algorithm takes less time to complete the sort. If this is important,
-then the slower algorithms may have a quality that is worth studying and replicating.
+4. __Insertion sort__ was the second fastest algorithm. While not as quick as Merge sort, it significantly outperformed the other algorithms. This can be attributed to its method of displacing each entry that it scans, which reduces unnecessary comparisons by biasing larger values towards one side of the array.
 
----
-
-While attending college, I took a course in programming structures in C++. This was a standard course that anyone who had any interest in computer science had to take. Moreover, in a lot of curriculums, it's a required course.
-
-As part of the final grade for this course I was taking, I had to submit a report that compared different types of algorithms that sorted array in order to see how effective they were and the time they took to complete their operations.
-
-The comparison made sense because different types of algorithms converge towards a specific O-time when dealing with large data set.
-That is, the particular time to execute an algorithm can drastically change, depending on the nature of the algorithm, when it is dealing with very large amounts of information.
-
-For example, algorithms increase linearly with the dataset, such that if you double the dataset, takes twice as long for the algorithm to complete.
-
-Alternatively, an algorithm could increase logarithmically with the dataset. That means that a great increase in the amount of information that has to be processed is a relatively minor effect on the actual time needed to process the algorithm.
-
-This is a very good situation as the algorithm process more information does not mean it will run significantly slower.
-
-Conversely, some algorithms have a quadratic behavior with data, meaning that if you double the sample size, the time to execute the algorithm increases by four times. This is obviously a very bad situation as even minor increases in the amount of data being processed means the algorithm takes far longer to execute.
-
-Analyzing the algorithms allows us to predict how long they will take to execute based off their convergence rate. Evidently, this is extremely important when we are dealing with time-critical situations where we want the absolute best performance for our computing power.
-
-The program compared four different algorithms. These included selection sort, bubble sort, insertion sort, and emerge sort.
-
-Each algorithm had its pros and cons. Some were more complicated than others, while others were more simple, but they also performed worse.
-
-An example of this is bubble sort. It has a very simple, but its performance is underwhelming compared to other algorithms.
-
-By comparison, merge sort is a far more complicated algorithm with many more lines of code. However, its performance is much better with large datasets.
-
-Selection sort and insertion sort lie somewhere in between these extremes, and each have their use cases depending on how large the dataset is.
-
----
-
-For another assignment, I had to submit a data structure known as a linked list.
-
-This is an interconnected structure that stores data in something analogous to a chain, wherein there are small elements interconnected with each other, and each element, can store a certain amount of information.
-
-There is an element at the start of this chain, then successive elements that are attached one after the other, and at the end there is a chain that terminates the entire linked list.
-
-This data structure is flexible in that different elements can be inserted at different positions along the linked list. However, there must always be an element at the head of the list and an element at the tail or the end of the list.
-
-This structure is flexible in that an arbitrary number of elements can be added to the list.
-
-Likewise, we can remove elements from the list to the point at which we have no list remaining.
-
-This flexibility means that we can separate the behavior of a linked list from another data structure like an array.
-In an array, the length is fixed, and the number of elements that can exist within the array are known.
-
-We can replace the data that is stored in each element of the array, but we cannot necessarily delete elements from the array. Likewise, we cannot necessarily add more elements to the array to make it longer.
-
-The details of this behavior naturally changed depending on the programming language in question.
-
-In some languages, the length of an array can be modified after it is created. So in that sense, it mimics the behavior of a linked list much more closely.
-
-In other languages, arrays cannot be easily modified after their creation. Before, the distinction between an array and a linked list is more pronounced.
-
-In the case of C++, we can declare arrays by giving them an initial length. However, afterwards, it's a bit more complicated to actually change the length or add entries to the array.
-
-Therefore, making your own data structure for a linked list can make sense depending on the data that's being stored in that list.
-
-For example, we may want to create a linked list that stores classes, which themselves store more complicated information. In this case, by making a linked list data structure, we can ensure a known relationship between each class that we can then use to make a more complicated program.
-
----
-
-These are programs to compare the speed of basic sorting algorithms an a linked list data type. For an array of 15000 elements, this is how the algorithms fare:  
 ![image](https://raw.githubusercontent.com/RCmags/SortingAlgorithmCompare/main/data/sort_compare.png)
 
-The linked list is easily visualized with this diagram:  
+In terms of variation between executions of the same algorithm, a different trend emerged:
+
+1. Merge sort had a much lower standard deviation than the other algorithms, indicating that its execution time varied little with input arrays. The extent to which the random array was ordered had minimal effect; there was neither a "favorable" nor "unfavorable" input.
+
+2. Bubble sort exhibited the largest standard deviation. The level of "sortedness" in the input array significantly affected its execution time.
+
+3. Selection sort and Insertion sort showed similar standard deviations. Between the two, Insertion sort was slightly more sensitive to the order of the input array, but not by much. In either case, the "sorting" of the input had a notable impact on execution time.
+
+Although Merge sort was the fastest and most consistent algorithm, the overhead required to excute it may be a drawback. If the input array is partially sorted, it may be possible to use a simpler sorting algorithm that completes the operation in an acceptable ammout of time. If low overhead is important, then the slower algorithms may possess qualities worth using.
+
+
+# Linked List Data Structure
+
+For another assignment, I had to implement a data structure known as a [linked list](https://en.wikipedia.org/wiki/Linked_list). This interconnected structure stores data in a way that resembles a chain, where individual elements are linked to one another, and each element can hold a specific amount of information. This data structure is flexible and allows different elements to be inserted at various positions along the linked list. However, there must always be an element at the head of the list and an element at the end.
+
 ![image](https://3.bp.blogspot.com/-sXOQBd_OCR8/WBBn3QNhOiI/AAAAAAAAALQ/ysaUNOhKMoY59zw2cRxcHioHzdvn8HdNgCLcB/s1600/simpleLinkedList.png)
+
+This structure permits an arbitrary number of elements to be added to the list. Similarly, we can remove elements until no items remain. This flexibility distinguishes linked lists from other data structures like [arrays](https://en.wikipedia.org/wiki/Array_(data_structure)). In an array, the number of elements is predetermined. While we can replace the data stored in each element, we cannot always delete elements or add more to increase its length. The behavior of these data structures, however, can vary depending on the programming language in use. 
+
+In some languages, the length of an array can be modified after its creation, allowing it to mimic the behavior of a linked list more closely. In the case of [C++](https://en.wikipedia.org/wiki/C%2B%2B), we can easily declare arrays with an initial length. However, modifying the length or adding entries to the array afterward can be more complicated. Therefore, creating a linked list data structure may be advantageous depending on the data being stored. For instance, we might want to create a linked list that stores __classes__, which can contain more complex information. In this case, a linked list helps maintain a known relationship between each element, enabling the development of a more sophisticated program.
+
 
 ### Github Repo:
 [SortingAlgorithmCompare](https://github.com/RCmags/SortingAlgorithmCompare)
