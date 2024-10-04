@@ -73,37 +73,61 @@ then the slower algorithms may have a quality that is worth studying and replica
 ---
 
 While attending college, I took a course in programming structures in C++. This was a standard course that anyone who had any interest in computer science had to take. Moreover, in a lot of curriculums, it's a required course.
+
 As part of the final grade for this course I was taking, I had to submit a report that compared different types of algorithms that sorted array in order to see how effective they were and the time they took to complete their operations.
+
 The comparison made sense because different types of algorithms converge towards a specific O-time when dealing with large data set.
 That is, the particular time to execute an algorithm can drastically change, depending on the nature of the algorithm, when it is dealing with very large amounts of information.
+
 For example, algorithms increase linearly with the dataset, such that if you double the dataset, takes twice as long for the algorithm to complete.
+
 Alternatively, an algorithm could increase logarithmically with the dataset. That means that a great increase in the amount of information that has to be processed is a relatively minor effect on the actual time needed to process the algorithm.
+
 This is a very good situation as the algorithm process more information does not mean it will run significantly slower.
+
 Conversely, some algorithms have a quadratic behavior with data, meaning that if you double the sample size, the time to execute the algorithm increases by four times. This is obviously a very bad situation as even minor increases in the amount of data being processed means the algorithm takes far longer to execute.
+
 Analyzing the algorithms allows us to predict how long they will take to execute based off their convergence rate. Evidently, this is extremely important when we are dealing with time-critical situations where we want the absolute best performance for our computing power.
 
 The program compared four different algorithms. These included selection sort, bubble sort, insertion sort, and emerge sort.
+
 Each algorithm had its pros and cons. Some were more complicated than others, while others were more simple, but they also performed worse.
+
 An example of this is bubble sort. It has a very simple, but its performance is underwhelming compared to other algorithms.
+
 By comparison, merge sort is a far more complicated algorithm with many more lines of code. However, its performance is much better with large datasets.
+
 Selection sort and insertion sort lie somewhere in between these extremes, and each have their use cases depending on how large the dataset is.
 
 ---
 
 For another assignment, I had to submit a data structure known as a linked list.
+
 This is an interconnected structure that stores data in something analogous to a chain, wherein there are small elements interconnected with each other, and each element, can store a certain amount of information.
+
 There is an element at the start of this chain, then successive elements that are attached one after the other, and at the end there is a chain that terminates the entire linked list.
+
 This data structure is flexible in that different elements can be inserted at different positions along the linked list. However, there must always be an element at the head of the list and an element at the tail or the end of the list.
+
 This structure is flexible in that an arbitrary number of elements can be added to the list.
+
 Likewise, we can remove elements from the list to the point at which we have no list remaining.
+
 This flexibility means that we can separate the behavior of a linked list from another data structure like an array.
 In an array, the length is fixed, and the number of elements that can exist within the array are known.
+
 We can replace the data that is stored in each element of the array, but we cannot necessarily delete elements from the array. Likewise, we cannot necessarily add more elements to the array to make it longer.
+
 The details of this behavior naturally changed depending on the programming language in question.
+
 In some languages, the length of an array can be modified after it is created. So in that sense, it mimics the behavior of a linked list much more closely.
+
 In other languages, arrays cannot be easily modified after their creation. Before, the distinction between an array and a linked list is more pronounced.
+
 In the case of C++, we can declare arrays by giving them an initial length. However, afterwards, it's a bit more complicated to actually change the length or add entries to the array.
+
 Therefore, making your own data structure for a linked list can make sense depending on the data that's being stored in that list.
+
 For example, we may want to create a linked list that stores classes, which themselves store more complicated information. In this case, by making a linked list data structure, we can ensure a known relationship between each class that we can then use to make a more complicated program.
 
 ---
