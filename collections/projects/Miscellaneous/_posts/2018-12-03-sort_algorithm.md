@@ -34,7 +34,7 @@ In terms of variation between executions of the same algorithm, a different tren
 Although Merge sort was the fastest and most consistent algorithm, the overhead required to excute it may be a drawback. If the input array is partially sorted, it may be possible to use a simpler sorting algorithm that completes the operation in an acceptable ammout of time. If low overhead is important, then the slower algorithms may possess qualities worth using.
 
 
-# Linked-List Data Structure
+# Linked-list data structure
 
 For another assignment, I had to implement a data structure known as a [linked list](https://en.wikipedia.org/wiki/Linked_list). This interconnected structure stores data in a way that resembles a chain, where individual elements are linked to one another, and each element can hold a specific amount of information. This data structure is flexible and allows different elements to be inserted at various positions along the linked list. However, there must always be an element at the head of the list and an element at the end.
 
