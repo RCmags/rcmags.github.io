@@ -3,6 +3,10 @@ layout: post
 title: "Simulation of a four-bar linkage"
 ---
 
+
+
+---
+
 This is a simple 2D simulation of a four bar linkage written in __python 2__. The lengths of the bars can be changed at the start of the program, as can the mass of the driving and driven bars. For simplicity, the intermiate bar that acts as a conrod is assumed to be massless. Other inputs are the initial angular velocity of the driving bar and a constant external torque acting on said bar. 
 
 As the system reduces to a single degree freedom, only one variable is solved for, mainly, the angle of the driving bar with respect to the horizontal. The solution to the resulting differential equation is then used to control the angle of the input bar during the animation phase of the program. 
