@@ -17,4 +17,4 @@ I was really pleased with the final result. While it wasn't the most visually ap
 ### GitHub repository
 To use the calculator, simply visit the [project page](https://rcmags.github.io/Browser-Graphing-Calculator/) of this project. Alternatively, you can download the files from the repository and open the "index.html" file with your browser to use the calculator.
 
-See: [Browser-Graphing-Calculator](https://rcmags.github.io/Browser-Graphing-Calculator)
+See: [Browser-Graphing-Calculator](https://github.com/RCmags/Browser-Graphing-Calculator)
