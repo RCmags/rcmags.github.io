@@ -178,7 +178,7 @@ Since the navigation algorithm considered the full __3-dimensional position__ of
 
 It's plain to see the robot worked pretty well. It did drift from its original position when asked to move over very large distances, but the error was rather small relative to its trajectory. For such a small and crude prototype, it demonstrated the feasibility of the position estimation methods discussed in this article. In particular, the successful use of an __accelerometer to obtain position__, even if in the short run, is especially noteworthy as this is considered a very difficult problem due to the rapid buildup of drift.
 
-### GitHub Repo:
+### GitHub repository
 The code for the project can be found in the following repository: [TrackRobot](https://github.com/RCmags/TrackRobot)
 
 __Note__: Some versions of the code are written using older versions of the libraries it depends on. This is because the navigation code was being written at the same time as its
