@@ -137,7 +137,7 @@ A common and inexpensive optical flow sensor is the __ADNS-3080__. It is conveni
 ![image](/img/tracked-robot/adns3080.jpeg)  
 <p align="center"><i>The ADNS-3080 is sold as a module</i></p>
 
-See: <b><a href="https://github.com/RCmags/ADNS3080">ADNS-3080 Mouse Sensor Library</a></b>
+See: <b><a href="/projects/arduino%20libraries/2020/12/12/adns3080.html">ADNS-3080 Mouse Sensor Library</a></b>
 
 I eventually settled on using __two__ optical flow sensors as that was the minimum amount required to determine both translation and rotation. In the same way that odometry uses wheel rotation to determine displacements, we can replace these inferred displacements with actual measurements and still use the same equations. Therefore, we perform a kind of __optical odometry__ that has much higher precision. We can find examples of this type of system in multiple papers. See the following:
 

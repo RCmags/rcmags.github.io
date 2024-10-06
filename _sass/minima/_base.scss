@@ -102,9 +102,11 @@ figcaption {
 /**
  * Lists
  */
-ol { // initially set at zero 
-  margin-left: 2 * $spacing-unit;
-  //margin-right: 0px;
+ 
+// ul initially set at zero | removed padding from paginator-list and project-list
+ul, ol { 
+  margin-left: 2 * $spacing-unit; // forced to zero
+  //margin-right: 0px; // forced to zero
 }
 
 // note: ul needs magin=0 to prevent offset in page listings
