@@ -56,7 +56,6 @@ The second iteration of the controller focused on implementing the basic functio
 - Information from the gyroscope could be retrieved and calibrated consistently.
 - Each axis had a corresponding PID controller that combined the receiver and gyroscope signals.
 
-<br>
 While these functions were programmed succesfully, in practice it became evident that vibrations were a serious problem. The gyroscope was sensitive to the slightest disturbances, so any vibrations were measured by the sensor. As the PID controller amplified these signals, the noise would cause the controls of the helicopter to jitter. This made it impossible to make the gains large enough to achieve stable flight, as vibrations overshadowed the slower rotation of the vehicle. 
 
 To overcome this problem, a [simple first order low pass filter](http://www.tsdconseil.fr/tutos/tuto-iir1-en.pdf) was used to suppress the vibration noise. While this helped, it did not provide sufficient suppression. A straight forward, albeit naive, solution was to [cascade multiple 1rst order filters](https://2n3904blog.com/cascading-single-pole-filters/). This increased the noise suppression but came at the cost of a larger response delay.  

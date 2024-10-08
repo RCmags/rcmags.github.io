@@ -20,5 +20,5 @@ The end result was pretty good. The collision model worked and the meteor would 
 ![image](https://raw.githubusercontent.com/RCmags/MeteorSim/main/img/menu_pic.png)
 <p align="center"><i>A simple command line interface let you play with the meteor</i></p>
 
-### Github Repo:
+### Github repository
 The code for this project can be found at the following repository: [MeteorSim](https://github.com/RCmags/MeteorSim). The code will need to be compiled for your computer using [Microsoft Windows](https://en.wikipedia.org/wiki/Microsoft_Windows) due to dependending on the [conio.h](https://en.wikipedia.org/wiki/Conio.h) library. 

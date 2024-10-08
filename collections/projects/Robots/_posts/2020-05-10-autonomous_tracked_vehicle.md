@@ -103,7 +103,7 @@ A simple enhancement is to make use of the accelerometer that is often bundled w
 
 Despite the hurdles that double integration presents, I was able to obtain acceptable velocity and position estimates through an accelerometer after many attempts. The solution came in the form of a modified version of the [Kalman filter implemented in this Arduino library](https://github.com/denyssene/SimpleKalmanFilter). In this filter, we have a variable with unknown behavior that has a known [standard deviation](https://en.wikipedia.org/wiki/Standard_deviation). Any values of the variable that are within this error band, relative to a long-term average of the variable, will be suppressed. The end result is that the filter reacts slowly to small changes in the input variable and reacts quickly to large changes. This works well for integrating acceleration as we can suppress small variations in the acceleration to avoid integration drift, yet we still consider large accelerations to determine the velocity. We can find more details about the acceleration filter developed for this project in the following article:
 
-See: <b><a href="https://github.com/RCmags/imuFilter">IMU Filter based on a quaternion | Stable double integration</a></b>
+See: <b><a href="/projects/arduino-libraries/2020/03/14/imu_sensor_fusion.html">IMU Filter based on a quaternion | Stable double integration</a></b>
 
 ## Real-time Dynamic Vehicle Model
 
@@ -137,7 +137,7 @@ A common and inexpensive optical flow sensor is the __ADNS-3080__. It is conveni
 ![image](/img/tracked-robot/adns3080.jpeg)  
 <p align="center"><i>The ADNS-3080 is sold as a module</i></p>
 
-See: <b><a href="/projects/arduino%20libraries/2020/12/12/adns3080.html">ADNS-3080 Mouse Sensor Library</a></b>
+See: <b><a href="/projects/arduino-libraries/2020/12/12/adns3080.html">ADNS-3080 Mouse Sensor Library</a></b>
 
 I eventually settled on using __two__ optical flow sensors as that was the minimum amount required to determine both translation and rotation. In the same way that odometry uses wheel rotation to determine displacements, we can replace these inferred displacements with actual measurements and still use the same equations. Therefore, we perform a kind of __optical odometry__ that has much higher precision. We can find examples of this type of system in multiple papers. See the following:
 

@@ -9,8 +9,8 @@ In the process of developing an [autonomous tracked robot](/projects/robots/2020
 A separate vector and quaternion library was developed to handle the mathematics involved in manipulating quaternions and any vectors that the quaternions would act upon. These data types were then used by the sensor fusion algorithm to perform heading computations. The fusion algorithm was extensively tested using an **MPU-6050** [inertial measurement unit](https://en.wikipedia.org/wiki/Inertial_measurement_unit). Another library was specifically developed to interface the MPU-6050 with an Arduino. Thus, the sensor fusion algorithm depended on two custom libraries to create a functioning system. We can consider this system to be a filter that acts on the raw data from the sensor. Therefore, the sensor fusion algorithm can also be referred to as an **IMU filter**, as it filters the information from the inertial measurement unit.
 
 **Note**: The auxiliary libraries developed for the IMU filter can be found here:
-- [MPU-6050 library](/projects/arduino libraries/2020/07/11/mpu6050.html)
-- [Vector and Quaternion library](/projects/arduino libraries/2020/09/20/3d_datatypes.html)
+- [MPU-6050 library](/projects/arduino-libraries/2020/07/11/mpu6050.html)
+- [Vector and Quaternion library](/projects/arduino-libraries/2020/09/20/3d_datatypes.html)
 
 # Initial PID-Based Filter 
 The initial form of the fusion algorithm was based on existing IMU filters. It was a **modified** version of the _Mahony filter_ that replaces the PI controller with something akin to a [second-order low-pass filter](https://www.electronics-tutorials.ws/filter/second-order-filters.html). The proportional term was removed, and the integral term was forced to decay to dampen the system. For more information on the Mahony filter, see these references:
@@ -95,4 +95,4 @@ See: [Robust Double Integration - RIDI](https://github.com/higerra/ridi_imu)
 <p align="center"><i>It’s possible to use large datasets to train a fusion algorithm.</i></p>
 
 # GitHub Repository
-The filter library can be downloaded directly from the arduino library catalog. It is also available from its gitHub repository at the following link: [imuFilter](https://github.com/RCmags/imuFilter)
+The filter library can be downloaded directly from the [arduino library catalog](https://www.arduino.cc/reference/en/libraries/). It is also available from its gitHub repository at the following link: [imuFilter](https://github.com/RCmags/imuFilter)

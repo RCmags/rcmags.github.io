@@ -15,7 +15,7 @@ This functionality made the project appealing because it had a large user interf
 
 This allowed the calculator to perform basic operations such as addition, subtraction, multiplication and division. It effectively mimmicked a cheap hand-held calculator. In the end, this was a nice project that taught me a lot about how to make graphical interfaces. It was not complex but it did highlight the importance of __factoring__ graphical elements to reuse them later.
 
-### Github Repo:
+### Github repository
 To use the calculator, simply execute "simple_calc.py" with the python shell. The repository can be found here:
 [Calculator-GUI](https://github.com/RCmags/Calculator-GUI)
 

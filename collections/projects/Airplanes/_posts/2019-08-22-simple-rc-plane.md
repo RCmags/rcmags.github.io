@@ -24,7 +24,7 @@ Both of these approaches are interesting in their own ways. The pylon racer is f
 
 With this in mind, we can simplify our wing to a flat 2D sheet with some [camber](https://en.wikipedia.org/wiki/Camber_(aerodynamics)). Similarly, the tail surfaces can be thin flat plates with rounded edges. To further simplify the aircraft, we can opt for a V-tail wherein the angle of the V determines how the effective stabilization along the vertical and horizontal axes.
 
-![image](https://www.researchgate.net/profile/Yueksel-Eraslan/publication/348150678/figure/fig8/AS:975472972288000@1609582288794/Tail-configurations-5-T-tail-configuration-has-horizontal-tail-located-on-top-of.ppm)
+![image](/img/simple-rc-airplane/part-1/tail-configs.png)
 
 A V-tail has the added benefit of lower mechanical complexity. Each side only requires one movable flap, controlled by an actuator. Since both sides are symmetrical, the mechanism is identical for each using the same servos and control linkages. The only drawback is the mixing required for pitch and yaw control, as both sides must move together to achieve control. However, this can be easily handled electronically with programmable servo motion.
 

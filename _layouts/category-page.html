@@ -4,9 +4,16 @@ layout: default
 
 {% include page-header.html content="Category" %}
 
+<!-- define page title -->
+{% if page.category_display %} 
+	{% assign title=page.category_display %}
+{% else %}
+	{% assign title=page.category %}
+{% endif %}
+
 <!-- category -->
 <header class="class-header">
-	<h1 class="post-title">{{ page.category | escape }}</h1>
+	<h1 class="post-title">{{ title | escape }}</h1>
 	<span>{{ page.description }}<span>
 </header>
 

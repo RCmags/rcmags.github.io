@@ -6,7 +6,6 @@ title: "Log | Analytical models of ornithopter behaviour"
 
 This page is a repository for posts regarding [analytical models](https://encyclopediaofmath.org/wiki/Mathematical_model) of ornithopter flight. These posts were originally made on [rcgroups.com](https://www.rcgroups.com/forums/showthread.php?3221699-Attempt%28s%29-at-a-servo-flap-ornithopter) and this page is meant to organize them in chronological order.
 
-# Posts
 1. [Very simple math model](https://www.rcgroups.com/forums/showpost.php?p=41093927&postcount=10)
 
 2. [Energy and oscillating mass](https://www.rcgroups.com/forums/showpost.php?p=41104533&postcount=14)

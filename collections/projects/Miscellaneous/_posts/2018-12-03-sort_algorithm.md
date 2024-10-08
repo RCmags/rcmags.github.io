@@ -45,5 +45,5 @@ This structure permits an arbitrary number of elements to be added to the list. 
 In some languages, the length of an array can be modified after its creation, allowing it to mimic the behavior of a linked list more closely. In the case of [C++](https://en.wikipedia.org/wiki/C%2B%2B), we can easily declare arrays with an initial length. However, modifying the length or adding entries to the array afterward can be more complicated. Therefore, creating a linked list data structure may be advantageous depending on the data being stored. For instance, we might want to create a linked list that stores __classes__, which can contain more complex information. In this case, a linked list helps maintain a known relationship between each element, enabling the development of a more sophisticated program.
 
 
-### Github Repo:
+### Github repository
 [SortingAlgorithmCompare](https://github.com/RCmags/SortingAlgorithmCompare)

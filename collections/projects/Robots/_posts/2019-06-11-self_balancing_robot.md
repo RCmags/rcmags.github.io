@@ -37,7 +37,6 @@ With this goal in mind, I gathered the most affordable equipment available to bu
 - An H-bridge capable of driving two DC motors independently
 - A 400mAh 2-cell LiPo battery to power the motors and the Arduino
 
-<br>
 From a mechanical standpoint, the system was very simple. Two wheels were placed directly under the chassis, while the electronics and battery were positioned at the highest point of the chassis. This elevated the center of mass of the vehicle and increased its [moment of inertia](https://en.wikipedia.org/wiki/Moment_of_inertia) about the unstable axis. As a result, the vehicle reacted more slowly to both gravity and the acceleration from the wheels, which helped the Arduino by reducing the speed at which it needed to correct the vehicle's instability.
 
 ![Moment of Inertia](https://uploads-cdn.omnicalculator.com/images/mass-moment-of-inertia/rod.png)
