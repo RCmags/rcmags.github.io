@@ -87,9 +87,7 @@ The velocity is then updated using the trapezoidal rule to integrate the filtere
 
 {%include image.html src="/img/imu-filter/equations/equation14.png" %}
 
-This approach led to a fairly decent estimation of velocity for short periods of time.
-The sensor would have to rapidly accelerate, then decelerate to get a accurate reading. If the operation was very prolonged or if the acceleration only occurred in one direction then did not reverse, the output of this algorithm would decay very rapidly to whatever target value was established.
-Therefore, it was only well suited for short-term disturbances rather than large, long-term readings of velocity. For that type of information, another sensor would need to be used.
+This approach led to a fairly decent estimation of velocity for short periods of time. The sensor would have to rapidly accelerate, then decelerate to get a accurate reading. If the acceleration was very prolonged, or if the acceleration only occurred in one direction then did not reverse, the output of this algorithm would decay very rapidly to whatever target value was established. Therefore, the algorithm was only well suited for short-term disturbances, rather than long-term readings of velocity.
 
 
 # Conclusions
