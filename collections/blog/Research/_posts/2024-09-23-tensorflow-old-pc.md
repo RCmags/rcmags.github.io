@@ -52,7 +52,7 @@ Here are all the repositories and sites that I visited while trying to find comp
 - Multiple Core2Quad builds, **CPU-only**: [TensorFlow 2.8.0 No AVX, No GPU, Python 3.7 - 3.10](https://github.com/yaroslavvb/tensorflow-community-wheels/issues/209)
 
 
-**II. Builds for other processors - No AVX**
+**II. Builds for other processors - No AVX**   
 These builds did not work with the core2quad. 
 
 - [TensorFlow 2.5.3 No GPU, No AVX, Intel pentium silver](https://github.com/yaroslavvb/tensorflow-community-wheels/issues/212)
