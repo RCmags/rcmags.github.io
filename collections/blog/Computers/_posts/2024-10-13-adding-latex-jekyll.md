@@ -49,16 +49,15 @@ This process was straightforward, and much to my surprise, it worked flawlessly.
 <br>
 Once I placed _all_ the KaTeX files in this specific structure, the LaTeX began to render correctly. According to the code, you can use different tags to adjust the CSS style of the equations. When the display is set to **false**, the equation will be centered on the page. Here’s an example using the `\\[ \\]` tags:
 
-`\\[ I_e = \int_{0}^t{(K_{p}e(t) - K_{c}{I_e})dt} \\]`
+\\[ I_e = \int_{0}^t{(K_{p}e(t) - K_{c}{I_e})dt} \\]
 
-And here’s the same example using the `\\( \\)` tags: `\\( I_e = \int_{0}^t{(K_{p}e(t) - K_{c}{I_e})dt} \\)`
+And here’s the same example using the `\\( \\)` tags: \\( I_e = \int_{0}^t{(K_{p}e(t) - K_{c}{I_e})dt} \\)
 
 You can also create more complex equations by simply modifying the underlying LaTeX code. Check out the **[LaTeX Cheatsheet](https://quickref.me/latex)** for an overview of different LaTeX expressions:
 
-```
-\\[ f\relax(x) = \int_{-\infty}^\infty
-    f\hat\xi\,e^{2 \pi i \xi x}
-    \,d\xi 
-\\]
-```
+\\[ \cfrac{1}{\sqrt{2}+\cfrac{1}{\sqrt{2}+\cfrac{1}{\sqrt{2}+\dotsb}}} \\]
+
 With just a few changes to the `<head>` tag of my Jekyll site, I was able to render elegant equations quickly. This solution is both simple and effective, and I want to commend the developers who made this system possible. Well done!
+
+# Important!
+If the latex is not written properly or contains new lines, it can **break** [lunr.js](https://lunrjs.com/) and ruin your website's search function. If for some reason your search stops working, carefully check any LaTex you have added to your markdown posts.  
