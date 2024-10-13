@@ -26,6 +26,7 @@ Robots:
     
 Electronics:
     url: "projects/electronics.html"
+
      
 # Blog directory
 
@@ -40,6 +41,15 @@ Journal:
 
 Computers:
     url: "blog/computers.html"
+
+
+# travel directory
+
+travel:
+    url: "travel.html"
+
+Argentina:
+    url: "blog/argentina.html"
 
 Brazil:
     url: "blog/brazil.html"

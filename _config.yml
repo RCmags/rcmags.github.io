@@ -13,10 +13,13 @@ paginate_path: "/page:num/"
 # collections
 collections_dir: collections
 
+# NOTE: listing MUST be updated with new pages
 collections:
   projects:
     output: true
   blog:
+    output: true
+  travel:
     output: true
     
 # social links
@@ -38,6 +41,10 @@ plugins:
  - jekyll-paginate
 
 # Order menu
-#header_pages:
-#  - projects.md
-#  - about.md
+header_pages:
+  - home.html
+  - about.html
+  - travel.html
+  - blog.html
+  - projects.html
+  - search.html
