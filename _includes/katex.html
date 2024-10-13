@@ -1,0 +1,22 @@
+{% if page.katex %}
+	<!-- CSS -->
+	<!-- src: https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css -->
+	<link rel="stylesheet" href="/katex/katex.min.css"/>
+	
+	<!-- JavaScript -->	
+	<!-- src: https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js -->
+	<script defer src="/katex/katex.min.js"></script>
+	
+	<!-- src: https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/auto-render.min.js -->
+	<script defer src="/katex/contrib/auto-render.min.js"
+  	onload="renderMathInElement(document.body,{
+    	delimiters: [
+      	{ left: '$$',  right: '$$',  display: true  },
+      	{ left: '$',   right: '$',   display: false },
+      	{ left: '\\[', right: '\\]', display: true  },
+      	{ left: '\\(', right: '\\)', display: false }
+  	]});">
+	</script>
+{% endif %}
+
+<!-- Source code: https://ionathan.ch/2021/05/19/latex-in-jekyll.html -->

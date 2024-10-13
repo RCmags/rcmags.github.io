@@ -1,5 +1,6 @@
 ---
 layout: category-page
 category: Electronics
-description: "Model aircraft sustained with fixed wings"
+description: "Projects mainly focused on electrical circuits and related topics"
 ---
+

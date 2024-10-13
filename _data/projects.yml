@@ -10,3 +10,6 @@ Vehicles:
 Coding:
   - "Arduino-Libraries"
   - "Miscellaneous"
+  
+Hardware:
+  - "Electronics"
