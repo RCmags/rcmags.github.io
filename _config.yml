@@ -43,7 +43,7 @@ plugins:
 # Order menu
 header_pages:
   - home.html
-  - about.html
+  - about.md
   - travel.html
   - blog.html
   - projects.html
