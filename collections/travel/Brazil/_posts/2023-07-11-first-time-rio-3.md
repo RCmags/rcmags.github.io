@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "A closer look of downtown Rio de Janeiro and visiting Copacabana"
+title: "Rio de Janeiro | A closer look of the downtown area and visiting Copacabana"
 
 # image sliders:
 

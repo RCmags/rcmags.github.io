@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "More wandering about downtown Rio. A beautiful mix of modern and historic"
+title: "Rio de Janeiro | Wandering about downtown area: a mix of modern and historic"
 
 # image sliders:
 

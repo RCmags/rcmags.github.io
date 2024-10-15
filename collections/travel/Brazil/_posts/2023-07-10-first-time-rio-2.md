@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Wandering around Rio and Christ the Redeemer"
+title: "Rio de Janeiro | Wandering around town and Christ the Redeemer"
 
 # image sliders:
 slider1:

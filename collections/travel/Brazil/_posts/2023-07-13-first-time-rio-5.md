@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Visiting the Federal University of Rio de Janeiro"
+title: "Rio de Janeiro | Visiting the Federal University"
 
 # image sliders:
 

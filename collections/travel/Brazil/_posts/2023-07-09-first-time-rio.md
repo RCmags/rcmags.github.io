@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "First time in Brazil: Welcome to Rio de Janeiro"
+title: "Rio de Janeiro | First time in Brazil: Welcome to Rio de Janeiro"
 
 # image sliders:
 slider1:
