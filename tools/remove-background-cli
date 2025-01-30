@@ -1,0 +1,19 @@
+==== Remove background CLI ====
+https://github.com/danielgatis/rembg?tab=readme-ov-file
+
+==== Bash For loops ====
+https://www.howtogeek.com/815778/bash-for-loops-examples/
+
+```
+for i in {1..10}
+do
+ echo "Loop spin:" $i
+done
+```
+
+==== Shell script ====
+
+for i in {1..10}
+do
+ rembg i image$i.jpg image-res$i.jpg 
+done

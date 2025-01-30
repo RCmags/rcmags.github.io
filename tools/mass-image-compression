@@ -1,0 +1,29 @@
+### Change image quality
+
+- References:
+https://askubuntu.com/questions/1164/how-to-easily-resize-images-via-command-line#13825
+
+https://thelinuxcode.com/imagemagick-resize-image/
+
+https://www.digitalocean.com/community/tutorials/reduce-file-size-of-images-linux
+
+- Commands:
+
+/* resize image */
+mogrify -resize 320x240 *.jpg
+mogrify -resize 320x240! *.jpg
+mogrify -resize 10% *.jpg
+
+/* reduce quality */
+mogrify -quality 80% *.jpg
+
+
+### Mass rename
+
+see: https://www.makeuseof.com/batch-rename-files-in-linux/
+
+-> Use Thunar "bulk rename" utility. Select all files, right click -> rename
+
+
+### Assign numbers to text lines
+https://ostechnix.com/add-line-numbers-text-files-linux/
