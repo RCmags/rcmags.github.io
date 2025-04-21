@@ -1,0 +1,62 @@
+---
+layout: post
+title: "One month in grad school: more inquiries about funding and teaching"
+---
+
+At the time of writing, it has been roughly one month since I started graduate school. In that time, I’ve been able to speak to a few professors and work as a Teaching Assistant for a couple of weeks. It’s also been enough time to better appreciate the difficulty of the courses I enrolled in. Since I haven’t started doing research yet, I still haven’t experienced the full pressure of graduate school—but most of the elements are there.
+
+**Study → Teach/Research → Do some other time-consuming activity ← Return to the start**
+
+It has been a calm and reassuring experience, but it has also shown me how the need for funding plays subtle roles in the decisions professors and students make. Since money comes from outside the university, whether research happens or not is ultimately up to the people paying for it. This has far-reaching consequences for who receives funding, when they get it, or even whether they get anything at all. Teaching exists as a stop-gap to fill in what external funding cannot provide, but it ultimately gets its money from student tuition.
+
+## There Is Always Research, But Not Always Money
+
+Besides a few teaching-focused professors, I’ve spoken to three professors doing active research. All of them were open to the idea of me joining their lab, but unfortunately, they all mentioned that they currently have no funding. The potential to work on interesting research is there, but without a way to ensure a graduate student a stipend, it becomes difficult to pursue. It’s somewhat heartbreaking, since a lot of very interesting research avenues may go ignored. Ultimately, what gets researched is often a trade-off between what is financially feasible and what is genuinely interesting.
+
+## Transient Instability Due to Political Posturing
+
+Because research is externally funded—and a lot of that funding comes from government agencies—political developments can have a direct impact on whether money is available. Since the 2024 U.S. presidential election, the new implementation of the DOGE (Department of Government Efficiency) has left academic funding on edge. Some funding has been completely cut, and some remains under a cloud of uncertainty. In either case, this doesn’t bode well for graduate students, as it’s unclear whether universities and professors will be able to secure the necessary funds to support them. Given this situation, it might be better to wait out the political turmoil for a few months and see what happens. Politics is ever-changing, and it’s unclear whether the proposed budget cuts will actually go into effect.
+
+## Teaching Assistantships Are Straightforward Work
+
+Since it’s only been about a month since I started graduate school, I was initially worried that I wouldn’t be prepared to be a teaching assistant. But after a few weeks of actually doing the job, I’ve gained much more confidence. The work itself is surprisingly straightforward and manageable. I was assigned to help with a Fluid Mechanics lab. The job consists of attending the labs, giving an overview of the theoretical analysis students are expected to perform afterward, and then grading the assignments they turn in. These assignments can range from simple pre-lab problems to detailed worksheets, or even full written reports of the entire experiment.
+
+Pre-labs are graded individually, while the more extensive assignments are graded in student groups. This helps reduce the workload for both students and the teaching assistant. Another aspect that makes the workload reasonable is the spacing between assignments. Pre-labs are due every week there’s a lab, and worksheets are due on the same day the lab is conducted. The longer written reports, however, are spaced out by a week to give students time to complete them. During this week, there’s no lab session, which also gives the TA time to comfortably grade the work that’s been submitted.
+
+As long as you don’t let more than a week pass after students submit their assignments, there’s a comfortable amount of free time to focus on other duties—like turning in homework or doing research. Overall, I’m very content with the workflow of a teaching assistant. It’s mostly a hands-off role where both the assignment of tasks and the grading are handled online. As long as you grade things in a reasonable time frame, there’s very little direct oversight. It feels like a semi-remote work experience. There’s a small in-person component for running the labs, and after that, all the work is done remotely. I find this setup very relaxed, since I can work whenever I have the time or inclination. It’s very flexible.
+
+To further build confidence in my role, I also took it upon myself to attend another TA’s lab sessions as a reference for how to conduct my own. He had prior experience and was especially helpful in the first few sessions, guiding me on how to explain the material and how to manage the class. He also helped me understand the online grading platform and how to use it efficiently. I’m very thankful for his assistance and patience. This experience reinforced the often-stated importance of getting to know other graduate students to better understand the department and its expectations.
+
+## Research: Choosing a Practical or Theoretical Area of Study?
+
+Moving on from teaching, when choosing a research topic, it seems important to strike a balance between the immediate financial reward and the potential for future insights. That is, we need to consider the practical results a topic might yield, as well as its value as an intellectually satisfying (though possibly abstract) pursuit. Veering too far in either direction isn’t ideal. If a research topic is too theoretical, it raises questions about whether it will ever receive funding. This is especially relevant in applied fields like *engineering*, where research is expected to lead to some *applied* benefit—either as a tool for physical analysis or as a design that improves upon previous ones. For example:
+
+- **Developing computationally efficient fluid mechanics equations:** These could be used to estimate pumping losses in pipe systems without resorting to computationally expensive finite element analysis.
+- **Improving the efficiency and maneuverability of micro-aerial vehicles through variable-geometry wings:** By increasing performance without adding complexity, this kind of research could impact long-duration drone use in package delivery to remote areas.
+
+However, if you don’t keep the idea of *application* in mind, your research may start to look more like something from pure physics, where the goal is understanding nature for its own sake rather than doing something with that knowledge. For example:
+
+- **Studying the viscosity of fluids under extremely high pressure, such as in the cloud layers of gas giants or deep oceans of ocean worlds.**  
+
+See: [Atmosphere of Neptune](https://solarstory.net/planets/neptune)
+
+While fascinating in terms of physical extremes, it’s not clear this would receive funding in a *mechanical engineering* department. And even if it did, what kind of career path would follow? It’s a niche topic that might interest a few academics—but who else? What industry would it apply to?
+
+These are the kinds of thoughts that must stay in your mind to steer yourself in a meaningful direction. If you want to use your knowledge outside of academia, you need to ask: will it be helpful? Will the knowledge be worth the significant personal investment of time and effort? Only you can decide whether those costs will lead to success and personal satisfaction. Otherwise, why do the work at all? It stops making sense.
+
+Outside of an academic structure, if you’re researching something, it should ideally provide value—either financial, intellectual, or personal. At the very least, it should help you make wiser decisions in the future.
+
+## Be Careful When Selecting Classes | Long-Term Thinking About Time Invested
+
+As discussed above, selecting a research topic comes with a lot of nuance. This naturally affects which classes you should take. It’s difficult to research something if you don’t have the background to understand it. Looking at it from the opposite angle, it makes sense to choose classes that interest you so that the knowledge gained helps guide you toward an intellectually satisfying research topic. Hopefully, this keeps you engaged with your work over a longer period.
+
+Personally, I find this much more flexible and agreeable compared to how undergraduate courses are structured. There, the curriculum is fixed and you take classes without much self-reflection about *why* you’re taking them. In contrast, graduate-level course selection is a more tailored experience. While there are still general curriculum requirements, they’re not very specific. This flexibility is shown in the PhD guidelines on the department website:
+
+[See: PhD Degree Guidelines – Iowa State University ME Department](https://www.me.iastate.edu/graduate-students/graduate-degrees-and-programs/phd-degree/)
+
+Instead of a fixed course list, students can choose an *area of study* to focus on. This closely mirrors the real-world problem-solving process: if you don’t know something, you investigate, attempt to solve the problem, then revise your approach as needed. If we apply this to graduate school, the ability to select courses freely allows for a similar cycle: learn what you need, apply it, evaluate, and return to learning as necessary.
+
+## Conclusion
+
+There’s a lot to explore when breaking down the experience of graduate school, but from the above reflections, a rough outline is beginning to take shape. As I spend more time in the program, I expect these ideas to form a more defined structure—something that will help in choosing a research topic, selecting relevant courses, and making smarter long-term decisions that avoid financial struggles.
+
