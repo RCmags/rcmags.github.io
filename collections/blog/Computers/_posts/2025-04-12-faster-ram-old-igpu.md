@@ -6,11 +6,15 @@ title: Testing Higher Frequency RAM on Intel HD4600 Integrated Graphics
 In my efforts to improve the performance of my **ThinkPad T540p** laptop, I experimented with increasing the frequency of its RAM to potentially enhance the [integrated graphics](https://www.intel.com/content/www/us/en/support/articles/000057824/graphics.html). The version I have lacks a discrete graphics card and the only GPU is the **Intel HD 4600** that is embedded into the **i7-4800MQ** processor. Integrated graphics cards [operate differently](https://en.wikipedia.org/wiki/Graphics_processing_unit#Integrated_graphics) from their discrete counterparts. They are inherently less powerful and share the system RAM with the CPU for graphical computations. One key factor influencing integrated graphics performance is the frequency at which the shared RAM operates. Higher frequencies generally mean greater bandwidth, allowing the graphics processor to handle more data per second. This improved throughput can enhance graphical performance by enabling faster rendering of complex or high-resolution images. We can see this trend between RAM and performance in the following video:
 
 {% include youtube.html id='lXFbYU6cvZw' %}  
-<p align="center"><i>Effect of RAM speed on an AMD APU</i></p>
+<p align="center"><i>Effect of RAM speed on the R7 iGPU of an AMD A8-7650k</i></p>
 
 After some research online, it seems this principle is more relevant for [AMD's integrated graphics solutions](https://en.wikipedia.org/wiki/AMD_APU), but its impact on Intel-based integrated graphics like the HD 4600 is less certain, despite faster ram being a relatively inexpensive upgrade option. This was particularly true for the ThinkPad T540p which uses DDR3L SODIMM RAM. This is an older standard dating back to 2012 so it has become significantly cheaper due to technological advancement.
 
 See: [Thinkpad T540p Platform Specifications](https://psref.lenovo.com/syspool/Sys/PDF/ThinkPad/ThinkPad_T540p/ThinkPad_T540p_Spec.PDF)
+
+{% include youtube.html id='gR_eVT1LjZs' %}  
+<p align="center"><i>Effect of RAM speed on an Intel HD6000 iGPU</i></p>
+
 
 ### Slower RAM
 At the start of this experiment, the laptop was equipped with __Kingston KVR16LS11/8 @ 1600 MHz and CL11 timings__. This consisted of two 8GB modules running in __dual-channel__ for a total of 16GB. This is a very standard configuration for laptops running DDR3L.
