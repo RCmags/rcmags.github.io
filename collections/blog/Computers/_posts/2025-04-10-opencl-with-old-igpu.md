@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 
+title: Attempting to use Tensorflow via OpenCL with an old intel iGPU
 ---
 
 
