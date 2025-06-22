@@ -8,12 +8,14 @@ In my efforts to improve the performance of my **ThinkPad T540p** laptop, I expe
 {% include youtube.html id='lXFbYU6cvZw' %}  
 <p align="center"><i>Effect of RAM speed on the R7 iGPU of an AMD A8-7650k</i></p>
 
-After some research online, it seems this principle is more relevant for [AMD's integrated graphics solutions](https://en.wikipedia.org/wiki/AMD_APU), but its impact on Intel-based integrated graphics like the HD 4600 is less certain, despite faster ram being a relatively inexpensive upgrade option. This was particularly true for the ThinkPad T540p which uses DDR3L SODIMM RAM. This is an older standard dating back to 2012 so it has become significantly cheaper due to technological advancement.
-
-See: [Thinkpad T540p Platform Specifications](https://psref.lenovo.com/syspool/Sys/PDF/ThinkPad/ThinkPad_T540p/ThinkPad_T540p_Spec.PDF)
+After some research online, it seems this principle is more relevant for [AMD's integrated graphics solutions](https://en.wikipedia.org/wiki/AMD_APU), but its impact on Intel-based integrated graphics like the HD 4600 is less certain, despite faster ram being a relatively inexpensive upgrade option. The unclear change in performance of (some) Intel iGPU's with respect to RAM frequency can be seen in this video:
 
 {% include youtube.html id='gR_eVT1LjZs' %}  
 <p align="center"><i>Effect of RAM speed on an Intel HD6000 iGPU</i></p>
+
+Despite this ambiguity, it was a cheap experiment to try faster RAM as the ThinkPad T540p uses DDR3L SODIMM. This is an older standard dating back to 2012 and has become significantly cheaper due to technological advancement. 
+
+See: [Thinkpad T540p Platform Specifications](https://psref.lenovo.com/syspool/Sys/PDF/ThinkPad/ThinkPad_T540p/ThinkPad_T540p_Spec.PDF)
 
 
 ### Slower RAM
@@ -40,12 +42,12 @@ After installing the higher-frequency RAM, objective performance – such as boo
 ### Conclusions
 There was a marginal difference (generally less than 5 points) between tests, but it wasn't substantial enough to conclude meaningful improvement from the higher frequency alone. If anything, the higher frequency ram had slightly worse performance. It's worth noting that these Crucial sticks had a higher CL rating compared to the original. This means while they ran at a high frequency, their access timings were slower. Therefore the overall "effective" speed difference was negligible between 1600 MHz CL11 and 1866 MHz CL13.
 
-See: [RAM Latency calculator](https://www.xbitlabs.com/ram-speed-calculator/)
-
 Given the equation: `Absolute latency = (CAS latency*2000) / Frequency`
 We can calculate:
 
 - For 1600 Mhz and CL11, the absolute latency is: `13.75 ns`
 - For 1866 Mhz and CL13, the absolute latency is: `13.93 ns`
+
+See: [RAM Latency calculator](https://www.xbitlabs.com/ram-speed-calculator/)
 
 It's crucial to remember this test was performed on older hardware. The DDR3 RAM and the 4th Gen Intel CPU are significantly outdated by the standards of 2025. Given this, results might differ for much newer systems or different generations of integrated graphics. Despite the lack of objective improvement, my own subjective experience indicates that the feeling of increased responsiveness when multitasking – having multiple programs open and switch between them – was noticeable. The overall system fluidity appeared marginally better. I would recommend this type of upgrade as a low-cost option for those looking to potentially squeeze slightly more performance from their computer. However, it is essential to understand that the gains are very minor.
