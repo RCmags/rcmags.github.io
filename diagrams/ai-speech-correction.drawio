@@ -1,0 +1,62 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.1.1 Chrome/132.0.6834.210 Electron/34.3.3 Safari/537.36" version="26.1.1">
+  <diagram name="Page-1" id="PLBad71tbFdv3gAetYYm">
+    <mxGraphModel dx="741" dy="426" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="-A8UZ74H-OdVrFeQKU_n-2" value="" style="html=1;strokeWidth=1;shadow=0;dashed=0;shape=mxgraph.ios7.misc.text_size;fillColor=#007AFF;strokeColor=none;buttonText=;strokeColor2=#222222;fontColor=#222222;fontSize=8;verticalLabelPosition=bottom;verticalAlign=top;align=center;sketch=0;" vertex="1" parent="1">
+          <mxGeometry x="430" y="258.5" width="60" height="57.5" as="geometry" />
+        </mxCell>
+        <mxCell id="-A8UZ74H-OdVrFeQKU_n-4" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/ai_machine_learning/Speech_Services.svg;" vertex="1" parent="1">
+          <mxGeometry x="290" y="253.5" width="67.5" height="67.5" as="geometry" />
+        </mxCell>
+        <mxCell id="-A8UZ74H-OdVrFeQKU_n-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-A8UZ74H-OdVrFeQKU_n-5" target="-A8UZ74H-OdVrFeQKU_n-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-A8UZ74H-OdVrFeQKU_n-5" value="" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Cognitive_Services.svg;" vertex="1" parent="1">
+          <mxGeometry x="550" y="258.5" width="95.83" height="57.5" as="geometry" />
+        </mxCell>
+        <mxCell id="-A8UZ74H-OdVrFeQKU_n-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-A8UZ74H-OdVrFeQKU_n-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="740" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-A8UZ74H-OdVrFeQKU_n-6" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.concepts.address_book;" vertex="1" parent="1">
+          <mxGeometry x="700" y="256.56" width="80" height="59.88" as="geometry" />
+        </mxCell>
+        <mxCell id="-A8UZ74H-OdVrFeQKU_n-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="-A8UZ74H-OdVrFeQKU_n-2" target="-A8UZ74H-OdVrFeQKU_n-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-A8UZ74H-OdVrFeQKU_n-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.01;entryY=0.493;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="-A8UZ74H-OdVrFeQKU_n-4" target="-A8UZ74H-OdVrFeQKU_n-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-A8UZ74H-OdVrFeQKU_n-15" value="Speech-to-Text Model" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="277.5" y="216.5" width="92.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-A8UZ74H-OdVrFeQKU_n-16" value="LLM model" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="557.92" y="223.5" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-A8UZ74H-OdVrFeQKU_n-17" value="Transcribed text" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="411.25" y="223.5" width="97.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-A8UZ74H-OdVrFeQKU_n-18" value="Refined Draft" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="690" y="223.5" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-A8UZ74H-OdVrFeQKU_n-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" target="-A8UZ74H-OdVrFeQKU_n-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="710" y="405.02857142857135" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-A8UZ74H-OdVrFeQKU_n-20" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.user;" vertex="1" parent="1">
+          <mxGeometry x="716.25" y="370" width="47.5" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-A8UZ74H-OdVrFeQKU_n-23" value="Human Review" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="770" y="390" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-A8UZ74H-OdVrFeQKU_n-25" value="Request corrections" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="590" y="370" width="92.08" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
