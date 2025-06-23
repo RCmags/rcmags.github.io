@@ -1,7 +1,21 @@
 ---
 layout: post
 title: "Using machine-learning tools to accelerate writing via dictation"
-
 ---
 
+Writing down my thoughts has often felt slow and arduous. However, software now allows us to leverage computational tools to significantly speed up this process. I've found the best tool for this task involves using machine learning software that transcribes or translates recorded speech into text. For me, AI-powered speech-to-text conversion makes drafting text much faster than traditional typing, as dictation-based writing makes ideas flow quicker during recording leading to higher productivity. Thoughts are captured rapidly and bypass the slower process of manual writting.
+
+While many tools exist for this purpose, my choice of software reflects my daily use of [Ubuntu Linux](https://ubuntu.com/download). I found [SpeechNote](https://github.com/mkiol/dsnote) to be an excellent tool, as it easily configures AI models via a graphical interface to download and use transcription models. This software is CPU-only compatible but offers significantly faster performance on GPUs. Its flexibility allows it to run on any computer with at least a dual-core processor.
+
+**See:** [SpeechNote - Flatpak](https://flathub.org/apps/net.mkiol.SpeechNote). A Frontend application for _Speech-to-Text_ or _Text-to-Speech_ AI models.
+
+On my [ThinkPad T540P](https://static.lenovo.com/shop/emea/content/pdf/ThinkPad/TSeries/en/thinkpad-t540p-datasheet.pdf) with an [i7-4800MQ](https://www.intel.com/content/www/us/en/products/sku/75128/intel-core-i74800mq-processor-6m-cache-up-to-3-70-ghz/specifications.html), SpeechNote transcribes audio snippets quickly. Recording 10-20 seconds results in text after waiting roughly the same ammount of time. On the CPU alone, [FasterWhisper Distil Large-V3](https://huggingface.co/Systran/faster-distil-whisper-large-v3) variant is very usable for generating ideas quickly. Conversly, on my private AI server using an [NVIDIA GTX 1660](https://www.techpowerup.com/gpu-specs/geforce-gtx-1660.c3365) GPU, the speech-to-text conversion is much faster. It can converter a 10-second recording in less than 1 second while using a minimal ammount of VRAM (around 3GB). I've had very good success with [WhisperCPP-Distil Large-v3](https://huggingface.co/distil-whisper/distil-large-v3) when using this GPU. The model automatically corrects for stuttering and adds punctuation to the text.
+
+When combined with other AI tools like Large Language Models (e.g. [Mistral:7b](https://ollama.com/library/mistral) or [DeepSeek-R1:8b](https://ollama.com/library/deepseek-r1) ), these transcribed texts can be refined significantly. For instance, pairing SpeechNote's transcription with a local LLM service like [Ollama](https://ollama.com/) allows the LLM to correct spelling and improve sentence structure. This results in a fairly refined piece of text. Therefore, both tools complement each other well: we transcribe thoughts from speech, then use an LLM model to polish that the transcribed text into something clearer and more readable.
+
+![image](/img/ai-dictation/ai-speech-correction.png)
+
+This refined text can be reviewed and edited by the user for final touches, making it closer to their intended expression. Critically, this approach drastically reduces the manual effort required compared to writing from scratch. Moreover, I believe speaking naturally leverages neural pathways that are optimized for rapid idea generation. Speech is our primary mode of communication and it forces us to express clear ideas quickly. Writing might involve over-refining thoughts that would flow more freely during speech. Transcription appears to bypass these internal filters and makes communicating an idea much more natural. The speed increase is substantial: dictation yields far more words per minute than manual typing ever can. It only requires an accurate transcription model and a sufficiently powerful computer. 
+
+In summary, **I highly recommend this approach** of combining transcription with LLM polishing given its efficiency, and its ability to leverage natural thought processes. Moreover, _Linux's ecosystem_ provides a smoother environment for integrating such specialized AI tools compared to other operating systems (in particular windows, and to a much lesser extent macOS).
 
