@@ -11,6 +11,10 @@ slider1:
 - url: /img/private-ml-server/server/server5.jpg
 - url: /img/private-ml-server/server/server6.jpg
 
+slider2:
+- url: /img/private-ml-server/horse-astronaut-good.png
+- url: /img/private-ml-server/horse-astronaut-good-2.png
+
 --- 
  
 In an attempt to better understanding machine learning (ML) software, it seemed like a good idea to set up a private server to run software like **PyTorch**, **TensorFlow,** and even **large language models** or **text-to-image generators**. These are among the most prevalent applications of machine learning, so it made sense to build a computer capable of executing such tasks to gain hands-on experience and deeper knowledge on the subject.
@@ -22,8 +26,7 @@ In an attempt to better understanding machine learning (ML) software, it seemed 
 
 To achieve this, a computer with sufficient computational power was necessary to these programs in a reasonable timeframe. While the majority of modern computers can run these types of programs, their **performance** depends on the available processing power. The processor can be used to perform machine learning computations, but it will be relatively slow. Some of this can be circumvented by using a processor with multiple cores and threads to enhance the ability to perform parallel computations.
 
-See: 
-- [What is a GPU?](https://www.intel.com/content/www/us/en/products/docs/processors/what-is-a-gpu.html)
+See: [GPU vs CPU](https://www.intel.com/content/www/us/en/products/docs/processors/what-is-a-gpu.html)
 
 However, the primary component involved in running machine learning software is a **graphics card** (GPU). These cards handle the overwhelming bulk of the ML computations because they excel at matrix multiplications. Consequently, besides the raw computation power of a GPU, the video memory (**V-RAM**) of the graphics card becomes a crucial factor. This dedicated memory, separate from system **RAM**, is specifically designed for the graphics card's operation.
 
@@ -36,12 +39,12 @@ Having ample VRAM allows more complex programs to be loaded into the graphics ca
 Based on these considerations, should sufficient VRAM be available, the computational prowess of the graphics card becomes the primary concern. Newer graphics cards generally require less power for equivalent performance, while the performance of an individual graphics card is directly tied to the power it uses; more power draw typically means better performance. This results in a compromise between desired computational power and the computer's physical ability to deliver power.
 
 ### Selecting Hardware
-I opted for an affordable desktop computer from a surplus store, specifically a used **Dell T-1700**. It featured a **4th-gen Xeon E1271 v3** CPU with 4 cores and 8 threads with 8Mb cache, and **32GB DDR3 RAM**. By 2025 standards, these specifications are modest, wherein the Xeon CPU released in ~2013 is comparable to 10th generation i3-10100f released in 2020. Given these specifications, the $50 price for the entire computer was well worth it.
+I opted for an affordable desktop computer from a surplus store, specifically a used **Dell T-1700**. It featured a **4th-gen Xeon E3-1271v3** CPU with 4 cores and 8 threads with 8Mb cache, and **32GB DDR3 RAM**. By 2025 standards, these specifications are modest, wherein the Xeon CPU released in ~2013 is comparable to 10th generation i3-10100f released in 2020. Given these specifications, the $50 price for the entire computer was well worth it.
 
 - [Dell Precision T-1700](https://i.dell.com/sites/doccontent/shared-content/data-sheets/en/Documents/Dell-Precision-T1700-Spec-Sheet-tab.pdf)
-- [Xeon E1271 v3](https://www.intel.com/content/www/us/en/products/sku/80908/intel-xeon-processor-e31271-v3-8m-cache-3-60-ghz/specifications.html)
+- [Xeon E3-1271v3](https://www.intel.com/content/www/us/en/products/sku/80908/intel-xeon-processor-e31271-v3-8m-cache-3-60-ghz/specifications.html)
 - [Core i3-10100f](https://www.intel.com/content/www/us/en/products/sku/203473/intel-core-i310100f-processor-6m-cache-up-to-4-30-ghz/specifications.html)
-- [E1271-v3 VS i3-10100f](https://www.cpubenchmark.net/compare/Intel-Core-i3-10100F-vs-Intel-Core-i7-4770K/3863vs1919)
+- [Comparison: E3-1271v3 VS i3-10100f](https://www.cpubenchmark.net/compare/Intel-Core-i3-10100F-vs-Intel-Core-i7-4770K/3863vs1919)
 
 Since machine learning algorithms rely heavily on graphics cards, processor and system RAM limitations become less critical compared to the graphics card's capabilities. To this end, the proper choice of graphics card was critical. The Dell T-1700's power supply could output _325 watts_, with other components consuming around 150 watts (including a maximum of 85 watts for the processor). This left approximately _175 watts_ of usable excess power for the graphics card, setting a threshold for its maximum power consumption.
 
@@ -76,95 +79,83 @@ Having considered all factors, I bought a used GTX 1660 online for approximately
 #### Hard drives
 Next, I acquired a solid-state drive (SSD) to replace the noisy 250GB hard drive. I opted for a **Samsung 850 Evo 250GB SATA SSD** with **DRAM**, which ensures consistent read/write speeds superior to DRAM-less alternatives. Additionally, I purchased a **Micron MTFDDAK512TBN** 512GB SATA SSD, also with DRAM, intended to work alongside the smaller SSD. The 250GB drive stored the operating system, while the 512GB drive held user data (mainly in the home folder). The old hard drive served as a backup for system restoration if needed.
 
-https://www.harddrivebenchmark.net/hdd.php?hdd=Samsung+SSD+850+EVO+250GB
-https://www.harddrivebenchmark.net/hdd.php?hdd=Micron%201100%20MTFDDAK512TBN
+See: 
+- [Samsung 850 Evo 250GB](https://www.harddrivebenchmark.net/hdd.php?hdd=Samsung+SSD+850+EVO+250GB)
+- [Micron MTFDDAK512TBN](https://www.harddrivebenchmark.net/hdd.php?hdd=Micron%201100%20MTFDDAK512TBN)
+- [DRAM vs DRAM-less Solid state drives](https://computercity.com/hardware/storage/dram-vs-dram-less-ssd)
 
-https://computercity.com/hardware/storage/dram-vs-dram-less-ssd
-
-https://oemdrivers.com/network-tp-link-archer-t6e
-
-To enable wireless connectivity, I installed a **TP-Link T6E PCIe-X1 Wi-Fi card** compatible with both 2.4GHz and 5GHz connections. This adapter was inserted into one of the remaining PCIe slots in the Dell T-1700, offering better performance and stronger connections compared to USB alternatives.
+To enable wireless connectivity, I installed a **TP-Link T6E PCIe Wi-Fi card** compatible with both 2.4GHz and 5GHz connections. This adapter was inserted into one of the remaining PCIe slots in the Dell T-1700, offering better performance and stronger connections compared to USB alternatives.
 
 The total cost for the computer, including components and software, was approximately $180-$190. The final configuration had an 8-thread processor with 32GB RAM, a 6GB VRAM GPU, and about 1TB of storage. I chose **Linux Mint** with the **XFCE** desktop environment to minimize resource usage by the graphical interface. Essentially, this means the computer runs a lightweight version of **Ubuntu 24.04 LTS**.
 
 ### Python AI packages
 With the hardware assembled, I proceeded to install the machine learning / AI software:
 
-1. **Miniconda**: To manage Python environments effectively.
+1. [Miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main): To manage Python environments effectively.
 2. Proprietary **Nvidia drivers**: For optimal graphics card performance on Linux.
-3. **CUDA** (per-environment): Instead of a global installation, I installed CUDA individually for each Python environment to ensure compatibility with specific AI software like TensorFlow.
-4. **Jupyter Notebook**: For running sessions involving TensorFlow and PyTorch.
+3. [CUDA](https://developer.nvidia.com/cuda-toolkit) (per-environment): Instead of a global installation, I installed CUDA individually for each Python environment to ensure compatibility with specific AI software like TensorFlow.
+4. [Jupyter Notebook](https://jupyter.org/install): For running sessions involving TensorFlow and PyTorch.
 5. TensorFlow environment: Created a separate conda environment to run the latest TensorFlow version, automatically pulling the required CUDA version for Turing GPUs.
 6. PyTorch environment: Established a dedicated conda environment for PyTorch installation and usage, which was straightforward and worked out of the box.
-7. **Ollama** and **Open-WebUI**: I setup a separate conda environment for running large language models locally and accessing a graphical user interface through Open-WebUI (a Python package). Ollama was installed at the user level and handled running the LLMs.
+7. [Ollama](https://ollama.com/download) and [Open-WebUI](https://docs.openwebui.com/): I setup a separate conda environment for running large language models locally and accessing a graphical user interface through Open-WebUI (a Python package). Ollama was installed at the user level and handled running the LLMs.
 
-https://ollama.com/download
-https://docs.openwebui.com/
-
-https://www.anaconda.com/docs/getting-started/miniconda/main
-https://jupyter.org/install
-https://developer.nvidia.com/cuda-toolkit
 
 This setup allowed me to utilize both TensorFlow and PyTorch efficiently, with PyTorch's simpler installation and code being particularly advantageous. The local execution of large language models using Ollama was facilitated by the open web UI, encapsulated within a conda environment to keep each configuration organized.
 
 ### Stable diffusion
-As the final software installation, I added **Automatic1111's GUI for Stable Diffusion**, although its importance was less critical for my primary interest in PyTorch-based application development. Despite occasional instability and the need for additional parameter tweaking, it was fascinating to observe the computer generate images using text commands.
+As the final software installation, I added **Automatic1111's WebUI** for Stable Diffusion, although its importance was less critical for my primary interest in PyTorch-based application development. Despite occasional instability and the need for additional parameter tweaking, it was fascinating to observe the computer generate images using text commands.
 
-https://github.com/AUTOMATIC1111/stable-diffusion-webui
+{% include image-slider.html list=page.slider2 aspect_ratio="1/1" %}
+<p align="center"><i>Images generated by the PC with the prompt: "Astronaut riding a horse""</i></p>
 
-1. **Create a new conda environment**:
-   ```bash
-   conda create -n auto1111 python=3.10.6
-   conda activate auto1111
-   ```
+See: 
+- [Stable Diffusion WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
+- [Using conda for automatic1111](https://www.reddit.com/r/StableDiffusion/comments/11z9wmk/managing_with_your_python_environment_using_conda/)
 
-2. **Install PyTorch with CUDA support**:
-   ```bash
-   conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
-   ```
+To run the WebUI server from a conda environment, I used the following commands:
+```bash
+# Create python environment
+conda create -n sdwebui python=3.10.6
+conda activate sdwebui
 
-3. **Clone the Automatic1111 repository**:
-   ```bash
-   git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
-   cd stable-diffusion-webui
-   ```
+# Install webui 
+git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
+cd stable-diffusion-webui
+pip install -r requirements.txt
 
-4. **Install required dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
+# Run webui (required every time to start server)
+python launch.py
+```
 
-
-6. **Launch the web UI**:
-   ```bash
-   python launch.py
-   ```
-   
-Credit goes to _Deekspeek_ for the above commands. Other approximate solutions can be found in the references section.
+Credit goes to [DeepSeek](https://www.deepseek.com/) for the above commands and the above reference.
 
 ### Remote access
-To enable remote access, I installed **Tailscale**, a free software solution that offers an extremely simple VPN configuration, allowing me to connect to the server and execute AI software remotely. This setup resulted in an affordable device accessible anywhere with internet, capable of running heavy computational tasks via Jupyter Notebook sessions or processing large language models for information retrieval or document analysis, which would otherwise be impossible on a less powerful laptop due to insufficient computational resources.
+To enable remote access, I installed **Tailscale** to get extremely simple to use VPN connection. This setup resulted in an server that was accessible anywhere that was capable of running computational tasks via JupyterLab, or that could run private large language models for information retrieval or document analysis. These are tasks that would otherwise be impossible on a much less powerful laptop due to insufficient computational resources.
 
-See:
-- [Tailscale](https://tailscale.com/)
+See: [Tailscale](https://tailscale.com/)
 
 
 ### LLM Models
-The large language models, despite the 6GB VRAM limitation of the graphics card, proved impressive with models like **mistral:7b** and **deepseek-r1:8b**. Response times ranged from a few seconds to around 20 seconds for commands. These models could access the internet for information retrieval, enhancing their capabilities. Ollama's flexibility allowed users to experiment with various models beyond popular ones like Deepseek or ChatGPT. Tailored models, such as **qwen2.5-coder:7b** for code assistance, could be easily selected using Ollama's GUI. Another notable model was IBM's **granite3.3:8b**, which also ran well on the GPU and provided concise, solid replies. This setup offered a powerful AI system with diverse use cases when given appropriate prompts.
+The large language models, despite the 6GB VRAM limitation of the graphics card, proved to be impressive with models like **mistral:7b** and **deepseek-r1:8b**. Response times ranged from a few seconds to around 20 seconds for very long prompts. Moreover, these models could be configured to access the internet for additional information, which greatly enhanced their capabilities. Ollama's flexibility allowed users to experiment with various models beyond popular ones like Deepseek or ChatGPT. Tailored models, such as **qwen2.5-coder:7b** for code generation, could be easily selected using Ollama's CLI interface, or via Open-webUI's GUI. Another notable model was IBM's **granite3.3:8b**, which also ran well on the GPU and consistently provided concise and precise replies. This multi-model setup created a generally useful AI system when the right models were given appropriate prompts.
 
 See: 
-https://ollama.com/library/deepseek-r1:8b
-https://ollama.com/library/mistral:7b
-https://ollama.com/library/granite3.3:8b
-https://ollama.com/library/qwen2.5-coder:7b
+- [deepseek-r1:8b](https://ollama.com/library/deepseek-r1:8b)
+- [mistral:7b](https://ollama.com/library/mistral:7b)
+- [granite3.3:8b](https://ollama.com/library/granite3.3:8b)
+- [qwen2.5-coder:7b](https://ollama.com/library/qwen2.5-coder:7b)
+
 
 ### Conclusion
-This project proved highly educational, providing insights into small large language models' capabilities and hardware limitations for running such software. Key takeaways include:
+This project was highly educational and provided insights into the capabilities of small-size large language models. Some of the main takeaways include:
 
-1. Nvidia graphics cards are recommended due to CUDA compatibility issues with AMD cards.
-2. Familiarity with Linux is essential, as it's the primary environment for configuring and using AI packages. Although other operating systems might support these tools, Linux offers a more straightforward setup.
-3. Prior research is crucial for making informed decisions when building a system capable of running AI software.
+1. Familiarity with Linux is essential, as it's the primary environment for configuring and using the AI/ML packages. Although other operating systems might support these tools, Linux offers a more straightforward setup.
+2. Prior research is crucial for making informed decisions when building a system capable of running AI software.
+3. Nvidia graphics cards are recommended to avoid compatibility issues with CUDA.
+4. The power supply is the main bottleneck when choosing a Graphics card.
+5. The CPU is mostly idle when computations are offloaded to the GPU. 
+6. One can use a relatively weak CPU to run AI models so long as the graphics card is powerful enough and has enough VRAM.
 
-In conclusion, this project demonstrates the potential of small language models and highlights the importance of understanding hardware limitations and preferred operating environments (Linux) when working with AI packages.
+Overall, this entire experience was an eyeopener, and demonstrated the importance of understanding hardware limitations when working with AI/ML packages.
 
+### References
 
