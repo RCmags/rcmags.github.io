@@ -3,9 +3,7 @@ layout: post
 title: Connecting an external graphics card (eGPU) to a Thinkpad T540p
 ---
 
-In an effort to enhance the performance of my **ThinkPad T540p**, I considered adding an external graphics card via the ExpressCard slot. These older ThinkPads, released in 2013, were equipped with a unique slot that connected directly to the PCIe lanes on the motherboard, bypassing the use of more modern Thunderbolt connections.
-
-Unlike contemporary computers, these older ThinkPads utilize the deprecated ExpressCard instead of Thunderbolt for connecting external devices. As the name suggests, these are large, rectangular cards that slide into the laptop. By using an appropriate adapter, they can be used to connect PCIe devices to the computer.
+In an effort to enhance the performance of my **ThinkPad T540p**, I considered adding an external graphics card via the ExpressCard slot. These older ThinkPads, released in 2013, were equipped with the deprecated [ExpressCard](https://en.wikipedia.org/wiki/ExpressCard) slot that connected to the PCIe lanes on the motherboard. As the name suggests, these are large, rectangular cards that slide into the laptop. Therefore, by using an appropriate adapter they can be used to connect PCIe devices to the laptop.
 
 ## Express card adapter
 Fortunately, this modification is common for this generation of ThinkPads and inexpensive adapters are readily available. The most popular choice among users is the **EXP GDC Beast adapter**. This small, rectangular device features a PCIe x16 connection and an HDMI cable that connects to a male ExpressCard connector.
@@ -35,8 +33,6 @@ Once all the components arrived via mail, I assembled them and created a functio
 Fortunately, there are numerous videos online that showcase similar configurations. These videos are helpful to understand what to do even if they do not use the exact laptop or graphics card. In my configuration, I connected everything together and _then_ powered on the laptop. It's essential to note that the express card slot can theoretically support hot swapping. That is, connecting and disconnecting devices while the computer is on. However, to avoid any compatibility issues, I ensured the card was connected to the computer before turning it on.
 
 Upon booting up the computer, I made no significant modifications to the **BIOS** configuration. The ThinkPad can be configured to run the express card at either **Gen 1** or **Gen 2** speeds. I opted for the default automatic settings, meaning that it would default to Gen 2 speeds if the connected device supported it. While this isn't the most recommended setup—Gen 1 is generally considered more stable with this particular adapter—leaving it on auto allows for adaptability should the connected device require a different protocol.
-
-_See:_ [Express Card](https://en.wikipedia.org/wiki/ExpressCard) - Details and Transfer speeds
 
 As I understood, the slower speed is recommended due to the exposed HDMI cable that transfers information between the EXP adapter and the express card slot. Some online posts suggest covering the cable with aluminum foil to eliminate any potential electrical interference coming from the exposed graphics card or the power supply. Despite these warnings, I opted not to follow the safer configuration as I was unsure if running at a slower speed would be necessary. Perhaps the video card I was using would be stable enough, and this configuration would not be needed.
 
@@ -74,7 +70,7 @@ During an initial installation the correct drivers are pulled automatically. How
 
 With the configuration finalized, the PSP emulator recognized the video card and I was able to run the game. In contrast to running the integrated graphics, I observed that the frames per second were actually lower; the IGPU could manage a stable 60fps at approximately 720p with _FXAA anti-aliasing_. However, using the external graphics card resulted in about 50 to 55 fps. By employing ``nvtop`` to check the GPU performance, I noticed that the GPU was running at 100% utilization. Additionally, the bandwidth utilization, was nearly saturated with incoming and outgoing information roughly adding to the 500 megabytes per second limit of the express card.
 
-See: 
+_See:_ 
 - [nvtop](https://github.com/Syllo/nvtop) GPU monitor. 
 - [FXAA](https://en.wikipedia.org/wiki/Fast_approximate_anti-aliasing)
 
@@ -87,7 +83,7 @@ This discrepancy was striking as it contradicted the experience in Windows. Upon
 
 This is significant, as Nvidia drivers in Linux are **not** capable of using of system memory as a supplement for additional VRAM required by the graphics card. This differs from how the drivers work in Windows where there is _shared memory_. This means that when the VRAM is insufficient for running a specific video process, the GPU can utilize system RAM as a slow buffer, much like how a computer uses **swap** on a hard drive to compensate for limited RAM.
 
-I'm uncertain as to why this is the case, but my assumption is that this may be a deliberate move by NVIDIA. It encourages users to purchase video cards with more VRAM than they otherwise would if the cards could access system RAM. This scenario is precisely opposite when using AMD video cards. With AMD, their drivers have _shared memory_ enabled by **default** on Linux, resulting in better performance on Linux compared to Windows. Thus, this is driver discrepancy an essential aspect to consider when purchasing a video card. 
+I'm uncertain as to why this is the case, but my assumption is that this may be a deliberate move by NVIDIA. It encourages users to purchase video cards with more VRAM than they otherwise would if the cards could access system RAM. This scenario is precisely opposite when using **AMD video cards**. With AMD, their drivers have _shared memory_ enabled by **default** on Linux, resulting in better performance on Linux compared to Windows. Thus, this is driver discrepancy an essential aspect to consider when purchasing a video card. 
 
 #### Machine Learning tasks:
 To further assess the video card's performance in Linux, I ran a small program that utilized [Keras](https://keras.io/) with a [Pytorch backend](https://pytorch.org/) to offload computations to the GPU. Remarkably, when running this program on the Nvidia Quadro through the Express card, performance was approximately twice to 2.5 times faster than simply running the program on the CPU.
