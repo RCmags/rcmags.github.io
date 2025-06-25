@@ -70,7 +70,7 @@ The control algorithm incorporated two inputs from the radio receiver: one to se
 
 Overall, I’m pleased with the results. Although it's far from perfect and not as refined as more popular control methods involving stepper motors, this project demonstrates a valuable experiment and clever software workaround. If the same algorithm were paired with better motors (such as brushed coreless motors that suffer from less stiction and cogging), it’s likely the robot’s performance would improve significantly. At the very least, it would have a much smoother response due to the reduced minimum torque required to rotate the wheels.
 
-![image](https://www.nidec.com/-/media/www-nidec-com/technology/motor/glossary/item/coreless_motor-01.jpg)
+![image](/img/self-balancing/version-2/coreless-motor.png)
 <p align="center"><i>Coreless brushed DC motors have iron-less rotors that do not cause cogging</i></p>
 
 ### GitHub Repo

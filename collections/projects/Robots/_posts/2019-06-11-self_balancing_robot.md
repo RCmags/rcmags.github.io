@@ -18,12 +18,12 @@ While learning how to program [Arduinos](https://www.arduino.cc/en/Guide/Introdu
 
 This project felt like an ideal learning opportunity. Most designs for these robots use [stepper motors](https://en.wikipedia.org/wiki/Stepper_motor) or [DC motors](https://en.wikipedia.org/wiki/DC_motor) with [rotary encoders](https://en.wikipedia.org/wiki/Rotary_encoder) to measure their position. Both approaches allow for precise control of the wheel's angular velocity since their position can be accurately monitored. In the case of _stepper motors_, if they are rotated slowly and under a light torque load, they can achieve precise motion control without directly measuring their position. This is because they rotate in discrete, known steps. By counting the steps commanded to the motors, the position can be automatically determined.
 
-![Stepper Motor](https://www.exploringarduino.com/wp-content/uploads/2019/07/Stepper-Motor-768x576.jpg)
+![Stepper Motor](/img/self-balancing/version-2/generic-stepper-motor.jpg)
 <p align="center">A direct-drive stepper motor is designed for low-speed, high-torque operation.</p>
 
 On the other hand, _DC motors_ do not rotate through a known angle, requiring a measurement system to sense their position. In this case, a rotary encoder can be used to count the number of steps and determine the angular rotation of the DC motor. This angular position can then be used as the basis for a [PID controller](https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_controller), which applies the necessary voltage to the motor to achieve a target angular position. Although this method is more complex than using stepper motors, it has the advantage of applying larger torques at higher speeds with lower energy consumption.
 
-![DC Motor with Encoder](https://yw-transmission.com/wp-content/uploads/2019/12/62-Dc-Motor-With-Encoder.jpg)
+![DC Motor with Encoder](/img/self-balancing/version-2/encoder-gearmotor.jpg)
 <p align="center">A DC motor needs to be geared to apply torques similar to a comparable stepper motor.</p>
 
 Given the advantages of DC motors, they are naturally appealing for a wheeled robot. However, using rotary encoders adds complexity and cost compared to stepper motors. As a challenge, I decided to use DC motors _without_ rotary encoders and to control them in a way that still provided adequate stability for a self-balancing robot. Although this approach might not be as effective as using stepper motors or rotary encoders, achieving acceptable performance with this setup would be a significant accomplishment.
