@@ -9,8 +9,8 @@ slider1:
 slider2:
 - url: /img/self-balancing/version-1/balance_motion.gif
 - url: /img/self-balancing/version-1/motion_error.gif
-
 ---
+
 While learning how to program [Arduinos](https://www.arduino.cc/en/Guide/Introduction), I frequently encountered different versions of the [self-balancing robot](https://people.ece.cornell.edu/land/courses/ece4760/FinalProjects/f2015/dc686_nn233_hz263/final_project_webpage_v2/dc686_nn233_hz263/index.html). This robot is essentially a two-wheeled platform that is unstable in one direction and needs to be stabilized to maintain the balance of an [inverted pendulum](https://en.wikipedia.org/wiki/Inverted_pendulum). To keep the vehicle upright, the wheels are rotated to generate horizontal accelerations that prevent the body from tilting forward. As a result, the vehicle remains upright by actively applying torque to the wheels. This project is a great example of an unstable system being forced towards a stable condition through a [controlled feedback loop](https://www.electronics-tutorials.ws/systems/closed-loop-system.html). It’s also an excellent way to learn about control algorithms and their strengths and drawbacks.
 
 {% include youtube.html id='I6z26LVu5y0' %}  
