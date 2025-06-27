@@ -24,6 +24,8 @@ _See:_
 - [Machine Learning in Additive Manufacturing: A Review](https://scholarworks.indianapolis.iu.edu/server/api/core/bitstreams/77e20cdf-9ee2-44de-b51a-0f7bffecded1/content)
 - [Toward autonomous additive manufacturing: Bayesian optimization on a 3D printer](https://link.springer.com/content/pdf/10.1557/s43577-021-00051-1.pdf)
 - [Improving performance of aerosol jet printing using machine learning‐driven optimization](https://onlinelibrary.wiley.com/doi/epdf/10.1002/appl.202300110)
+- Accelerated Multiobjective Calibration of Fused Deposition Modeling 3D Printers Using Multitask Bayesian Optimization and Computer Vision
+- Autonomous Output-Oriented Aerosol Jet Printing Enabled by Hybrid Machine Learning
 
 Moreover, since this is an ultimately physical process, there is a **limit** on the number of experimental trials that can be performed to find any optimal solution. It is simply **not practical** to perform an unrestricted number of manufacturing runs, as each sample requires significant amount of time and raw materials to complete. Therefore, one cannot use a generic optimization algorithm that will require hundreds of data samples, as these would take years to complete in real life. In light of this essential constraint, it would be fundamental to devise some theoretical or empirical process to reduce the number of data samples required by the optimization process. One could think of this as devising a set of **dimensionless parameters** that would encapsulate the most important parameters that affect the printing process. In essence, these parameters would reduce the number of variables and hence reduce the number of required data samples. Such procedures are seen in experimental fluid dynamics or heat transfer experiments.
 
