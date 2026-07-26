@@ -1,8 +1,9 @@
 .youtube {
 	position: relative;
 	padding-bottom: MIN(56.25%, $max-image-size * 0.5625); // force use of raw CSS
-  	margin-bottom: $spacing-unit;	
-		
+  	margin-bottom: $spacing-unit;
+    margin-top: $spacing-unit;
+
 	iframe {
 		border: 0;
 		border-radius: $img-radius;
