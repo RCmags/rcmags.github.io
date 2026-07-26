@@ -203,3 +203,4 @@ The sensor looks for a magnet attached to the crank, and once the magnet is infr
 <p align="center"><i>Video 7. Operation of the glide lock system</i></p> 
 
 __Github Repository:__ [GlideLock](https://github.com/RCmags/GlideLock)
+
