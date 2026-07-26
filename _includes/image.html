@@ -1,3 +1,8 @@
-<img src="{{ include.src }}" style="max-width: {{ include.maxwidth }}; width: auto;" id="{{include.label}}">
+{% if include.maxwidth %} 
+<img src="{{ include.src }}" id="{{ include.label }}" style="max-width: {{ include.maxwidth }}; width: auto;" >
+
+{% else %}
+<img src="{{ include.src }}" id="{{ include.label }}">
+{% endif %}
 
 {% include figure-title.html text=include.text label=include.label %}
