@@ -37,21 +37,21 @@ _Landing gear_:
 
 The propeller could be located at the nose of the aircraft in a tractor configuration or farther aft in a pusher configuration. A tractor configuration shifts the center of mass forward which aids stability. It also ensures the propeller is far away from the rotor and reduces the risk of collision. However, it exposes the propeller to the ground making it very likely it will break during a crash.
 
-{% include image.html src="/img/autogyro/tractor_prop.png" label="Figure.2" text="Propeller Ground Collision" %}
+{% include image.html src="/img/autogyro/tractor_prop.png" label="Figure.2" text="Propeller Ground Collision" fullwidth=true %}
 
 The pusher configuration can shield the propeller with the front of the aircraft but the propeller is now very close to the rotor. It takes very little deflection for the rotor to collide with the propeller. Obviously this is catastrophic.
 
-{% include image.html src="/img/autogyro/pusher_prop.png" label="Figure.3" text="Propeller Rotor Collision" %}
+{% include image.html src="/img/autogyro/pusher_prop.png" label="Figure.3" text="Propeller Rotor Collision" fullwidth=true %}
 
 The collision can be avoided by rotating the mast to move the propeller forward and under the rotor. Doing so moves the center of mass forward so less ballast is needed in the nose to maintain equilibrium.
 
-{% include image.html src="/img/autogyro/pusher_hidden.png" label="Figure.4" text="Angled rotor mast" %}
+{% include image.html src="/img/autogyro/pusher_hidden.png" label="Figure.4" text="Angled rotor mast" fullwidth=true %}
 
 _Offset-hinge:_
 
 In the absence of a horizontal stabilizer the autogyro needs another mechanism to obtain pitch stability. A horizontal stabilizer applies a moment that rotates the aircraft towards a smaller angle of attack. This moment can be reproduced with a lever between the mast and the rotor. Due to the distance between the rotor and the hinge, the rotor's axial force will apply torque to the lever. The torque can be countered with a spring attached to the lever.
 
-{% include image.html src="/img/autogyro/offset_balance.png" label="Figure.5" text="Hinge offset in equilibrium" %}
+{% include image.html src="/img/autogyro/offset_balance.png" label="Figure.5" text="Hinge offset in equilibrium" fullwidth=true %}
 
 As the spring is elastic, it will deflect when the force changes. With more angle of attack, the axial force increases and the spring expands. With less angle of attack, the axial force decreases and the spring compresses. These deflections move the line-of-action of the force relative to the center of mass and generate a moment that rotates the aircraft to a smaller angle of attack.
 

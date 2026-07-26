@@ -1,8 +1,17 @@
+<!-- Create image -->
 {% if include.maxwidth %} 
-<img src="{{ include.src }}" id="{{ include.label }}" style="max-width: {{ include.maxwidth }}; width: auto;" >
+<img src="{{ include.src }}" id="{{ include.label }}" style="max-width: {{ include.maxwidth }};" >
+
+{% elsif include.fullwidth %}
+<img src="{{ include.src }}" id="{{ include.label }}" style="width: 100%;" >
+
+{% elsif include.fullwidth and include.maxwidth %}
+<img src="{{ include.src }}" id="{{ include.label }}" style="max-width: {{ include.maxwidth }}; width: 100%;" >
 
 {% else %}
-<img src="{{ include.src }}" id="{{ include.label }}">
+<img src="{{ include.src }}" id="{{ include.label }}" >
+
 {% endif %}
 
+<!-- Add sub-title -->
 {% include figure-title.html text=include.text label=include.label %}
