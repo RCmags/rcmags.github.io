@@ -75,7 +75,7 @@ main {
  */
 img {
   max-width: $max-image-size;
-  width: 100%;
+  width: auto;
   vertical-align: middle;
   // center horizontally
   display: block;
