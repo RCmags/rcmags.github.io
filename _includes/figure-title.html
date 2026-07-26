@@ -1,0 +1,8 @@
+{% if include.text %}
+<p align="center"> 
+    {% if include.label %}
+        <a href="#{{ include.label }}"><b>{{ include.label }}</b></a> - 
+    {% endif %}
+    {{ include.text }} 
+</p>
+{% endif %}

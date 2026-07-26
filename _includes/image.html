@@ -1,1 +1,3 @@
-<img src="{{ include.src }}" style="max-width: {{ include.maxwidth }}; width: auto;">
+<img src="{{ include.src }}" style="max-width: {{ include.maxwidth }}; width: auto;" id="{{include.label}}">
+
+{% include figure-title.html text=include.text label=include.label %}

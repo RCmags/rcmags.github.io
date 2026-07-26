@@ -1,4 +1,4 @@
-<div class="image-slider">	
+<div class="image-slider" id="{{include.label}}">	
   	<div class="container_out">
   	{% for image in include.list %}
     	<div class="container_in" 
@@ -11,3 +11,5 @@
     {% endfor %}
   	</div>		
 </div>
+
+{% include figure-title.html text=include.text label=include.label %}

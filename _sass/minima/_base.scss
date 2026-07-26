@@ -15,10 +15,10 @@ li, p {
   //color: grey;
 }
 
-	/* margin */
-p {
-  padding-bottom: 16px;
-}
+/* margin */
+//p {
+//  padding-bottom: 8px;
+//}
 
 /**
  * Basic styling
@@ -56,7 +56,7 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-  margin-bottom: calc($spacing-unit / 2);
+  margin-bottom: calc($spacing-unit / 1);
 }
 
 
@@ -105,8 +105,8 @@ figcaption {
  
 // ul initially set at zero | removed padding from paginator-list and project-list
 ul, ol { 
-  margin-left: 2 * $spacing-unit; // forced to zero
-  margin-bottom: 2 * $spacing-unit;
+  margin-left: 3 * $spacing-unit; // forced to zero
+  //margin-bottom: 2 * $spacing-unit;
   //margin-right: 0px; // forced to zero
   //margin-top: 0px;
 }

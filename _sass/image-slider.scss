@@ -25,7 +25,8 @@
 
 	// containers
   	width: 100%;
-  	margin-bottom: 16px;  	
+  	margin-bottom: $spacing-unit;
+    margin-top: $spacing-unit;
   	max-width: $max-image-size;
   	margin-left: auto;
   	margin-right: auto;

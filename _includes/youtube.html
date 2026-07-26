@@ -1,3 +1,5 @@
-<div class="youtube">
+<div class="youtube" id="{{ include.label }}">
   <iframe src="https://www.youtube.com/embed/{{ include.id }}" allowfullscreen></iframe>
 </div>
+
+{% include figure-title.html text=include.text label=include.label %}
